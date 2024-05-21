@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo_dk_cycle_shop.png";
 
 const Header = () => {
     return(
-        <header class='flex bg-gray-dark border-b py-4 sm:px-10 px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50'>
-            <div class='flex flex-wrap items-center lg:gap-y-2 gap-4 w-full'>
-                <a href="javascript:void(0)"><img src={logo} alt="logo" class='w-36' />
+        <header className='flex bg-gray-dark border-b py-4 sm:px-10 px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50'>
+            <div className='flex flex-wrap items-center lg:gap-y-2 gap-4 w-full'>
+                <a href="javascript:void(0)"><img src={logo} alt="logo" className='lg:w-36 w-10' />
                 </a>
             
                 <div id="collapseMenu"
-                    class='lg:ml-12 max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
-                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                    className='lg:ml-12 max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+                    <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-black" viewBox="0 0 320.591 320.591">
                         <path
                         d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
                         data-original="#000000"></path>
@@ -22,28 +22,30 @@ const Header = () => {
                     </button>
             
                     <ul
-                    class='lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-                    <li class='mb-6 hidden max-lg:block'>
-                        <a href="javascript:void(0)"><img src={logo} alt="logo" class='w-36' />
+                    className='lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                    <li className='mb-6 hidden max-lg:block'>
+                        <a href="javascript:void(0)"><img src={logo} alt="logo" className='w-10' />
                         </a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        class='text-[#FF6347] hover:text-[#FF6347] text-[15px] block font-semibold'>SPECIAL OFFERS</a></li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        class='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>COMPONENTS</a></li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        class='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>ACCESSORIES</a></li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        class='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>TOOLS & MAINTENANCE</a></li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        class='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>BIKES</a></li>
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                        className='text-[#FF6347] hover:text-[#FF6347] text-[15px] block font-semibold'>SPECIAL OFFERS</a></li>
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>E-Bike</a></li>
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Mountain Bike</a></li>
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Road Bike</a></li>
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Trekking</a></li>
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Kids</a></li>
                     </ul>
                 </div>
             
-                <div class="flex gap-x-6 gap-y-4 ml-auto">
+                <div className="flex gap-x-6 gap-y-4 ml-auto">
                     <div
-                    class='flex border-2 focus-within:border-gray-400 rounded-full px-6 py-3 overflow-hidden max-w-52 max-lg:hidden'>
-                    <input type='text' placeholder='Search something...' class='w-full text-sm bg-transparent outline-none pr-2' />
+                    className='flex border-2 focus-within:border-gray-400 rounded-full px-6 py-3 overflow-hidden max-w-52 max-lg:hidden'>
+                    <input type='text' placeholder='Search something...' className='w-full text-sm bg-transparent outline-none pr-2' />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
                         class="cursor-pointer fill-gray-600">
                         <path
@@ -52,32 +54,32 @@ const Header = () => {
                     </svg>
                     </div>
             
-                    <div class='flex items-center space-x-8'>
-                    <span class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="cursor-pointer fill-[#FFFFFF] inline"
+                    <div className='flex items-center space-x-8'>
+                    <span className="relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" className="cursor-pointer fill-[#FFFFFF] inline"
                         viewBox="0 0 64 64">
                         <path
                             d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z"
                             data-original="#000000" />
                         </svg>
-                        <span class="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
+                        <span className="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
                     </span>
             
-                    <span class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" class="cursor-pointer fill-[#FFFFFF] inline"
+                    <span className="relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" className="cursor-pointer fill-[#FFFFFF] inline"
                         viewBox="0 0 512 512">
                         <path
                             d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
                             data-original="#000000"></path>
                         </svg>
-                        <span class="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
+                        <span className="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
                     </span>
-                    <button
-                        class='px-5 py-2 text-sm rounded-full text-white border-2 border-[#FF6347] bg-[#FF6347] hover:bg-[#FF7F50]'>SignIn
+                    <button className='px-5 py-2 text-sm rounded-full text-white border-2 border-[#FF6347] bg-[#FF6347] hover:bg-[#FF7F50]'>
+                        Sign In
                     </button>
             
-                    <button id="toggleOpen" class='lg:hidden'>
-                        <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <button id="toggleOpen" className='lg:hidden'>
+                        <svg className="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                             clip-rule="evenodd"></path>

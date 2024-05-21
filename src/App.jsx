@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import Header from './components/Common/Header'
+import Footer from './components/Common/Footer'
 
 function App() {
 
   return (
-    <Header />
+    <div>
+      <Header />
+      <Footer />
+    </div>
   )
 }
 
