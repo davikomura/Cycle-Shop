@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo_dk_cycle_shop.png";
 
 const Header = () => {
     return(
         <header className='flex bg-gray-dark border-b py-4 sm:px-10 px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50'>
             <div className='flex flex-wrap items-center lg:gap-y-2 gap-4 w-full'>
-                <a href="javascript:void(0)"><img src={logo} alt="logo" className='lg:w-36 w-10' />
-                </a>
-            
+                <Link to="/">
+                    <img src={logo} alt="logo" className='lg:w-36 w-10' />
+                </Link>
+                {/* <a href="javascript:void(0)"><img src={logo} alt="logo" className='lg:w-36 w-10' />
+                </a> */}
                 <div id="collapseMenu"
                     className='lg:ml-12 max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
                     <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
