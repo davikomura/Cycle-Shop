@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const images = [
-    'https://d1nymbkeomeoqg.cloudfront.net/photos/26/22/383685_21601_XL.jpg',
-    'https://www.ciadopedal.com.br/17952-thickbox_default/bicicleta-29-21v-masculina-ultra-bikes.jpg',
-    'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg', // Placeholder image
-    'https://via.placeholder.com/800x400', // Placeholder image
-    'https://via.placeholder.com/800x400'  // Placeholder image
-  ];
+  'https://d1nymbkeomeoqg.cloudfront.net/photos/26/22/383685_21601_XL.jpg',
+  'https://www.bike-components.de/assets/a/c4390dd0b99e79b1b5df3db693fd79be.avif',
+  'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg', // Placeholder image
+  'https://www.bike-components.de/assets/a/d90551726fba50537f5d83661bf9c95b.avif', // Placeholder image
+  'https://www.bike-components.de/assets/a/85bc8195a0f83a7aa729e612e8d71c95.avif'  // Placeholder image
+];
 
 const ImageCarousel = () => {
 
@@ -35,7 +35,7 @@ const ImageCarousel = () => {
           >
             <img
               src={image}
-              className="absolute block w-full h-full object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="absolute block w-[768px] h-[411px] object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               alt={`Slide ${index + 1}`}
             />
           </div>
