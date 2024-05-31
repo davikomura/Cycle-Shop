@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ImageCarousel from '../Content/ImageCarousel';
 import dona from "../../assets/bike.png"
+import MountainMasterPro from "../../assets/MountainMasterPro.jpg"
 
 export const MainPage = () => {
 
@@ -38,45 +39,45 @@ export const MainPage = () => {
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6">
             <div class="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
               <div class="w-11/12 h-[210px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
-                <img src="https://readymadeui.com/images/product9.webp" alt="Product 1"
+                <img src="#" alt="Product 1"
                   class="h-full w-full object-contain" />
               </div>
               <div>
-                <h3 class="text-lg font-extrabold text-gray-800">Sole Elegance</h3>
-                <h4 class="text-lg text-gray-800 font-bold mt-4">$10</h4>
+                <h3 class="text-lg font-extrabold text-gray-800">EcoRider 3000</h3>
+                <h4 class="text-lg text-gray-800 font-bold mt-4">€750</h4>
               </div>
             </div>
       
             <div class="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
               <div class="w-11/12 h-[210px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
-                <img src="https://readymadeui.com/images/product10.webp" alt="Product 2"
+                <img src="#" alt="Product 2"
                   class="h-full w-full object-contain" />
               </div>
               <div>
-                <h3 class="text-lg font-extrabold text-gray-800">Urban Sneakers</h3>
-                <h4 class="text-lg text-gray-800 font-bold mt-4">$12</h4>
+                <h3 class="text-lg font-extrabold text-gray-800">UrbanCycler</h3>
+                <h4 class="text-lg text-gray-800 font-bold mt-4">€550</h4>
               </div>
             </div>
       
             <div class="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
               <div class="w-11/12 h-[210px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
-                <img src="https://readymadeui.com/images/product11.webp" alt="Product 3"
+                <img src={MountainMasterPro} alt="MountainMaster Pro"
                   class="h-full w-full object-contain" />
               </div>
               <div>
-                <h3 class="text-lg font-extrabold text-gray-800">Velvet Boots</h3>
-                <h4 class="text-lg text-gray-800 font-bold mt-4">$14</h4>
+                <h3 class="text-lg font-extrabold text-gray-800">MountainMaster Pro</h3>
+                <h4 class="text-lg text-gray-800 font-bold mt-4">€1200</h4>
               </div>
             </div>
       
             <div class="bg-white rounded-2xl p-5 cursor-pointer hover:-translate-y-2 transition-all relative">
               <div class="w-11/12 h-[210px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 md:mb-2 mb-4">
-                <img src="https://readymadeui.com/images/product12.webp" alt="Product 3"
+                <img src="#" alt="Product 3"
                   class="h-full w-full object-contain" />
               </div>
               <div>
-                <h3 class="text-lg font-extrabold text-gray-800">Summit Hiking</h3>
-                <h4 class="text-lg text-gray-800 font-bold mt-4">$12</h4>
+                <h3 class="text-lg font-extrabold text-gray-800">SpeedyTourer X</h3>
+                <h4 class="text-lg text-gray-800 font-bold mt-4">€950</h4>
               </div>
             </div>
       
