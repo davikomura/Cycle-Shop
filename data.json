@@ -4,211 +4,197 @@
             "nome": "EcoRider 3000",
             "preco": 750,
             "imagem": "img/Bikes/EcoRider3000.jpg",
-            "descricao": "Uma bicicleta urbana ecológica, ideal para deslocamentos diários pela cidade. Possui um design moderno, confortável e sustentável, com materiais recicláveis e baixa pegada de carbono."
+            "descricao": "An eco-friendly urban bike, ideal for daily commutes around the city. It features a modern, comfortable, and sustainable design, with recyclable materials and a low carbon footprint.",
+            "tipo": "E-Bike"
         },
         {
             "nome": "UrbanCycler",
             "preco": 550,
             "imagem": "img/Bikes/UrbanCycler.jpg",
-            "descricao": "A bicicleta perfeita para quem busca praticidade e estilo na cidade. Leve e ágil, é ideal para trajetos urbanos, seja para ir ao trabalho ou dar um passeio pelo parque."
+            "descricao": "The perfect bike for those seeking practicality and style in the city. Lightweight and agile, it is ideal for urban routes, whether for commuting to work or a park ride.",
+            "tipo": "Trekking"
         },
         {
             "nome": "MountainMaster Pro",
             "preco": 600,
             "imagem": "img/Bikes/MountainMasterPro.jpg",
-            "descricao": "Uma bicicleta de montanha de alto desempenho, projetada para os entusiastas do mountain bike. Com componentes de qualidade e uma estrutura resistente, é perfeita para trilhas desafiadoras."
+            "descricao": "A high-performance mountain bike, designed for mountain biking enthusiasts. With quality components and a sturdy frame, it is perfect for challenging trails.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "SpeedyTourer X",
             "preco": 600,
             "imagem": "img/Bikes/SpeedyTourerX.png",
-            "descricao": "Uma bicicleta de turismo rápida e versátil, perfeita para viagens longas. Com um quadro leve e aerodinâmico, é ideal para quem busca conforto e desempenho em suas aventuras de ciclismo."
+            "descricao": "A fast and versatile touring bike, perfect for long journeys. With a lightweight and aerodynamic frame, it is ideal for those seeking comfort and performance on their cycling adventures.",
+            "tipo": "Road Bike"
         },
         {
             "nome": "ComfyCruiser",
             "preco": 600,
             "imagem": "img/Bikes/ComfyCruiser.jpg",
-            "descricao": "Uma bicicleta cruiser confortável e estilosa, perfeita para passeios descontraídos pela cidade. Com um design clássico e um assento macio, proporciona uma experiência de pedalagem relaxante e agradável."
+            "descricao": "A stylish and comfortable cruiser bike, perfect for relaxed city rides. With a classic design and a soft seat, it provides a relaxing and enjoyable riding experience.",
+            "tipo": "Trekking"
         },
         {
             "nome": "CityCommuter 500",
             "preco": 600,
             "imagem": "",
-            "descricao": "A CityCommuter 500 é perfeita para quem busca uma bicicleta urbana de alta qualidade. Com seu design elegante e confortável, é ideal para deslocamentos diários pela cidade."
+            "descricao": "The CityCommuter 500 is perfect for those looking for a high-quality urban bike. With its sleek and comfortable design, it is ideal for daily commutes around the city.",
+            "tipo": "Trekking"
         },
         {
             "nome": "TrailBlazer 2000",
             "preco": 1100,
             "imagem": "",
-            "descricao": "A TrailBlazer 2000 é uma bicicleta de trilha robusta e confiável. Com sua suspensão dianteira e pneus largos, é capaz de enfrentar os terrenos mais difíceis com facilidade."
+            "descricao": "The TrailBlazer 2000 is a rugged and reliable trail bike. With its front suspension and wide tires, it can easily handle the toughest terrains.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "EcoRide 100",
             "preco": 400,
             "imagem": "",
-            "descricao": "A EcoRide 100 é uma bicicleta econômica e sustentável, perfeita para quem se preocupa com o meio ambiente. Com seu design leve e eficiente, é ideal para passeios urbanos."
+            "descricao": "The EcoRide 100 is an economical and sustainable bike, perfect for those concerned about the environment. With its lightweight and efficient design, it is ideal for urban rides.",
+            "tipo": "E-Bike"
         },
         {
             "nome": "UrbanExplorer 700",
             "preco": 800,
             "imagem": "",
-            "descricao": "A UrbanExplorer 700 é uma bicicleta versátil e confortável, ideal para quem gosta de explorar a cidade. Com sua geometria relaxada e acessórios práticos, é perfeita para viagens urbanas."
+            "descricao": "The UrbanExplorer 700 is a versatile and comfortable bike, ideal for those who love to explore the city. With its relaxed geometry and practical accessories, it is perfect for urban trips.",
+            "tipo": "Trekking"
         },
         {
             "nome": "MountainHawk XT",
             "preco": 1400,
             "imagem": "",
-            "descricao": "A MountainHawk XT é uma bicicleta de montanha de alto desempenho, projetada para os verdadeiros entusiastas do ciclismo off-road. Com sua suspensão total e componentes de alta qualidade, é perfeita para trilhas desafiadoras."
+            "descricao": "The MountainHawk XT is a high-performance mountain bike, designed for true off-road cycling enthusiasts. With its full suspension and high-quality components, it is perfect for challenging trails.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "Speedster 1000",
             "preco": 850,
             "imagem": "",
-            "descricao": "A Speedster 1000 é uma bicicleta rápida e ágil, ideal para quem gosta de velocidade. Com sua geometria esportiva e componentes de alta performance, é perfeita para ciclistas que buscam aventuras emocionantes."
+            "descricao": "The Speedster 1000 is a fast and agile bike, ideal for those who love speed. With its sporty geometry and high-performance components, it is perfect for exciting adventures.",
+            "tipo": "Road Bike"
         },
         {
             "nome": "CommuterCruise 300",
             "preco": 480,
             "imagem": "",
-            "descricao": "A CommuterCruise 300 é uma bicicleta confortável e prática, perfeita para deslocamentos diários pela cidade. Com seu design elegante e acessórios úteis, é ideal para quem busca praticidade e estilo."
+            "descricao": "The CommuterCruise 300 is a comfortable and practical bike, perfect for daily commutes around the city. With its sleek design and useful accessories, it is ideal for those seeking practicality and style.",
+            "tipo": "Trekking"
         },
         {
             "nome": "AllTerrain Pro",
             "preco": 1600,
             "imagem": "",
-            "descricao": "A AllTerrain Pro é uma bicicleta todo-o-terreno de alta performance, projetada para os ciclistas mais exigentes. Com sua suspensão total e componentes de última geração, é perfeita para enfrentar os desafios mais difíceis."
+            "descricao": "The AllTerrain Pro is a high-performance all-terrain bike, designed for the most demanding cyclists. With its full suspension and state-of-the-art components, it is perfect for tackling the toughest challenges.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "RapidRider 800",
             "preco": 720,
             "imagem": "",
-            "descricao": "A RapidRider 800 é uma bicicleta rápida e ágil, ideal para deslocamentos urbanos rápidos. Com seu design leve e aerodinâmico, é perfeita para quem busca eficiência e velocidade."
+            "descricao": "The RapidRider 800 is a fast and agile bike, ideal for quick urban commutes. With its lightweight and aerodynamic design, it is perfect for those seeking efficiency and speed.",
+            "tipo": "Road Bike"
         },
         {
             "nome": "CityCruise 400",
             "preco": 550,
             "imagem": "",
-            "descricao": "A CityCruise 400 é uma bicicleta urbana confortável e prática, perfeita para deslocamentos diários pela cidade. Com seu design elegante e acessórios úteis, é ideal para quem busca estilo e funcionalidade."
+            "descricao": "The CityCruise 400 is a comfortable and practical urban bike, perfect for daily commutes around the city. With its sleek design and useful accessories, it is ideal for those seeking style and functionality.",
+            "tipo": "Trekking"
         },
         {
             "nome": "TrailRover 1500",
             "preco": 1250,
             "imagem": "",
-            "descricao": "A TrailRover 1500 é uma bicicleta de trilha versátil e robusta, ideal para os amantes da natureza. Com sua suspensão dianteira e pneus largos, é capaz de enfrentar os terrenos mais difíceis com facilidade."
+            "descricao": "The TrailRover 1500 is a versatile and rugged trail bike, ideal for nature lovers. With its front suspension and wide tires, it can easily handle the toughest terrains.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "EcoCycle 50",
             "preco": 300,
             "imagem": "",
-            "descricao": "A EcoCycle 50 é uma bicicleta econômica e sustentável, perfeita para passeios urbanos. Com seu design simples e eficiente, é ideal para quem se preocupa com o meio ambiente."
+            "descricao": "The EcoCycle 50 is an economical and sustainable bike, perfect for urban rides. With its simple and efficient design, it is ideal for those concerned about the environment.",
+            "tipo": "E-Bike"
         },
         {
             "nome": "UrbanRider 600",
             "preco": 700,
             "imagem": "",
-            "descricao": "A UrbanRider 600 é uma bicicleta urbana confortável e versátil, ideal para deslocamentos diários pela cidade. Com sua geometria relaxada e acessórios práticos, é perfeita para viagens urbanas."
+            "descricao": "The UrbanRider 600 is a comfortable and versatile urban bike, ideal for daily commutes around the city. With its relaxed geometry and practical accessories, it is perfect for urban trips.",
+            "tipo": "Trekking"
         },
         {
             "nome": "MountainChamp X",
             "preco": 1350,
             "imagem": "",
-            "descricao": "A MountainChamp X é uma bicicleta de montanha de alto desempenho, projetada para os ciclistas mais exigentes. Com sua suspensão total e componentes de alta qualidade, é perfeita para trilhas desafiadoras."
+            "descricao": "The MountainChamp X is a high-performance mountain bike, designed for the most demanding cyclists. With its full suspension and high-quality components, it is perfect for challenging trails.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "SpeedyRacer 1200",
             "preco": 950,
             "imagem": "",
-            "descricao": "A SpeedyRacer 1200 é uma bicicleta rápida e ágil, ideal para ciclistas que buscam velocidade. Com seu design esportivo e componentes de alta performance, é perfeita para aventuras emocionantes."
+            "descricao": "The SpeedyRacer 1200 is a fast and agile bike, ideal for cyclists who seek speed. With its sporty design and high-performance components, it is perfect for exciting adventures.",
+            "tipo": "Road Bike"
         },
         {
             "nome": "ComfyCruise 250",
             "preco": 420,
             "imagem": "",
-            "descricao": "A ComfyCruise 250 é uma bicicleta confortável e prática, perfeita para deslocamentos urbanos. Com seu design elegante e acessórios úteis, é ideal para quem busca conforto e estilo."
+            "descricao": "The ComfyCruise 250 is a comfortable and practical bike, perfect for urban commutes. With its sleek design and useful accessories, it is ideal for those seeking comfort and style.",
+            "tipo": "Trekking"
         },
         {
             "nome": "CityGlider 450",
             "preco": 580,
             "imagem": "",
-            "descricao": "A CityGlider 450 é uma bicicleta urbana leve e ágil, ideal para deslocamentos diários pela cidade. Com seu design aerodinâmico e acessórios funcionais, é perfeita para quem busca eficiência e praticidade."
+            "descricao": "The CityGlider 450 is a lightweight and agile urban bike, ideal for daily commutes around the city. With its aerodynamic design and functional accessories, it is perfect for those seeking efficiency and practicality.",
+            "tipo": "Trekking"
         },
         {
             "nome": "TrailMaster 1800",
             "preco": 1450,
             "imagem": "",
-            "descricao": "A TrailMaster 1800 é uma bicicleta de trilha robusta e versátil, ideal para os amantes da natureza. Com sua suspensão dianteira e pneus largos, é capaz de enfrentar os terrenos mais difíceis com facilidade."
+            "descricao": "The TrailMaster 1800 is a rugged and versatile trail bike, ideal for nature lovers. With its front suspension and wide tires, it can easily handle the toughest terrains.",
+            "tipo": "Mountain Bike"
         },
         {
             "nome": "EcoRide 75",
             "preco": 350,
             "imagem": "",
-            "descricao": "A EcoRide 75 é uma bicicleta econômica e sustentável, perfeita para quem se preocupa com o meio ambiente. Com seu design simples e eficiente, é ideal para passeios urbanos."
+            "descricao": "The EcoRide 75 is an economical and sustainable bike, perfect for those concerned about the environment. With its simple and efficient design, it is ideal for urban rides.",
+            "tipo": "E-Bike"
         },
         {
-            "nome": "UrbanAdventurer 800",
+            "nome": "UrbanVoyager 800",
             "preco": 750,
             "imagem": "",
-            "descricao": "A UrbanAdventurer 800 é uma bicicleta urbana versátil e confortável, ideal para deslocamentos diários pela cidade. Com sua geometria relaxada e acessórios práticos, é perfeita para viagens urbanas."
+            "descricao": "The UrbanVoyager 800 is a comfortable and versatile urban bike, ideal for daily commutes around the city. With its relaxed geometry and practical accessories, it is perfect for urban trips.",
+            "tipo": "Trekking"
         },
         {
-            "nome": "MountainRidge XT",
-            "preco": 1300,
+            "nome": "MountainHero XT",
+            "preco": 1550,
             "imagem": "",
-            "descricao": "A MountainRidge XT é uma bicicleta de montanha de alto desempenho, projetada para os verdadeiros entusiastas do ciclismo off-road. Com sua suspensão total e componentes de alta qualidade, é perfeita para trilhas desafiadoras."
+            "descricao": "The MountainHero XT is a high-performance mountain bike, designed for the most demanding cyclists. With its full suspension and high-quality components, it is perfect for challenging trails.",
+            "tipo": "Mountain Bike"
         },
         {
-            "nome": "SpeedDemon 1500",
-            "preco": 1100,
+            "nome": "SpeedKing 1500",
+            "preco": 1050,
             "imagem": "",
-            "descricao": "A SpeedDemon 1500 é uma bicicleta rápida e ágil, ideal para quem gosta de velocidade. Com sua geometria esportiva e componentes de alta performance, é perfeita para ciclistas que buscam aventuras emocionantes."
+            "descricao": "The SpeedKing 1500 is a fast and agile bike, ideal for cyclists who seek speed. With its sporty design and high-performance components, it is perfect for exciting adventures.",
+            "tipo": "Road Bike"
         },
         {
-            "nome": "CommuterCoaster 350",
-            "preco": 500,
+            "nome": "CommuterEase 350",
+            "preco": 450,
             "imagem": "",
-            "descricao": "A CommuterCoaster 350 é uma bicicleta confortável e prática, perfeita para deslocamentos diários pela cidade. Com seu design elegante e acessórios úteis, é ideal para quem busca praticidade e estilo."
-        },
-        {
-            "nome": "AllTerrain Elite",
-            "preco": 1800,
-            "imagem": "",
-            "descricao": "A AllTerrain Elite é uma bicicleta todo-o-terreno de alta performance, projetada para os ciclistas mais exigentes. Com sua suspensão total e componentes de última geração, é perfeita para enfrentar os desafios mais difíceis."
-        },
-        {
-            "nome": "RapidRoller 900",
-            "preco": 680,
-            "imagem": "",
-            "descricao": "A RapidRoller 900 é uma bicicleta rápida e ágil, ideal para deslocamentos urbanos rápidos. Com seu design leve e aerodinâmico, é perfeita para quem busca eficiência e velocidade."
-        },
-        {
-            "nome": "CitySprinter 600",
-            "preco": 620,
-            "imagem": "",
-            "descricao": "A CitySprinter 600 é uma bicicleta urbana leve e ágil, ideal para deslocamentos diários pela cidade. Com seu design aerodinâmico e acessórios funcionais, é perfeita para quem busca eficiência e praticidade."
-        },
-        {
-            "nome": "TrailTracker 1700",
-            "preco": 1400,
-            "imagem": "",
-            "descricao": "A TrailTracker 1700 é uma bicicleta de trilha robusta e confiável, ideal para os amantes da natureza. Com sua suspensão dianteira e pneus largos, é capaz de enfrentar os terrenos mais difíceis com facilidade."
-        },
-        {
-            "nome": "EcoBike 80",
-            "preco": 370,
-            "imagem": "",
-            "descricao": "A EcoBike 80 é uma bicicleta econômica e sustentável, perfeita para passeios urbanos. Com seu design simples e eficiente, é ideal para quem se preocupa com o meio ambiente."
-        },
-        {
-            "nome": "UrbanCrawler 650",
-            "preco": 680,
-            "imagem": "",
-            "descricao": "A UrbanCrawler 650 é uma bicicleta urbana confortável e versátil, ideal para deslocamentos diários pela cidade. Com sua geometria relaxada e acessórios práticos, é perfeita para viagens urbanas."
-        },
-        {
-            "nome": "MountainBlaze X",
-            "preco": 1250,
-            "imagem": "",
-            "descricao": "A MountainBlaze X é uma bicicleta de montanha de alto desempenho, projetada para os verdadeiros entusiastas do ciclismo off-road. Com sua suspensão total e componentes de alta qualidade, é perfeita para trilhas desafiadoras."
+            "descricao": "The CommuterEase 350 is a comfortable and practical bike, perfect for daily commutes around the city. With its sleek design and useful accessories, it is ideal for those seeking comfort and style.",
+            "tipo": "Trekking"
         }
     ]
 }

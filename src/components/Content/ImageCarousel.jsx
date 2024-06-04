@@ -26,7 +26,7 @@ const ImageCarousel = () => {
 
   return (
     <div id="default-carousel" className="relative w-full" data-carousel="slide">
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="bg-gray-dark relative h-56 overflow-hidden rounded-lg md:h-96">
         {images.map((image, index) => (
           <div
             key={index}
