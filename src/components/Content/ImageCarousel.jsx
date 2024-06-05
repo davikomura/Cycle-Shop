@@ -1,57 +1,96 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const images = [
-  'https://d1nymbkeomeoqg.cloudfront.net/photos/26/22/383685_21601_XL.jpg',
+  'https://assets.specialized.com/i/specialized/NavigationalTiles_Bikes_1200x1200_02?$scom-navigation-tile$&fmt=auto',
   'https://www.bike-components.de/assets/a/c4390dd0b99e79b1b5df3db693fd79be.avif',
-  'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg', // Placeholder image
-  'https://www.bike-components.de/assets/a/d90551726fba50537f5d83661bf9c95b.avif', // Placeholder image
-  'https://www.bike-components.de/assets/a/85bc8195a0f83a7aa729e612e8d71c95.avif'  // Placeholder image
+  'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg',
+  'https://www.bike-components.de/assets/a/d90551726fba50537f5d83661bf9c95b.avif',
+  'https://www.bike-components.de/assets/a/85bc8195a0f83a7aa729e612e8d71c95.avif',
+  'https://example.com/image6.jpg',
+  'https://example.com/image7.jpg',
+  'https://example.com/image8.jpg',
 ];
 
-const ImageCarousel = () => {
+const imagesDictionary = {
+  'E-Bike': 'https://assets.specialized.com/i/specialized/NavigationalTiles_Bikes_1200x1200_02?$scom-navigation-tile$&fmt=auto',
+  'Mountain Bike': 'https://www.bike-components.de/assets/a/c4390dd0b99e79b1b5df3db693fd79be.avif',
+  'Road Bike': 'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg',
+  'Trekking': 'https://www.bike-components.de/assets/a/d90551726fba50537f5d83661bf9c95b.avif',
+  'Kids': 'https://www.bike-components.de/assets/a/85bc8195a0f83a7aa729e612e8d71c95.avif',
+  'Pneus': 'https://example.com/image6.jpg',
+  'Vestuarios': 'https://example.com/image7.jpg',
+  'Acessorios': 'https://example.com/image8.jpg',
+};
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ImageCarousel = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const carouselRef = useRef(null);
 
   const prevSlide = () => {
-    setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+    const newIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+    setCurrentImageIndex(newIndex);
+    const carousel = carouselRef.current;
+    const imageWidth = carousel.scrollWidth / images.length;
+    carousel.scrollLeft = newIndex * imageWidth;
   };
 
   const nextSlide = () => {
-    setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+    const newIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+    setCurrentImageIndex(newIndex);
+    const carousel = carouselRef.current;
+    const imageWidth = carousel.scrollWidth / images.length;
+    carousel.scrollLeft = newIndex * imageWidth;
   };
 
-  const setSlide = (index) => {
-    setCurrentIndex(index);
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // scroll-fast
+    carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
-    <div id="default-carousel" className="relative w-full" data-carousel="slide">
-      <div className="bg-gray-dark relative h-56 overflow-hidden rounded-lg md:h-96">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute duration-700 ease-in-out w-full h-full ${index === currentIndex ? 'block' : 'hidden'}`}
-            data-carousel-item
-          >
-            <img
-              src={image}
-              className="absolute block w-[768px] h-[411px] object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-              alt={`Slide ${index + 1}`}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
-            aria-current={index === currentIndex}
-            aria-label={`Slide ${index + 1}`}
-            onClick={() => setSlide(index)}
-          ></button>
-        ))}
+    <div className="relative flex flex-col bg-gray-dark m-auto p-auto">
+      <div
+        className="flex overflow-x-scroll pb-20 pt-20 hide-scroll-bar no-select"
+        ref={carouselRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        style={{ cursor: 'default', overflowX: 'hidden' }}
+      >
+        <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+          {images.map((image, index) => (
+            <div className="inline-block px-3" key={index}>
+              <div
+                className={`w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out ${
+                  index === currentImageIndex ? 'border-4 border-blue-500' : ''
+                }`}
+              >
+                <img src={image} alt={`Image ${index}`} className="w-full h-full object-cover" />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <button
         type="button"
@@ -84,9 +123,9 @@ const ImageCarousel = () => {
         onClick={nextSlide}
         data-carousel-next
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-[#FF6347] dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
           <svg
-            className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            className="w-4 h-4 text-gray-dark dark:text-gray-800 rtl:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
