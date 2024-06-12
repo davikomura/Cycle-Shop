@@ -80,16 +80,26 @@ const ImageCarousel = () => {
       >
         <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
           {images.map((image, index) => (
-            <div className="inline-block px-3" key={index}>
+            <div className="inline-block px-3 relative" key={index}>
               <div
                 className={`w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out ${
                   index === currentImageIndex ? 'border-4 border-blue-500' : ''
                 }`}
               >
                 <img src={image} alt={`Image ${index}`} className="w-full h-full object-cover" />
+                <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-3xl font-bold">
+                  <div className="text-white">{Object.keys(imagesDictionary).find(key => imagesDictionary[key] === image)}</div>
+                </div>
+                <div className="absolute left-0 right-0 bottom-5 flex flex-col justify-center items-center">
+                  <button className="text-black bg-white hover:bg-[#FF6347] text-white font-bold py-2 px-8 rounded-lg">
+                    Ver Produtos
+                  </button>
+                </div>
               </div>
             </div>
           ))}
+
+
         </div>
       </div>
       <button
