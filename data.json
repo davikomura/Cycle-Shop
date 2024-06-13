@@ -196,5 +196,40 @@
             "descricao": "The CommuterEase 350 is a comfortable and practical bike, perfect for daily commutes around the city. With its sleek design and useful accessories, it is ideal for those seeking comfort and style.",
             "tipo": "Trekking"
         }
+    ],
+
+    "Categorias": [
+        {
+            "tipo": "E-Bike",
+            "imagem": "img/Categorias/e-bike.png"
+        },
+        {
+            "tipo": "Trekking",
+            "imagem": "img/Categorias/Trekking.png"
+        },
+        {
+            "tipo": "Mountain Bike",
+            "imagem": "img/Categorias/mountain_bike.png"
+        },
+        {
+            "tipo": "Road Bike",
+            "imagem": "img/Categorias/road_bike.png"
+        },
+        {
+            "tipo": "Kids",
+            "imagem": ""
+        },
+        {
+            "tipo": "Pneus",
+            "imagem": ""
+        },
+        {
+            "tipo": "Vestuarios",
+            "imagem": ""
+        },
+        {
+            "tipo": "Acessorios",
+            "imagem": ""
+        }
     ]
 }

@@ -91,7 +91,7 @@ const ImageCarousel = () => {
                   <div className="text-white">{Object.keys(imagesDictionary).find(key => imagesDictionary[key] === image)}</div>
                 </div>
                 <div className="absolute left-0 right-0 bottom-5 flex flex-col justify-center items-center">
-                  <button className="text-black bg-white hover:bg-[#FF6347] text-white font-bold py-2 px-8 rounded-lg">
+                  <button className="text-black bg-white hover:bg-[#FF6347] font-bold py-2 px-8 rounded-lg">
                     Ver Produtos
                   </button>
                 </div>
