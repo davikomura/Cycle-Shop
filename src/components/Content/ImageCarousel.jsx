@@ -1,26 +1,5 @@
-import React, { useState, useRef } from 'react';
-
-const images = [
-  'https://assets.specialized.com/i/specialized/NavigationalTiles_Bikes_1200x1200_02?$scom-navigation-tile$&fmt=auto',
-  'https://www.bike-components.de/assets/a/c4390dd0b99e79b1b5df3db693fd79be.avif',
-  'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg',
-  'https://www.bike-components.de/assets/a/d90551726fba50537f5d83661bf9c95b.avif',
-  'https://www.bike-components.de/assets/a/85bc8195a0f83a7aa729e612e8d71c95.avif',
-  'https://example.com/image6.jpg',
-  'https://example.com/image7.jpg',
-  'https://example.com/image8.jpg',
-];
-
-const imagesDictionary = {
-  'E-Bike': 'https://assets.specialized.com/i/specialized/NavigationalTiles_Bikes_1200x1200_02?$scom-navigation-tile$&fmt=auto',
-  'Mountain Bike': 'https://www.bike-components.de/assets/a/c4390dd0b99e79b1b5df3db693fd79be.avif',
-  'Road Bike': 'https://oggibikes.com.br/wp-content/uploads/2024/02/010_oggi_digital_banner_home_site_janeiro.jpg',
-  'Trekking': 'https://www.bike-components.de/assets/a/d90551726fba50537f5d83661bf9c95b.avif',
-  'Kids': 'https://www.bike-components.de/assets/a/85bc8195a0f83a7aa729e612e8d71c95.avif',
-  'Pneus': 'https://example.com/image6.jpg',
-  'Vestuarios': 'https://example.com/image7.jpg',
-  'Acessorios': 'https://example.com/image8.jpg',
-};
+import React, { useState, useRef, useEffect } from 'react';
+import data from '/data.json';
 
 const ImageCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -29,19 +8,24 @@ const ImageCarousel = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef(null);
 
+  const categorias = data.Categorias.map(categoria => ({
+    name: categoria.tipo,
+    image: categoria.imagem
+  }));
+
   const prevSlide = () => {
-    const newIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+    const newIndex = currentImageIndex === 0 ? categorias.length - 1 : currentImageIndex - 1;
     setCurrentImageIndex(newIndex);
     const carousel = carouselRef.current;
-    const imageWidth = carousel.scrollWidth / images.length;
+    const imageWidth = carousel.scrollWidth / categorias.length;
     carousel.scrollLeft = newIndex * imageWidth;
   };
 
   const nextSlide = () => {
-    const newIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+    const newIndex = currentImageIndex === categorias.length - 1 ? 0 : currentImageIndex + 1;
     setCurrentImageIndex(newIndex);
     const carousel = carouselRef.current;
-    const imageWidth = carousel.scrollWidth / images.length;
+    const imageWidth = carousel.scrollWidth / categorias.length;
     carousel.scrollLeft = newIndex * imageWidth;
   };
 
@@ -79,16 +63,16 @@ const ImageCarousel = () => {
         style={{ cursor: 'default', overflowX: 'hidden' }}
       >
         <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
-          {images.map((image, index) => (
+          {categorias.map((categoria, index) => (
             <div className="inline-block px-3 relative" key={index}>
               <div
                 className={`w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out ${
                   index === currentImageIndex ? 'border-4 border-blue-500' : ''
                 }`}
               >
-                <img src={image} alt={`Image ${index}`} className="w-full h-full object-cover" />
+                <img src={categoria.image} alt={categoria.name} className="w-full h-full object-cover" />
                 <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-3xl font-bold">
-                  <div className="text-white">{Object.keys(imagesDictionary).find(key => imagesDictionary[key] === image)}</div>
+                  <div className="text-white">{categoria.name}</div>
                 </div>
                 <div className="absolute left-0 right-0 bottom-5 flex flex-col justify-center items-center">
                   <button className="text-black bg-white hover:bg-[#FF6347] font-bold py-2 px-8 rounded-lg">
@@ -98,8 +82,6 @@ const ImageCarousel = () => {
               </div>
             </div>
           ))}
-
-
         </div>
       </div>
       <button
