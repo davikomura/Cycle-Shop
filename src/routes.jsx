@@ -1,7 +1,8 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
-import { MainPage } from './components/Pages/MainPage.jsx';
+import { MainPage } from './Pages/MainPage.jsx';
+import { MountainBike } from './Pages/MountainBike.jsx';
 
 const routes = [
   
@@ -12,6 +13,10 @@ const routes = [
       {
         path: "/",
         element: <MainPage />,
+      },
+      {
+        path: "/Mountain-Bike",
+        element: <MountainBike />,
       },
     ],
   }

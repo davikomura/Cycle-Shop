@@ -42,7 +42,7 @@ const Header = () => {
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                         className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>E-Bike</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Mountain Bike</a></li>
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'><Link to="/Mountain-Bike">Mountain Bike</Link></a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                         className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Road Bike</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'

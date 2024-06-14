@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import dona from "../../assets/bike.png";
-import bikesData from "/data.json"; // Importe os dados das bicicletas
-import ImageCarousel from '../Content/ImageCarousel';
+import dona from "../assets/bike.png";
+import bikesData from "/data.json";
+import ImageCarousel from '../components/Content/ImageCarousel';
 
 export const MainPage = () => {
   // Pegue as 4 primeiras bicicletas

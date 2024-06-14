@@ -195,6 +195,76 @@
             "imagem": "",
             "descricao": "The CommuterEase 350 is a comfortable and practical bike, perfect for daily commutes around the city. With its sleek design and useful accessories, it is ideal for those seeking comfort and style.",
             "tipo": "Trekking"
+        },
+        {
+            "nome": "MiniRider 100",
+            "preco": 200,
+            "imagem": "img/Bikes/MiniRider100.jpg",
+            "descricao": "A perfect beginner bike for young riders, featuring training wheels and a sturdy frame to ensure safety and fun.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "KidCruiser 50",
+            "preco": 180,
+            "imagem": "img/Bikes/KidCruiser50.jpg",
+            "descricao": "A stylish and comfortable bike for kids, designed with bright colors and a soft seat to make riding enjoyable.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "JuniorSpeedster 200",
+            "preco": 220,
+            "imagem": "img/Bikes/JuniorSpeedster200.jpg",
+            "descricao": "A sporty bike for young adventurers, offering a lightweight frame and easy-to-use gears for a fun riding experience.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "LilMountain 150",
+            "preco": 250,
+            "imagem": "img/Bikes/LilMountain150.jpg",
+            "descricao": "A miniature mountain bike designed for kids, with durable tires and a robust frame for off-road fun.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "TinyTourer 75",
+            "preco": 210,
+            "imagem": "img/Bikes/TinyTourer75.jpg",
+            "descricao": "A comfortable touring bike for kids, perfect for longer rides with family. Features a cushioned seat and easy pedaling.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "EcoKid 50",
+            "preco": 190,
+            "imagem": "img/Bikes/EcoKid50.jpg",
+            "descricao": "An eco-friendly bike for children, made with sustainable materials and designed for safe, everyday use.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "YoungRider 300",
+            "preco": 230,
+            "imagem": "img/Bikes/YoungRider300.jpg",
+            "descricao": "A versatile bike for older kids, offering multiple gears and a comfortable riding position for various terrains.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "KidExplorer 80",
+            "preco": 240,
+            "imagem": "img/Bikes/KidExplorer80.jpg",
+            "descricao": "An adventurous bike for young explorers, featuring durable construction and vibrant colors to inspire fun rides.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "JuniorRacer 150",
+            "preco": 260,
+            "imagem": "img/Bikes/JuniorRacer150.jpg",
+            "descricao": "A high-speed bike for kids who love racing, with a lightweight frame and performance-focused design.",
+            "tipo": "Kids"
+        },
+        {
+            "nome": "Playtime Rider 60",
+            "preco": 170,
+            "imagem": "img/Bikes/PlaytimeRider60.jpg",
+            "descricao": "A playful and colorful bike for young children, equipped with safety features and a comfortable ride.",
+            "tipo": "Kids"
         }
     ],
 
