@@ -287,19 +287,19 @@
         },
         {
             "tipo": "Kids",
-            "imagem": ""
+            "imagem": "img/Categorias/kids_bike.png"
         },
         {
             "tipo": "Pneus",
-            "imagem": ""
+            "imagem": "img/Categorias/pneu_bike.png"
         },
         {
             "tipo": "Vestuarios",
-            "imagem": ""
+            "imagem": "img/Categorias/clothing_bike.png"
         },
         {
             "tipo": "Acessorios",
-            "imagem": ""
+            "imagem": "img/Categorias/accessories_bike.png"
         }
     ]
 }

@@ -40,15 +40,15 @@ const Header = () => {
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                         className='text-[#FF6347] hover:text-[#FF6347] text-[15px] block font-semibold'>SPECIAL OFFERS</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>E-Bike</a></li>
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'><Link to="/E-Bike">E-Bike</Link></a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                         className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'><Link to="/Mountain-Bike">Mountain Bike</Link></a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Road Bike</a></li>
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'><Link to="/Road-Bike">Road Bike</Link></a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Trekking</a></li>
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'><Link to="/Trekking">Trekking</Link></a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'>Kids</a></li>
+                        className='text-[#FFFFFF] hover:text-[#FF6347] text-[15px] block font-semibold'><Link to="/Kids">Kids</Link></a></li>
                     </ul>
                 </div>
             
