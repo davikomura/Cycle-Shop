@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import data from '/data.json';
 
 const ImageCarousel = () => {
@@ -76,7 +77,11 @@ const ImageCarousel = () => {
                 </div>
                 <div className="absolute left-0 right-0 bottom-5 flex flex-col justify-center items-center">
                   <button className="text-black bg-white hover:bg-[#FF6347] font-bold py-2 px-8 rounded-lg">
+                  <Link
+                    to={`/${categoria.name.replace(/\s+/g, '-')}`} // Gera a rota a partir do nome da categoria
+                  >
                     Ver Produtos
+                  </Link>
                   </button>
                 </div>
               </div>
