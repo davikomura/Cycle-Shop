@@ -1,6 +1,7 @@
 {
     "bikes": [
         {
+            "id": 1,
             "nome": "EcoRider 3000",
             "preco": 750,
             "imagem": "img/Bikes/EcoRider3000.jpg",
@@ -8,6 +9,7 @@
             "tipo": "E-Bike"
         },
         {
+            "id": 2,
             "nome": "UrbanCycler",
             "preco": 550,
             "imagem": "img/Bikes/UrbanCycler.jpg",
@@ -15,6 +17,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 3,
             "nome": "MountainMaster Pro",
             "preco": 600,
             "imagem": "img/Bikes/MountainMasterPro.jpg",
@@ -22,6 +25,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 4,
             "nome": "SpeedyTourer X",
             "preco": 600,
             "imagem": "img/Bikes/SpeedyTourerX.png",
@@ -29,6 +33,7 @@
             "tipo": "Road Bike"
         },
         {
+            "id": 5,
             "nome": "ComfyCruiser",
             "preco": 600,
             "imagem": "img/Bikes/ComfyCruiser.jpg",
@@ -36,6 +41,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 6,
             "nome": "CityCommuter 500",
             "preco": 600,
             "imagem": "",
@@ -43,6 +49,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 7,
             "nome": "TrailBlazer 2000",
             "preco": 1100,
             "imagem": "",
@@ -50,6 +57,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 8,
             "nome": "EcoRide 100",
             "preco": 400,
             "imagem": "",
@@ -57,6 +65,7 @@
             "tipo": "E-Bike"
         },
         {
+            "id": 9,
             "nome": "UrbanExplorer 700",
             "preco": 800,
             "imagem": "",
@@ -64,6 +73,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 10,
             "nome": "MountainHawk XT",
             "preco": 1400,
             "imagem": "",
@@ -71,6 +81,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 11,
             "nome": "Speedster 1000",
             "preco": 850,
             "imagem": "",
@@ -78,6 +89,7 @@
             "tipo": "Road Bike"
         },
         {
+            "id": 12,
             "nome": "CommuterCruise 300",
             "preco": 480,
             "imagem": "",
@@ -85,6 +97,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 13,
             "nome": "AllTerrain Pro",
             "preco": 1600,
             "imagem": "",
@@ -92,6 +105,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 14,
             "nome": "RapidRider 800",
             "preco": 720,
             "imagem": "",
@@ -99,6 +113,7 @@
             "tipo": "Road Bike"
         },
         {
+            "id": 15,
             "nome": "CityCruise 400",
             "preco": 550,
             "imagem": "",
@@ -106,6 +121,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 16,
             "nome": "TrailRover 1500",
             "preco": 1250,
             "imagem": "",
@@ -113,6 +129,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 17,
             "nome": "EcoCycle 50",
             "preco": 300,
             "imagem": "",
@@ -120,6 +137,7 @@
             "tipo": "E-Bike"
         },
         {
+            "id": 18,
             "nome": "UrbanRider 600",
             "preco": 700,
             "imagem": "",
@@ -127,6 +145,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 19,
             "nome": "MountainChamp X",
             "preco": 1350,
             "imagem": "",
@@ -134,6 +153,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 20,
             "nome": "SpeedyRacer 1200",
             "preco": 950,
             "imagem": "",
@@ -141,6 +161,7 @@
             "tipo": "Road Bike"
         },
         {
+            "id": 21,
             "nome": "ComfyCruise 250",
             "preco": 420,
             "imagem": "",
@@ -148,6 +169,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 22,
             "nome": "CityGlider 450",
             "preco": 580,
             "imagem": "",
@@ -155,6 +177,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 23,
             "nome": "TrailMaster 1800",
             "preco": 1450,
             "imagem": "",
@@ -162,6 +185,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 24,
             "nome": "EcoRide 75",
             "preco": 350,
             "imagem": "",
@@ -169,6 +193,7 @@
             "tipo": "E-Bike"
         },
         {
+            "id": 25,
             "nome": "UrbanVoyager 800",
             "preco": 750,
             "imagem": "",
@@ -176,6 +201,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 26,
             "nome": "MountainHero XT",
             "preco": 1550,
             "imagem": "",
@@ -183,6 +209,7 @@
             "tipo": "Mountain Bike"
         },
         {
+            "id": 27,
             "nome": "SpeedKing 1500",
             "preco": 1050,
             "imagem": "",
@@ -190,6 +217,7 @@
             "tipo": "Road Bike"
         },
         {
+            "id": 28,
             "nome": "CommuterEase 350",
             "preco": 450,
             "imagem": "",
@@ -197,6 +225,7 @@
             "tipo": "Trekking"
         },
         {
+            "id": 29,
             "nome": "MiniRider 100",
             "preco": 200,
             "imagem": "img/Bikes/MiniRider100.jpg",
@@ -204,6 +233,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 30,
             "nome": "KidCruiser 50",
             "preco": 180,
             "imagem": "img/Bikes/KidCruiser50.jpg",
@@ -211,6 +241,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 31,
             "nome": "JuniorSpeedster 200",
             "preco": 220,
             "imagem": "img/Bikes/JuniorSpeedster200.jpg",
@@ -218,6 +249,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 32,
             "nome": "LilMountain 150",
             "preco": 250,
             "imagem": "img/Bikes/LilMountain150.jpg",
@@ -225,6 +257,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 33,
             "nome": "TinyTourer 75",
             "preco": 210,
             "imagem": "img/Bikes/TinyTourer75.jpg",
@@ -232,6 +265,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 34,
             "nome": "EcoKid 50",
             "preco": 190,
             "imagem": "img/Bikes/EcoKid50.jpg",
@@ -239,6 +273,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 35,
             "nome": "YoungRider 300",
             "preco": 230,
             "imagem": "img/Bikes/YoungRider300.jpg",
@@ -246,6 +281,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 36,
             "nome": "KidExplorer 80",
             "preco": 240,
             "imagem": "img/Bikes/KidExplorer80.jpg",
@@ -253,6 +289,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 37,
             "nome": "JuniorRacer 150",
             "preco": 260,
             "imagem": "img/Bikes/JuniorRacer150.jpg",
@@ -260,6 +297,7 @@
             "tipo": "Kids"
         },
         {
+            "id": 38,
             "nome": "Playtime Rider 60",
             "preco": 170,
             "imagem": "img/Bikes/PlaytimeRider60.jpg",
@@ -301,5 +339,184 @@
             "tipo": "Acessorios",
             "imagem": "img/Categorias/accessories_bike.png"
         }
+    ],
+
+    "avaliacoes" : [
+        {
+            "id_bicicleta": 1,
+            "nota": 4,
+            "comentario": "Ótima bike para o dia a dia. Muito confortável e sustentável."
+        },
+        {
+            "id_bicicleta": 1,
+            "nota": 5,
+            "comentario": "Adorei o design e a eficiência da EcoRider 3000!"
+        },
+        {
+            "id_bicicleta": 2,
+            "nota": 3,
+            "comentario": "Boa bike, mas poderia ser mais leve."
+        },
+        {
+            "id_bicicleta": 2,
+            "nota": 4,
+            "comentario": "Prática e estilosa, ideal para a cidade."
+        },
+        {
+            "id_bicicleta": 3,
+            "nota": 5,
+            "comentario": "Excelente para trilhas. Recomendo!"
+        },
+        {
+            "id_bicicleta": 3,
+            "nota": 4,
+            "comentario": "Muito boa para terrenos difíceis."
+        },
+        {
+            "id_bicicleta": 4,
+            "nota": 4,
+            "comentario": "Bike rápida e confortável para longas distâncias."
+        },
+        {
+            "id_bicicleta": 5,
+            "nota": 3,
+            "comentario": "Confortável, mas esperava mais acessórios."
+        },
+        {
+            "id_bicicleta": 5,
+            "nota": 4,
+            "comentario": "Ótima para passeios na cidade."
+        },
+        {
+            "id_bicicleta": 6,
+            "nota": 4,
+            "comentario": "Boa qualidade, ideal para o dia a dia."
+        },
+        {
+            "id_bicicleta": 7,
+            "nota": 5,
+            "comentario": "Perfeita para trilhas! Muito resistente."
+        },
+        {
+            "id_bicicleta": 8,
+            "nota": 4,
+            "comentario": "Econômica e sustentável, cumpre o que promete."
+        },
+        {
+            "id_bicicleta": 9,
+            "nota": 4,
+            "comentario": "Muito confortável para explorar a cidade."
+        },
+        {
+            "id_bicicleta": 10,
+            "nota": 5,
+            "comentario": "Excelente desempenho em trilhas difíceis."
+        }
+    ],
+
+    "vendas" : [
+        {
+            "id": 1,
+            "nome": "EcoRider 3000",
+            "total_vendas": 120
+        },
+        {
+            "id": 2,
+            "nome": "UrbanCycler",
+            "total_vendas": 95
+        },
+        {
+            "id": 3,
+            "nome": "MountainMaster Pro",
+            "total_vendas": 80
+        },
+        {
+            "id": 4,
+            "nome": "SpeedyTourer X",
+            "total_vendas": 70
+        },
+        {
+            "id": 5,
+            "nome": "ComfyCruiser",
+            "total_vendas": 65
+        },
+        {
+            "id": 6,
+            "nome": "CityCommuter 500",
+            "total_vendas": 60
+        },
+        {
+            "id": 7,
+            "nome": "TrailBlazer 2000",
+            "total_vendas": 50
+        },
+        {
+            "id": 8,
+            "nome": "EcoRide 100",
+            "total_vendas": 45
+        },
+        {
+            "id": 9,
+            "nome": "UrbanExplorer 700",
+            "total_vendas": 40
+        },
+        {
+            "id": 10,
+            "nome": "MountainHawk XT",
+            "total_vendas": 35
+        },
+        {
+            "id": 11,
+            "nome": "Speedster 1000",
+            "total_vendas": 30
+        },
+        {
+            "id": 12,
+            "nome": "CommuterCruise 300",
+            "total_vendas": 25
+        },
+        {
+            "id": 13,
+            "nome": "AllTerrain Pro",
+            "total_vendas": 20
+        },
+        {
+            "id": 14,
+            "nome": "RapidRider 800",
+            "total_vendas": 15
+        },
+        {
+            "id": 15,
+            "nome": "CityCruise 400",
+            "total_vendas": 10
+        },
+        {
+            "id": 16,
+            "nome": "TrailRover 1500",
+            "total_vendas": 8
+        },
+        {
+            "id": 17,
+            "nome": "EcoCycle 50",
+            "total_vendas": 5
+        },
+        {
+            "id": 18,
+            "nome": "UrbanRider 600",
+            "total_vendas": 3
+        },
+        {
+            "id": 19,
+            "nome": "MountainChamp X",
+            "total_vendas": 2
+        },
+        {
+            "id": 20,
+            "nome": "SpeedyRacer 1200",
+            "total_vendas": 1
+        }
     ]
+    
+    
+    
 }
