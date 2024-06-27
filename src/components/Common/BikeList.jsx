@@ -17,7 +17,11 @@ const BikeList = ({ tipo }) => {
     let sortedBikes;
     switch (criteria) {
       case 'Mais Vendidos':
-        sortedBikes = [...bikes].sort((a, b) => b.vendidos - a.vendidos);
+        sortedBikes = [...bikes].sort((a, b) => {
+          const salesA = salesData.find(sale => sale.nome === a.nome)?.total_vendas || 0;
+          const salesB = salesData.find(sale => sale.nome === b.nome)?.total_vendas || 0;
+          return salesB - salesA;
+        });
         break;
       case 'Melhor Avaliados':
         sortedBikes = [...bikes].sort((a, b) => b.avaliacao - a.avaliacao);

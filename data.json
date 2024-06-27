@@ -498,7 +498,7 @@
         {
             "id": 17,
             "nome": "EcoCycle 50",
-            "total_vendas": 5
+            "total_vendas": 500
         },
         {
             "id": 18,
@@ -516,7 +516,4 @@
             "total_vendas": 1
         }
     ]
-    
-    
-    
 }
