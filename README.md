@@ -1,36 +1,36 @@
 # Bike Store Website
 
-Este é um projeto de website para uma loja de bicicletas, desenvolvido utilizando React, JavaScript e Tailwind CSS.
+This is a website project for a bike shop, developed using React, JavaScript, and Tailwind CSS.
 
-## Funcionalidades
+## Features
 
-- **Páginas de Produtos**: Apresenta uma variedade de bicicletas disponíveis para venda, com detalhes sobre cada produto.
-- **Filtros de Busca**: Permite aos usuários filtrar bicicletas por tipo, marca, preço, etc., para facilitar a navegação.
-- **Carrinho de Compras**: Permite aos usuários adicionar bicicletas ao carrinho e proceder para o checkout.
-- **Sistema de Pagamento**: Integração com um sistema de pagamento para processar transações de compra.
-- **Gerenciamento de Estoque**: Interface para gerenciar o estoque de bicicletas disponíveis.
+- **Product Pages**: Displays a variety of bikes available for sale, with details on each product.
+- **Search Filters**: Allows users to filter bikes by type, brand, price, etc., to facilitate navigation.
+- **Shopping Cart**: Lets users add bikes to the cart and proceed to checkout.
+- **Payment System**: Integration with a payment system to process purchase transactions.
+- **Inventory Management**: Interface for managing the available bike inventory.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **JavaScript**: Linguagem de programação utilizada para a lógica do aplicativo.
-- **Tailwind CSS**: Framework CSS utilizado para estilização do website.
+- **React**: JavaScript library for building user interfaces.
+- **JavaScript**: Programming language used for application logic.
+- **Tailwind CSS**: CSS framework used for styling the website.
 
-## Como Executar o Projeto
+## How to Run the Project
 
-1. Clone este repositório: `git clone https://github.com/davikomura/Cycle-Shop.git`
-2. Instale as dependências: `npm install`
-3. Execute o aplicativo: `npm start`
-4. Acesse o website em: `http://localhost:3000`
+1. Clone this repository: `git clone https://github.com/davikomura/Cycle-Shop.git`
+2. Install the dependencies: `npm install`
+3. Run the application: `npm start`
+4. Access the website at: `http://localhost:3000`
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request com melhorias ou correções de bugs.
+Contributions are welcome! Feel free to submit a pull request with improvements or bug fixes.
 
-## Autor
+## Author
 
-Davi Komura
+Davi Komura de Castro
 
-## Licença
+## License
 
-Este projeto é licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
