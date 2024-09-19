@@ -4,7 +4,7 @@
             "id": 1,
             "nome": "EcoRider 3000",
             "preco": 750,
-            "imagem": "public/img/Bikes/EcoRider3000.jpg",
+            "imagem": "img/Bikes/EcoRider3000.jpg",
             "descricao": "An eco-friendly urban bike, ideal for daily commutes around the city. It features a modern, comfortable, and sustainable design, with recyclable materials and a low carbon footprint.",
             "tipo": "E-Bike"
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "nome": "UrbanCycler",
             "preco": 550,
-            "imagem": "public/img/Bikes/UrbanCycler.jpg",
+            "imagem": "img/Bikes/UrbanCycler.jpg",
             "descricao": "The perfect bike for those seeking practicality and style in the city. Lightweight and agile, it is ideal for urban routes, whether for commuting to work or a park ride.",
             "tipo": "Trekking"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "nome": "MountainMaster Pro",
             "preco": 600,
-            "imagem": "public/img/Bikes/MountainMasterPro.jpg",
+            "imagem": "img/Bikes/MountainMasterPro.jpg",
             "descricao": "A high-performance mountain bike, designed for mountain biking enthusiasts. With quality components and a sturdy frame, it is perfect for challenging trails.",
             "tipo": "Mountain Bike"
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "nome": "SpeedyTourer X",
             "preco": 600,
-            "imagem": "public/img/Bikes/SpeedyTourerX.png",
+            "imagem": "img/Bikes/SpeedyTourerX.png",
             "descricao": "A fast and versatile touring bike, perfect for long journeys. With a lightweight and aerodynamic frame, it is ideal for those seeking comfort and performance on their cycling adventures.",
             "tipo": "Road Bike"
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "nome": "ComfyCruiser",
             "preco": 600,
-            "imagem": "public/img/Bikes/ComfyCruiser.jpg",
+            "imagem": "img/Bikes/ComfyCruiser.jpg",
             "descricao": "A stylish and comfortable cruiser bike, perfect for relaxed city rides. With a classic design and a soft seat, it provides a relaxing and enjoyable riding experience.",
             "tipo": "Trekking"
         },
@@ -228,7 +228,7 @@
             "id": 29,
             "nome": "MiniRider 100",
             "preco": 200,
-            "imagem": "public/img/Bikes/MiniRider100.jpg",
+            "imagem": "img/Bikes/MiniRider100.jpg",
             "descricao": "A perfect beginner bike for young riders, featuring training wheels and a sturdy frame to ensure safety and fun.",
             "tipo": "Kids"
         },
@@ -236,7 +236,7 @@
             "id": 30,
             "nome": "KidCruiser 50",
             "preco": 180,
-            "imagem": "public/img/Bikes/KidCruiser50.jpg",
+            "imagem": "img/Bikes/KidCruiser50.jpg",
             "descricao": "A stylish and comfortable bike for kids, designed with bright colors and a soft seat to make riding enjoyable.",
             "tipo": "Kids"
         },
@@ -244,7 +244,7 @@
             "id": 31,
             "nome": "JuniorSpeedster 200",
             "preco": 220,
-            "imagem": "public/img/Bikes/JuniorSpeedster200.jpg",
+            "imagem": "img/Bikes/JuniorSpeedster200.jpg",
             "descricao": "A sporty bike for young adventurers, offering a lightweight frame and easy-to-use gears for a fun riding experience.",
             "tipo": "Kids"
         },
@@ -252,7 +252,7 @@
             "id": 32,
             "nome": "LilMountain 150",
             "preco": 250,
-            "imagem": "public/img/Bikes/LilMountain150.jpg",
+            "imagem": "img/Bikes/LilMountain150.jpg",
             "descricao": "A miniature mountain bike designed for kids, with durable tires and a robust frame for off-road fun.",
             "tipo": "Kids"
         },
@@ -260,7 +260,7 @@
             "id": 33,
             "nome": "TinyTourer 75",
             "preco": 210,
-            "imagem": "public/img/Bikes/TinyTourer75.jpg",
+            "imagem": "img/Bikes/TinyTourer75.jpg",
             "descricao": "A comfortable touring bike for kids, perfect for longer rides with family. Features a cushioned seat and easy pedaling.",
             "tipo": "Kids"
         },
@@ -268,7 +268,7 @@
             "id": 34,
             "nome": "EcoKid 50",
             "preco": 190,
-            "imagem": "public/img/Bikes/EcoKid50.jpg",
+            "imagem": "img/Bikes/EcoKid50.jpg",
             "descricao": "An eco-friendly bike for children, made with sustainable materials and designed for safe, everyday use.",
             "tipo": "Kids"
         },
@@ -276,7 +276,7 @@
             "id": 35,
             "nome": "YoungRider 300",
             "preco": 230,
-            "imagem": "public/img/Bikes/YoungRider300.jpg",
+            "imagem": "img/Bikes/YoungRider300.jpg",
             "descricao": "A versatile bike for older kids, offering multiple gears and a comfortable riding position for various terrains.",
             "tipo": "Kids"
         },
@@ -284,7 +284,7 @@
             "id": 36,
             "nome": "KidExplorer 80",
             "preco": 240,
-            "imagem": "public/img/Bikes/KidExplorer80.jpg",
+            "imagem": "img/Bikes/KidExplorer80.jpg",
             "descricao": "An adventurous bike for young explorers, featuring durable construction and vibrant colors to inspire fun rides.",
             "tipo": "Kids"
         },
@@ -292,7 +292,7 @@
             "id": 37,
             "nome": "JuniorRacer 150",
             "preco": 260,
-            "imagem": "public/img/Bikes/JuniorRacer150.jpg",
+            "imagem": "img/Bikes/JuniorRacer150.jpg",
             "descricao": "A high-speed bike for kids who love racing, with a lightweight frame and performance-focused design.",
             "tipo": "Kids"
         },
@@ -300,7 +300,7 @@
             "id": 38,
             "nome": "Playtime Rider 60",
             "preco": 170,
-            "imagem": "public/img/Bikes/PlaytimeRider60.jpg",
+            "imagem": "img/Bikes/PlaytimeRider60.jpg",
             "descricao": "A playful and colorful bike for young children, equipped with safety features and a comfortable ride.",
             "tipo": "Kids"
         }
@@ -309,35 +309,35 @@
     "Categorias": [
         {
             "tipo": "E-Bike",
-            "imagem": "public/img/Categorias/e-bike.png"
+            "imagem": "img/Categorias/e-bike.png"
         },
         {
             "tipo": "Trekking",
-            "imagem": "public/img/Categorias/Trekking.png"
+            "imagem": "img/Categorias/Trekking.png"
         },
         {
             "tipo": "Mountain Bike",
-            "imagem": "public/img/Categorias/mountain_bike.png"
+            "imagem": "img/Categorias/mountain_bike.png"
         },
         {
             "tipo": "Road Bike",
-            "imagem": "public/img/Categorias/road_bike.png"
+            "imagem": "img/Categorias/road_bike.png"
         },
         {
             "tipo": "Kids",
-            "imagem": "public/img/Categorias/kids_bike.png"
+            "imagem": "img/Categorias/kids_bike.png"
         },
         {
             "tipo": "Pneus",
-            "imagem": "public/img/Categorias/pneu_bike.png"
+            "imagem": "img/Categorias/pneu_bike.png"
         },
         {
             "tipo": "Vestuarios",
-            "imagem": "public/img/Categorias/clothing_bike.png"
+            "imagem": "img/Categorias/clothing_bike.png"
         },
         {
             "tipo": "Acessorios",
-            "imagem": "public/img/Categorias/accessories_bike.png"
+            "imagem": "img/Categorias/accessories_bike.png"
         }
     ],
 
