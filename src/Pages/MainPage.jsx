@@ -4,13 +4,10 @@ import bikesData from "/data.json";
 import ImageCarousel from '../components/Content/ImageCarousel';
 
 export const MainPage = () => {
-  // Pegue as 4 primeiras bicicletas
   const featuredBikes = bikesData.bikes.slice(0, 4);
 
   return (
     <>
-      {/* <ImageCarousel /> */}
-
       <section className="pt-10 overflow-hidden bg-gray-dark dark:bg-gray-800 md:pt-0 sm:pt-16 2xl:pt-16">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2">

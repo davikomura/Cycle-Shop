@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo_dk_cycle_shop.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return(
@@ -37,7 +38,7 @@ const Footer = () => {
                     <h2 class="text-white text-lg font-bold mb-4">Company</h2>
                     <ul class="space-y-3">
                         <li>
-                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all">About</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all"><Link to="/About">About</Link></a>
                         </li>
                         <li>
                         <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all">Privacy Policy</a>

@@ -7,6 +7,7 @@ import { Ebike } from './Pages/Ebike.jsx';
 import { RoadBike } from './Pages/RoadBike.jsx';
 import { Trekking } from './Pages/Trekking.jsx';
 import { Kids } from './Pages/Kids.jsx';
+import { About } from './Pages/About.jsx';
 
 const routes = [
   
@@ -37,6 +38,10 @@ const routes = [
       {
         path: "/Kids",
         element: <Kids />,
+      },
+      {
+        path: "/About",
+        element: <About />,
       },
     ],
   }
