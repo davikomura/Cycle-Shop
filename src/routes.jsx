@@ -8,6 +8,7 @@ import { RoadBike } from './Pages/RoadBike.jsx';
 import { Trekking } from './Pages/Trekking.jsx';
 import { Kids } from './Pages/Kids.jsx';
 import { About } from './Pages/About.jsx';
+import { PrivacyPolicy } from './Pages/PrivacyPolicy.jsx';
 
 const routes = [
   
@@ -42,6 +43,10 @@ const routes = [
       {
         path: "/About",
         element: <About />,
+      },
+      {
+        path: "/PrivacyPolicy",
+        element: <PrivacyPolicy />,
       },
     ],
   }

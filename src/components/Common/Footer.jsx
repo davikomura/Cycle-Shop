@@ -41,7 +41,7 @@ const Footer = () => {
                         <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all"><Link to="/About">About</Link></a>
                         </li>
                         <li>
-                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all">Privacy Policy</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all"><Link to="/PrivacyPolicy">Privacy Policy</Link></a>
                         </li>
                         <li>
                         <a href="javascript:void(0)" class="text-gray-400 hover:text-white text-base transition-all">Terms &amp; Conditions</a>
