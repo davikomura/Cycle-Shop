@@ -3,6 +3,11 @@ import logo from "../../assets/logo_dk_cycle_shop.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+      };
+
     return(
         <footer className="bg-gray-dark py-12 px-16 font-[sans-serif]">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -38,10 +43,10 @@ const Footer = () => {
                     <h2 className="text-white text-lg font-bold mb-4">Company</h2>
                     <ul className="space-y-3">
                         <li>
-                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/About">About</Link></a>
+                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/About" onClick={scrollToTop}>About</Link></a>
                         </li>
                         <li>
-                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/PrivacyPolicy">Privacy Policy</Link></a>
+                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/PrivacyPolicy" onClick={scrollToTop}>Privacy Policy</Link></a>
                         </li>
                         <li>
                         <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all">Terms &amp; Conditions</a>
