@@ -17,7 +17,7 @@ export const About = () => {
                 </p>
             </div>
             <div className="w-full lg:w-2/5 flex items-center justify-center">
-                <img className="w-full h-auto object-cover bg-black" src={logo} alt="Logo" />
+                <img className="w-full h-auto object-cover bg-black rounded-2xl" src={logo} alt="Logo" />
             </div>
         </div>
 
@@ -32,7 +32,7 @@ export const About = () => {
 
             <div className="w-full lg:w-7/12 lg:pt-8 flex flex-col justify-center lg:justify-start items-center lg:items-start">
                 <img
-                    className="object-cover lg:object-left"
+                    className="object-cover lg:object-left rounded-md"
                     src={davi1}
                     alt="Davi Img"
                 />
