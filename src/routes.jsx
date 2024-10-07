@@ -9,6 +9,8 @@ import { Trekking } from './Pages/Trekking.jsx';
 import { Kids } from './Pages/Kids.jsx';
 import { About } from './Pages/About.jsx';
 import { PrivacyPolicy } from './Pages/PrivacyPolicy.jsx';
+import { TermsConditions } from './Pages/TermsConditions.jsx';
+import { Faq } from './Pages/Faq.jsx';
 
 const routes = [
   
@@ -47,6 +49,14 @@ const routes = [
       {
         path: "/PrivacyPolicy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "/Terms&Conditions",
+        element: <TermsConditions />,
+      },
+      {
+        path: "/FAQ",
+        element: <Faq />,
       },
     ],
   }

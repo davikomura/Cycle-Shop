@@ -32,7 +32,7 @@ const Footer = () => {
                         <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all">Support</a>
                         </li>
                         <li>
-                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all">FAQ</a>
+                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/FAQ" onClick={scrollToTop}>FAQ</Link></a>
                         </li>
                         <li>
                         <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all">Bike assembly videos</a>
@@ -49,7 +49,7 @@ const Footer = () => {
                         <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/PrivacyPolicy" onClick={scrollToTop}>Privacy Policy</Link></a>
                         </li>
                         <li>
-                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all">Terms &amp; Conditions</a>
+                        <a href="javascript:void(0)" className="text-gray-400 hover:text-white text-base transition-all"><Link to="/terms&Conditions" onClick={scrollToTop}>Terms &amp; Conditions</Link></a>
                         </li>
                     </ul>
                 </div>
