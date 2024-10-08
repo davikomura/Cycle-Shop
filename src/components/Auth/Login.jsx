@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo_dk_cycle_shop.png";
 
 export const Login = () => {
@@ -6,11 +7,13 @@ export const Login = () => {
     <section className="bg-gray-dark dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-4 py-8 mx-auto min-h-screen lg:py-0">
         <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img
-            className="w-28 sm:w-36 h-auto mr-2"
-            src={logo}
-            alt="logo"
-          />
+            <Link to="/">
+                <img
+                    className="w-28 sm:w-36 h-auto mr-2"
+                    src={logo}
+                    alt="logo"
+                />
+            </Link>
         </a>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md lg:max-w-lg xl:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -74,7 +77,9 @@ export const Login = () => {
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{' '}
                 <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                  Sign up
+                    <Link to="/Signup">
+                        Sign up
+                    </Link>
                 </a>
               </p>
             </form>
