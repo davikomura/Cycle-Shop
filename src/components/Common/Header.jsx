@@ -85,7 +85,7 @@ const Header = () => {
                         <span className="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
                     </span>
                     <button className='px-5 py-2 text-sm rounded-full text-white border-2 border-[#FF6347] bg-[#FF6347] hover:bg-[#FF7F50]'>
-                        Sign In
+                        <Link to="/Login">Sign In</Link>
                     </button>
             
                     <button id="toggleOpen" className='lg:hidden' onClick={toggleMenu}>

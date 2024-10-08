@@ -11,6 +11,8 @@ import { About } from './Pages/About.jsx';
 import { PrivacyPolicy } from './Pages/PrivacyPolicy.jsx';
 import { TermsConditions } from './Pages/TermsConditions.jsx';
 import { Faq } from './Pages/Faq.jsx';
+import { Login } from './components/Auth/Login.jsx';
+import { Signup } from './components/Auth/Signup.jsx';
 
 const routes = [
   
@@ -21,6 +23,14 @@ const routes = [
       {
         path: "/",
         element: <MainPage />,
+      },
+      {
+        path: "/Login",
+        element: <Login />,
+      },
+      {
+        path: "/Signup",
+        element: <Signup />,
       },
       {
         path: "/Mountain-Bike",
