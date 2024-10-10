@@ -7,15 +7,15 @@ import { Outlet } from 'react-router-dom';
 function App() {
   const location = useLocation();
 
-  const isLoginPage = location.pathname === '/Login';
+  const isLoginOrSignUpPage = location.pathname === '/Login' || location.pathname === '/Signup';
 
   return (
     <>
-      {!isLoginPage && <Header />}
+      {!isLoginOrSignUpPage && <Header />}
       
       <Outlet />
       
-      {!isLoginPage && <Footer />}
+      {!isLoginOrSignUpPage && <Footer />}
     </>
   );
 }
