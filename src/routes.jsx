@@ -13,6 +13,7 @@ import { TermsConditions } from './Pages/TermsConditions.jsx';
 import { Faq } from './Pages/Faq.jsx';
 import { Login } from './components/Auth/Login.jsx';
 import { Signup } from './components/Auth/Signup.jsx';
+import { Cart } from './components/Cart/Cart.jsx';
 
 const routes = [
   
@@ -31,6 +32,10 @@ const routes = [
       {
         path: "/Signup",
         element: <Signup />,
+      },
+      {
+        path: "/Cart",
+        element: <Cart />,
       },
       {
         path: "/Mountain-Bike",

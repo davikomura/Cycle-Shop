@@ -4,7 +4,7 @@
             "id": 1,
             "nome": "EcoRider 3000",
             "preco": 750,
-            "imagem": "img/Bikes/EcoRider3000.jpg",
+            "imagem": "img/Bikes/EcoRider3000.png",
             "descricao": "An eco-friendly urban bike, ideal for daily commutes around the city. It features a modern, comfortable, and sustainable design, with recyclable materials and a low carbon footprint.",
             "tipo": "E-Bike"
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "nome": "UrbanCycler",
             "preco": 550,
-            "imagem": "img/Bikes/UrbanCycler.jpg",
+            "imagem": "img/Bikes/UrbanCycler.png",
             "descricao": "The perfect bike for those seeking practicality and style in the city. Lightweight and agile, it is ideal for urban routes, whether for commuting to work or a park ride.",
             "tipo": "Trekking"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "nome": "MountainMaster Pro",
             "preco": 600,
-            "imagem": "img/Bikes/MountainMasterPro.jpg",
+            "imagem": "img/Bikes/MountainMasterPro.png",
             "descricao": "A high-performance mountain bike, designed for mountain biking enthusiasts. With quality components and a sturdy frame, it is perfect for challenging trails.",
             "tipo": "Mountain Bike"
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "nome": "ComfyCruiser",
             "preco": 600,
-            "imagem": "img/Bikes/ComfyCruiser.jpg",
+            "imagem": "img/Bikes/ComfyCruiser.png",
             "descricao": "A stylish and comfortable cruiser bike, perfect for relaxed city rides. With a classic design and a soft seat, it provides a relaxing and enjoyable riding experience.",
             "tipo": "Trekking"
         },
@@ -44,7 +44,7 @@
             "id": 6,
             "nome": "CityCommuter 500",
             "preco": 600,
-            "imagem": "",
+            "imagem": "img/Bikes/CityCommuter500.png",
             "descricao": "The CityCommuter 500 is perfect for those looking for a high-quality urban bike. With its sleek and comfortable design, it is ideal for daily commutes around the city.",
             "tipo": "Trekking"
         },
@@ -52,7 +52,7 @@
             "id": 7,
             "nome": "TrailBlazer 2000",
             "preco": 1100,
-            "imagem": "",
+            "imagem": "img/Bikes/TrailBlazer2000.png",
             "descricao": "The TrailBlazer 2000 is a rugged and reliable trail bike. With its front suspension and wide tires, it can easily handle the toughest terrains.",
             "tipo": "Mountain Bike"
         },
@@ -68,7 +68,7 @@
             "id": 9,
             "nome": "UrbanExplorer 700",
             "preco": 800,
-            "imagem": "",
+            "imagem": "img/Bikes/UrbanExplorer700.png",
             "descricao": "The UrbanExplorer 700 is a versatile and comfortable bike, ideal for those who love to explore the city. With its relaxed geometry and practical accessories, it is perfect for urban trips.",
             "tipo": "Trekking"
         },
@@ -76,7 +76,7 @@
             "id": 10,
             "nome": "MountainHawk XT",
             "preco": 1400,
-            "imagem": "",
+            "imagem": "img/Bikes/MountainHawkXT.png",
             "descricao": "The MountainHawk XT is a high-performance mountain bike, designed for true off-road cycling enthusiasts. With its full suspension and high-quality components, it is perfect for challenging trails.",
             "tipo": "Mountain Bike"
         },
@@ -100,7 +100,7 @@
             "id": 13,
             "nome": "AllTerrain Pro",
             "preco": 1600,
-            "imagem": "",
+            "imagem": "img/Bikes/AllTerrainPro.png",
             "descricao": "The AllTerrain Pro is a high-performance all-terrain bike, designed for the most demanding cyclists. With its full suspension and state-of-the-art components, it is perfect for tackling the toughest challenges.",
             "tipo": "Mountain Bike"
         },
@@ -124,7 +124,7 @@
             "id": 16,
             "nome": "TrailRover 1500",
             "preco": 1250,
-            "imagem": "",
+            "imagem": "img/Bikes/TrailRover1500.png",
             "descricao": "The TrailRover 1500 is a versatile and rugged trail bike, ideal for nature lovers. With its front suspension and wide tires, it can easily handle the toughest terrains.",
             "tipo": "Mountain Bike"
         },
@@ -148,7 +148,7 @@
             "id": 19,
             "nome": "MountainChamp X",
             "preco": 1350,
-            "imagem": "",
+            "imagem": "img/Bikes/MountainChampX.png",
             "descricao": "The MountainChamp X is a high-performance mountain bike, designed for the most demanding cyclists. With its full suspension and high-quality components, it is perfect for challenging trails.",
             "tipo": "Mountain Bike"
         },
