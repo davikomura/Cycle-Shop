@@ -328,15 +328,15 @@
             "imagem": "img/Categorias/kids_bike.png"
         },
         {
-            "tipo": "Pneus",
+            "tipo": "Tires",
             "imagem": "img/Categorias/pneu_bike.png"
         },
         {
-            "tipo": "Vestuarios",
+            "tipo": "Clothing",
             "imagem": "img/Categorias/clothing_bike.png"
         },
         {
-            "tipo": "Acessorios",
+            "tipo": "Accessories",
             "imagem": "img/Categorias/accessories_bike.png"
         }
     ],

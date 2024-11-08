@@ -80,7 +80,7 @@ const ImageCarousel = () => {
                   <Link
                     to={`/${categoria.name.replace(/\s+/g, '-')}`} // Gera a rota a partir do nome da categoria
                   >
-                    Ver Produtos
+                    Shop Now
                   </Link>
                   </button>
                 </div>

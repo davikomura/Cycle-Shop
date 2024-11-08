@@ -16,10 +16,10 @@ export const MainPage = () => {
                 New Tarmac
               </h2>
               <p className="max-w-lg mt-3 text-xl leading-relaxed text-white dark:text-gray-300 md:mt-8">
-                Unidades Limitadas
+                Limited units
               </p>
               <button className="bg-white py-2 px-6 rounded mt-3 text-base">
-                Comprar
+                Buy
               </button>
             </div>
             <div className="relative flex justify-center">
