@@ -1,13 +1,31 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo_dk_cycle_shop.png';
+import { useAuth } from '../../context/useAuth.jsx';
 
 export const Login = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setError('');
+    const formData = new FormData(event.currentTarget);
+    const email = String(formData.get('email') || '').trim();
+    const password = String(formData.get('password') || '').trim();
+
+    if (!email || !password) {
+      setError('Please fill in both email and password.');
+      return;
+    }
+
+    login({ email });
     setSubmitted(true);
+    const redirectTo = location.state?.from?.pathname || '/';
+    navigate(redirectTo, { replace: true });
   };
 
   return (
@@ -76,9 +94,14 @@ export const Login = () => {
               >
                 Sign in
               </button>
+              {error && (
+                <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+                  {error}
+                </p>
+              )}
               {submitted && (
                 <p className="rounded-lg bg-green-50 px-4 py-3 text-sm text-green-700">
-                  Demo mode: your sign-in request was captured successfully.
+                  Signed in successfully.
                 </p>
               )}
               <p className="text-sm font-light text-gray-500">

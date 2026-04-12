@@ -82,13 +82,16 @@ const ImageCarousel = () => {
                   alt={categoria.name}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-3xl font-bold">
-                  <div className="text-white">{categoria.name}</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-3xl font-bold">
+                  <div className="text-white drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]">
+                    {categoria.name}
+                  </div>
                 </div>
                 <div className="absolute bottom-5 left-0 right-0 flex justify-center">
                   <Link
                     to={getCategoryRoute(categoria.name)}
-                    className="rounded-lg bg-white px-8 py-2 font-bold text-black transition-colors hover:bg-[#FF6347]"
+                    className="rounded-lg bg-white px-8 py-2 font-bold text-black shadow-lg transition-colors hover:bg-[#FF6347]"
                   >
                     Shop Now
                   </Link>

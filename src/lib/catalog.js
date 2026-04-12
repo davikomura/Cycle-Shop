@@ -82,11 +82,11 @@ export const getProductsByType = (tipo) =>
 
 const normalizeImagePath = (path) => {
   if (!path) {
-    return '/img/file.jpg';
+    return null;
   }
 
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  return availableImages.has(normalizedPath) ? normalizedPath : '/img/file.jpg';
+  return availableImages.has(normalizedPath) ? normalizedPath : null;
 };
 
 export const getProductRating = (productId) => {
@@ -106,14 +106,39 @@ export const getSalesCount = (productName) =>
   data.vendas.find((item) => item.nome === productName)?.total_vendas ?? 0;
 
 export const getCompleteBikeCatalog = () =>
-  data.bikes.map((bike) => ({
-    ...bike,
-    imagem: normalizeImagePath(bike.imagem),
-    avaliacao: getProductRating(bike.id),
-    totalVendas: getSalesCount(bike.nome),
-  }));
+  data.bikes
+    .map((bike) => ({
+      ...bike,
+      imagem: normalizeImagePath(bike.imagem),
+      avaliacao: getProductRating(bike.id),
+      totalVendas: getSalesCount(bike.nome),
+    }))
+    .filter((bike) => bike.imagem);
 
 export const getFeaturedProducts = () => getCompleteBikeCatalog().slice(0, 4);
+
+export const getProductById = (productId) =>
+  getCompleteBikeCatalog().find((bike) => bike.id === Number(productId)) ?? null;
+
+export const searchProducts = (query) => {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  if (!normalizedQuery) {
+    return getCompleteBikeCatalog();
+  }
+
+  return getCompleteBikeCatalog().filter((bike) => {
+    const haystack = [
+      bike.nome,
+      bike.descricao,
+      bike.tipo,
+    ]
+      .join(' ')
+      .toLowerCase();
+
+    return haystack.includes(normalizedQuery);
+  });
+};
 
 export const formatPrice = (price) =>
   new Intl.NumberFormat('en-US', {

@@ -1,13 +1,30 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo_dk_cycle_shop.png';
+import { useAuth } from '../../context/useAuth.jsx';
 
 export const Signup = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const { signup } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setError('');
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const password = String(formData.get('password') || '').trim();
+
+    if (!name || !email || !password) {
+      setError('Please complete every field to create your account.');
+      return;
+    }
+
+    signup({ name, email });
     setSubmitted(true);
+    navigate('/', { replace: true });
   };
 
   return (
@@ -125,9 +142,15 @@ export const Signup = () => {
               </button>
             </div>
 
+            {error && (
+              <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+                {error}
+              </p>
+            )}
+
             {submitted && (
               <p className="mt-4 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-700">
-                Demo mode: your account request was saved successfully.
+                Account created successfully.
               </p>
             )}
 

@@ -14,7 +14,7 @@ export const Cart = () => {
         </p>
         <Link
           to="/"
-          className="mt-6 rounded-lg bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-[#FF6347]"
+          className="mt-6 rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-[#FF6347]"
         >
           Continue shopping
         </Link>
@@ -26,7 +26,10 @@ export const Cart = () => {
     <section className="mx-auto max-w-6xl px-4 py-12">
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Your cart</h1>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d46847]">
+            Checkout review
+          </p>
+          <h1 className="mt-2 text-3xl font-bold text-gray-900">Your cart</h1>
           <p className="mt-2 text-gray-600">
             Review quantities before moving to checkout.
           </p>
@@ -45,12 +48,12 @@ export const Cart = () => {
           {items.map((item) => (
             <article
               key={item.id}
-              className="flex flex-col gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center"
+              className="soft-panel flex flex-col gap-4 rounded-[28px] p-5 sm:flex-row sm:items-center"
             >
               <img
                 src={item.imagem}
                 alt={item.nome}
-                className="h-32 w-full rounded-xl bg-gray-50 object-contain p-4 sm:w-40"
+                className="h-32 w-full rounded-2xl bg-[linear-gradient(180deg,#fff8f1_0%,#ffffff_100%)] object-contain p-4 sm:w-40"
               />
               <div className="flex-1">
                 <h2 className="text-xl font-semibold text-gray-900">{item.nome}</h2>
@@ -63,7 +66,7 @@ export const Cart = () => {
                       onChange={(event) =>
                         updateQuantity(item.id, Number(event.target.value))
                       }
-                      className="ml-3 rounded-md border border-gray-300 px-3 py-2"
+                      className="ml-3 rounded-full border border-gray-300 bg-white px-3 py-2"
                     >
                       {[1, 2, 3, 4, 5].map((quantity) => (
                         <option key={quantity} value={quantity}>
@@ -95,7 +98,7 @@ export const Cart = () => {
           ))}
         </div>
 
-        <aside className="h-fit rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <aside className="soft-panel h-fit rounded-[28px] p-6">
           <h2 className="text-xl font-semibold text-gray-900">Order summary</h2>
           <div className="mt-6 space-y-4 text-sm text-gray-600">
             <div className="flex items-center justify-between">
@@ -111,12 +114,12 @@ export const Cart = () => {
               <span>{formatPrice(totalPrice)}</span>
             </div>
           </div>
-          <button
-            type="button"
-            className="mt-6 w-full rounded-lg bg-[#FF6347] px-4 py-3 font-medium text-white transition-colors hover:bg-[#FF7F50]"
+          <Link
+            to="/checkout"
+            className="mt-6 block w-full rounded-full bg-gradient-to-r from-[#e95f3c] to-[#ff8b61] px-4 py-3 text-center font-medium text-white shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-0.5 hover:shadow-orange-500/30"
           >
             Proceed to checkout
-          </button>
+          </Link>
         </aside>
       </div>
     </section>
