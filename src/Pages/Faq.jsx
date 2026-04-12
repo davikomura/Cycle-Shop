@@ -1,55 +1,44 @@
-import { React, useState, useEffect } from 'react'
-import faqsData from "/data.json";
+import { useState } from 'react';
+import faqsData from '/data.json';
 
 export const Faq = () => {
-
   const [activeIndex, setActiveIndex] = useState(null);
-  const [faqs, setFaqs] = useState([]);
-
-  useEffect(() => {
-    // Load the FAQs from the JSON file
-    setFaqs(faqsData.faqs);
-  }, []);
 
   const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    setActiveIndex((currentIndex) => (currentIndex === index ? null : index));
   };
 
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <h6 className="text-lg text-indigo-600 font-medium text-center mb-2">
+          <h1 className="mb-2 text-center text-lg font-medium text-indigo-600">
             FAQs
-          </h6>
-          <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
+          </h1>
+          <h2 className="text-center text-4xl font-bold leading-[3.25rem] text-gray-900">
             Frequently asked questions
           </h2>
         </div>
 
-        <div className="accordion-group">
-          {faqs.map((faq, index) => (
+        <div>
+          {faqsData.faqs.map((faq, index) => (
             <div
-              key={index}
-              className={`accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl ${
-                activeIndex === index
-                  ? "hover:bg-indigo-50 accordion-active:bg-indigo-50 active"
-                  : "hover:bg-indigo-50"
+              key={faq.question}
+              className={`rounded-2xl border-b border-solid border-gray-200 px-6 py-8 transition-all duration-500 ${
+                activeIndex === index ? 'bg-indigo-50' : 'hover:bg-indigo-50'
               }`}
             >
               <button
-                className={`accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600 ${
-                  activeIndex === index
-                    ? "accordion-active:font-medium accordion-active:text-indigo-600"
-                    : ""
-                }`}
+                type="button"
+                className="group inline-flex w-full items-center justify-between text-left leading-8 text-gray-900 transition duration-500 hover:text-indigo-600"
                 onClick={() => toggleAccordion(index)}
-                aria-controls={`basic-collapse-${index}`}
+                aria-expanded={activeIndex === index}
+                aria-controls={`faq-panel-${index}`}
               >
-                <h5>{faq.question}</h5>
+                <span className="text-lg font-medium">{faq.question}</span>
                 <svg
                   className={`text-gray-500 transition duration-500 group-hover:text-indigo-600 ${
-                    activeIndex === index ? "rotate-180" : ""
+                    activeIndex === index ? 'rotate-180' : ''
                   }`}
                   width="22"
                   height="22"
@@ -63,18 +52,18 @@ export const Faq = () => {
                     strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                  ></path>
+                  />
                 </svg>
               </button>
               <div
-                id={`basic-collapse-${index}`}
-                className="accordion-content w-full px-0 overflow-hidden"
+                id={`faq-panel-${index}`}
+                className="overflow-hidden px-0"
                 style={{
-                  maxHeight: activeIndex === index ? "250px" : "0",
-                  transition: "max-height 0.5s ease",
+                  maxHeight: activeIndex === index ? '250px' : '0',
+                  transition: 'max-height 0.5s ease',
                 }}
               >
-                <p className="text-base text-gray-900 leading-6">
+                <p className="pt-4 text-base leading-6 text-gray-900">
                   {faq.answer}
                 </p>
               </div>
@@ -83,5 +72,5 @@ export const Faq = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

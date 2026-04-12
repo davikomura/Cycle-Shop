@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const TermsConditions = () => {
   return (
     <div className="bg-gray-100 flex justify-center items-center">
@@ -26,5 +24,5 @@ export const TermsConditions = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};

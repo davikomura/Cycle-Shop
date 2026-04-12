@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const PrivacyPolicy = () => {
   return (
     <div className="bg-gray-100">
@@ -58,7 +56,7 @@ export const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold mb-2">Cookies</h2>
 
             <p className="mb-4">
-                A cookie is a small file that asks permission to be placed on your computer's hard drive. Once you agree,
+                A cookie is a small file that asks permission to be placed on your computer&apos;s hard drive. Once you agree,
                 the
                 file
                 is added, and the cookie helps analyze web traffic or lets you know when you visit a particular site.
@@ -126,5 +124,5 @@ export const PrivacyPolicy = () => {
             </p>
         </div>
     </div>
-  )
-}
+  );
+};

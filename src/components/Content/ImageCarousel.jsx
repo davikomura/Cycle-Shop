@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '/data.json';
+import { getCategoryRoute } from '../../lib/catalog.js';
 
 const ImageCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -9,13 +10,14 @@ const ImageCarousel = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef(null);
 
-  const categorias = data.Categorias.map(categoria => ({
+  const categorias = data.Categorias.map((categoria) => ({
     name: categoria.tipo,
-    image: categoria.imagem
+    image: `/${categoria.imagem}`,
   }));
 
   const prevSlide = () => {
-    const newIndex = currentImageIndex === 0 ? categorias.length - 1 : currentImageIndex - 1;
+    const newIndex =
+      currentImageIndex === 0 ? categorias.length - 1 : currentImageIndex - 1;
     setCurrentImageIndex(newIndex);
     const carousel = carouselRef.current;
     const imageWidth = carousel.scrollWidth / categorias.length;
@@ -23,16 +25,17 @@ const ImageCarousel = () => {
   };
 
   const nextSlide = () => {
-    const newIndex = currentImageIndex === categorias.length - 1 ? 0 : currentImageIndex + 1;
+    const newIndex =
+      currentImageIndex === categorias.length - 1 ? 0 : currentImageIndex + 1;
     setCurrentImageIndex(newIndex);
     const carousel = carouselRef.current;
     const imageWidth = carousel.scrollWidth / categorias.length;
     carousel.scrollLeft = newIndex * imageWidth;
   };
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (event) => {
     setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setStartX(event.pageX - carouselRef.current.offsetLeft);
     setScrollLeft(carouselRef.current.scrollLeft);
   };
 
@@ -44,18 +47,21 @@ const ImageCarousel = () => {
     setIsDragging(false);
   };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // scroll-fast
+  const handleMouseMove = (event) => {
+    if (!isDragging) {
+      return;
+    }
+
+    event.preventDefault();
+    const x = event.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
-    <div className="relative flex flex-col bg-gray-dark m-auto p-auto">
+    <div className="relative m-auto flex flex-col bg-gray-dark">
       <div
-        className="flex overflow-x-scroll pb-20 pt-20 hide-scroll-bar no-select"
+        className="no-select flex overflow-x-scroll pb-20 pt-20"
         ref={carouselRef}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
@@ -63,41 +69,44 @@ const ImageCarousel = () => {
         onMouseMove={handleMouseMove}
         style={{ cursor: 'default', overflowX: 'hidden' }}
       >
-        <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+        <div className="ml-10 flex flex-nowrap md:ml-20 lg:ml-40">
           {categorias.map((categoria, index) => (
-            <div className="inline-block px-3 relative" key={index}>
+            <div className="relative inline-block px-3" key={categoria.name}>
               <div
-                className={`w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out ${
+                className={`h-64 w-64 max-w-xs overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl ${
                   index === currentImageIndex ? 'border-4 border-blue-500' : ''
                 }`}
               >
-                <img src={categoria.image} alt={categoria.name} className="w-full h-full object-cover" />
-                <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-3xl font-bold">
+                <img
+                  src={categoria.image}
+                  alt={categoria.name}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-3xl font-bold">
                   <div className="text-white">{categoria.name}</div>
                 </div>
-                <div className="absolute left-0 right-0 bottom-5 flex flex-col justify-center items-center">
-                  <button className="text-black bg-white hover:bg-[#FF6347] font-bold py-2 px-8 rounded-lg">
+                <div className="absolute bottom-5 left-0 right-0 flex justify-center">
                   <Link
-                    to={`/${categoria.name.replace(/\s+/g, '-')}`} // Gera a rota a partir do nome da categoria
+                    to={getCategoryRoute(categoria.name)}
+                    className="rounded-lg bg-white px-8 py-2 font-bold text-black transition-colors hover:bg-[#FF6347]"
                   >
                     Shop Now
                   </Link>
-                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
       <button
         type="button"
-        className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={prevSlide}
-        data-carousel-prev
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
           <svg
-            className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            className="h-4 w-4 text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -114,15 +123,15 @@ const ImageCarousel = () => {
           <span className="sr-only">Previous</span>
         </span>
       </button>
+
       <button
         type="button"
-        className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={nextSlide}
-        data-carousel-next
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-[#FF6347] dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-[#FF6347] group-focus:ring-4 group-focus:ring-white">
           <svg
-            className="w-4 h-4 text-gray-dark dark:text-gray-800 rtl:rotate-180"
+            className="h-4 w-4 text-gray-dark"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

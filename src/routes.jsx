@@ -1,80 +1,83 @@
-import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
+import { About } from './Pages/About.jsx';
+import { CategoryLanding } from './Pages/CategoryLanding.jsx';
+import { Ebike } from './Pages/Ebike.jsx';
+import { Faq } from './Pages/Faq.jsx';
+import { Kids } from './Pages/Kids.jsx';
 import { MainPage } from './Pages/MainPage.jsx';
 import { MountainBike } from './Pages/MountainBike.jsx';
-import { Ebike } from './Pages/Ebike.jsx';
-import { RoadBike } from './Pages/RoadBike.jsx';
-import { Trekking } from './Pages/Trekking.jsx';
-import { Kids } from './Pages/Kids.jsx';
-import { About } from './Pages/About.jsx';
 import { PrivacyPolicy } from './Pages/PrivacyPolicy.jsx';
+import { RoadBike } from './Pages/RoadBike.jsx';
 import { TermsConditions } from './Pages/TermsConditions.jsx';
-import { Faq } from './Pages/Faq.jsx';
+import { Trekking } from './Pages/Trekking.jsx';
 import { Login } from './components/Auth/Login.jsx';
 import { Signup } from './components/Auth/Signup.jsx';
 import { Cart } from './components/Cart/Cart.jsx';
 
 const routes = [
-  
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <MainPage />,
       },
       {
-        path: "/Login",
+        path: '/Login',
         element: <Login />,
       },
       {
-        path: "/Signup",
+        path: '/Signup',
         element: <Signup />,
       },
       {
-        path: "/Cart",
+        path: '/Cart',
         element: <Cart />,
       },
       {
-        path: "/Mountain-Bike",
+        path: '/Mountain-Bike',
         element: <MountainBike />,
       },
       {
-        path: "/E-Bike",
+        path: '/E-Bike',
         element: <Ebike />,
       },
       {
-        path: "/Road-Bike",
+        path: '/Road-Bike',
         element: <RoadBike />,
       },
       {
-        path: "/Trekking",
+        path: '/Trekking',
         element: <Trekking />,
       },
       {
-        path: "/Kids",
+        path: '/Kids',
         element: <Kids />,
       },
       {
-        path: "/About",
+        path: '/About',
         element: <About />,
       },
       {
-        path: "/PrivacyPolicy",
+        path: '/PrivacyPolicy',
         element: <PrivacyPolicy />,
       },
       {
-        path: "/Terms&Conditions",
+        path: '/Terms-and-Conditions',
         element: <TermsConditions />,
       },
       {
-        path: "/FAQ",
+        path: '/FAQ',
         element: <Faq />,
       },
+      {
+        path: '/category/:categorySlug',
+        element: <CategoryLanding />,
+      },
     ],
-  }
+  },
 ];
 
 const router = createBrowserRouter(routes);

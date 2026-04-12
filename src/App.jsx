@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './components/Common/Header';
 import Footer from './components/Common/Footer';
