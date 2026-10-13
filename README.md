@@ -1,36 +1,66 @@
-# Bike Store Website
+# Cycle Shop
 
-This is a website project for a bike shop, developed using React, JavaScript, and Tailwind CSS.
+Loja demonstrativa de bicicletas com React e TypeScript, catálogo, busca, filtros,
+favoritos, carrinho e checkout simulado. Os dados vêm de `data.json`; conta,
+favoritos e carrinho são persistidos no localStorage. Não há autenticação de
+servidor nem processamento real de pagamentos.
 
-## Features
+## Stack
 
-- **Product Pages**: Displays a variety of bikes available for sale, with details on each product.
-- **Search Filters**: Allows users to filter bikes by type, brand, price, etc., to facilitate navigation.
-- **Shopping Cart**: Lets users add bikes to the cart and proceed to checkout.
-- **Payment System**: Integration with a payment system to process purchase transactions.
-- **Inventory Management**: Interface for managing the available bike inventory.
+- Node.js **24.21.0 LTS**, definido em `.nvmrc` e `.node-version`.
+- pnpm **10.33.0**, definido em `packageManager`; use `pnpm-lock.yaml`.
+- React **19.3**, TypeScript **6.0.3** com `strict` e Vite **8.3**.
+- Tailwind CSS **4.3**, integrado pelo plugin `@tailwindcss/vite`.
+- TanStack Router **1.170** para rotas e TanStack Query **5.104** para o catálogo.
 
-## Technologies Used
+TypeScript permanece na linha 6 por compatibilidade com typescript-eslint.
+O pnpm permanece na linha 10, validada neste projeto no Windows.
+As versões exatas das dependências estão registradas no lockfile.
 
-- **React**: JavaScript library for building user interfaces.
-- **JavaScript**: Programming language used for application logic.
-- **Tailwind CSS**: CSS framework used for styling the website.
+## Desenvolvimento
 
-## How to Run the Project
+Com fnm instalado:
 
-1. Clone this repository: `git clone https://github.com/davikomura/Cycle-Shop.git`
-2. Install the dependencies: `npm install`
-3. Run the application: `npm start`
-4. Access the website at: `http://localhost:3000`
+```powershell
+fnm install
+fnm use
+npm install --global pnpm@10.33.0
+pnpm install --frozen-lockfile
+pnpm dev
+```
 
-## Contribution
+Abra o endereço informado pelo Vite, normalmente http://localhost:5173.
+Também é possível instalar Node.js 24.21.0 diretamente ou usar outro gerenciador.
 
-Contributions are welcome! Feel free to submit a pull request with improvements or bug fixes.
+## Verificação
 
-## Author
+```sh
+pnpm typecheck
+pnpm lint
+pnpm test
+pnpm build
+pnpm exec playwright install chromium
+pnpm test:e2e
+```
 
-Davi Komura de Castro
+Os testes de navegador usam o build de produção: execute `pnpm build` antes deles.
+Cobrem busca, detalhes de produto, favoritos, persistência do carrinho, retorno do
+login ao checkout, pedido simulado, filtros e navegação móvel.
 
-## License
+`pnpm preview` serve o build localmente. A Vercel mantém o fallback de SPA em
+`vercel.json`, necessário para abrir URLs internas diretamente.
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## Organização
+
+- `src/routes.tsx`: árvore de rotas e validação dos parâmetros de busca.
+- `src/lib/catalog.ts`: catálogo tipado e funções de consulta.
+- `src/lib/useCatalog.ts`: cache compartilhado do catálogo via TanStack Query.
+- `src/types.ts`: tipos de produtos, usuários, carrinho e pedidos.
+- `src/context/`: estado local da conta, favoritos e carrinho.
+- `src/index.css`: tema e estilos; Tailwind 4 usa configuração em CSS.
+
+O catálogo empacotado é usado como `initialData` e permanece atualizado até um
+novo deploy (`staleTime: Infinity`). Ao conectar uma API, adapte `queryFn`, remova
+os dados iniciais locais e configure carregamento, erros e invalidação do cache.
+
+Autor: Davi Komura de Castro. Licença [MIT](./LICENSE).

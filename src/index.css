@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-gray-dark: #212121;
+}
+
+/* Preserve the previous default border color. */
+@layer base {
+  *, ::before, ::after { border-color: var(--color-gray-200); }
+}
 
 @layer base {
   :root {
