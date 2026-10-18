@@ -18,7 +18,7 @@ export const Cart = () => {
         </p>
         <Link
           to="/"
-          className="mt-6 rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-[#FF6347]"
+          className="mt-6 rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-brand-red"
         >
           {t("checkout:continueShopping")}
         </Link>
@@ -30,7 +30,7 @@ export const Cart = () => {
     <section className="mx-auto max-w-6xl px-4 py-12">
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d46847]">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">
             {t("checkout:checkoutReview")}
           </p>
           <h1 className="mt-2 text-3xl font-bold text-gray-900">
@@ -59,7 +59,7 @@ export const Cart = () => {
               <img
                 src={item.imagem}
                 alt={item.nome}
-                className="h-32 w-full rounded-2xl bg-[linear-gradient(180deg,#fff8f1_0%,#ffffff_100%)] object-contain p-4 sm:w-40"
+                className="h-32 w-full rounded-2xl bg-[linear-gradient(180deg,#f4f6fa_0%,#ffffff_100%)] object-contain p-4 sm:w-40"
               />
               <div className="flex-1">
                 <h2 className="text-xl font-semibold text-gray-900">
@@ -132,7 +132,7 @@ export const Cart = () => {
           </div>
           <Link
             to="/checkout"
-            className="mt-6 block w-full rounded-full bg-linear-to-r from-[#e95f3c] to-[#ff8b61] px-4 py-3 text-center font-medium text-white shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-0.5 hover:shadow-orange-500/30"
+            className="mt-6 block w-full rounded-full bg-linear-to-r from-brand-red to-brand-red-dark px-4 py-3 text-center font-medium text-white shadow-lg shadow-brand-red/20 transition-all hover:-translate-y-0.5 hover:shadow-brand-red/30"
           >
             {t("checkout:proceedToCheckout")}
           </Link>

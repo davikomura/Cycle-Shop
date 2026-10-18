@@ -13,7 +13,7 @@ export const CheckoutSuccess = () => {
   return (
     <section className="mx-auto flex min-h-[60vh] max-w-4xl flex-col justify-center px-4 py-16">
       <div className="soft-panel rounded-[32px] p-10 text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d46847]">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">
           {t("checkout:orderConfirmed")}
         </p>
         <h1 className="mt-2 text-4xl font-bold text-gray-900">
@@ -34,13 +34,13 @@ export const CheckoutSuccess = () => {
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             to="/"
-            className="rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-[#FF6347]"
+            className="rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-brand-red"
           >
             {t("common:backToHomepage")}
           </Link>
           <Link
             to="/favorites"
-            className="rounded-full border border-gray-300 px-5 py-3 text-gray-700 transition-colors hover:border-[#d46847] hover:text-[#d46847]"
+            className="rounded-full border border-gray-300 px-5 py-3 text-gray-700 transition-colors hover:border-brand-red hover:text-brand-red"
           >
             {t("checkout:viewFavorites")}
           </Link>

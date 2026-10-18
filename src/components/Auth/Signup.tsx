@@ -3,7 +3,7 @@ import { useI18n } from "../../i18n/I18n";
 import type { FormEvent } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import logo from "../../assets/logo_dk_cycle_shop.png";
+import logo from "../../assets/dk-cycle-stacked.png";
 import { useAuth } from "../../context/useAuth";
 
 export const Signup = () => {
@@ -38,7 +38,7 @@ export const Signup = () => {
       </div>
       <div className="mx-auto w-full max-w-4xl max-md:max-w-xl">
         <Link to="/" className="mb-6 flex justify-center">
-          <img className="h-auto w-28 sm:w-36" src={logo} alt="DK Cycle Shop" />
+          <img className="h-auto w-40 rounded-xl bg-white sm:w-48" src={logo} alt="DK Cycle Shop" />
         </Link>
         <div className="grid w-full gap-16 overflow-hidden rounded-md bg-white p-6 shadow-md sm:p-8 md:grid-cols-2">
           <div className="space-y-6 max-md:order-1">
@@ -54,7 +54,7 @@ export const Signup = () => {
             <div className="space-y-6">
               <button
                 type="button"
-                className="flex w-full items-center justify-center rounded-md bg-blue-600 px-5 py-2.5 text-base font-semibold tracking-wider text-white hover:bg-blue-700"
+                className="flex w-full items-center justify-center rounded-md bg-brand-blue px-5 py-2.5 text-base font-semibold tracking-wider text-white hover:bg-brand-blue-dark"
               >
                 {t("auth:continueWithFacebook")}
               </button>
@@ -93,7 +93,7 @@ export const Signup = () => {
                   name="name"
                   type="text"
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-800 outline-blue-500"
+                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-800 outline-brand-blue"
                   placeholder={t("auth:enterName")}
                 />
               </div>
@@ -109,7 +109,7 @@ export const Signup = () => {
                   name="email"
                   type="email"
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-800 outline-blue-500"
+                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-800 outline-brand-blue"
                   placeholder={t("auth:enterEmail")}
                 />
               </div>
@@ -125,7 +125,7 @@ export const Signup = () => {
                   name="password"
                   type="password"
                   required
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-800 outline-blue-500"
+                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-800 outline-brand-blue"
                   placeholder={t("auth:enterPassword")}
                 />
               </div>
@@ -134,14 +134,14 @@ export const Signup = () => {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 rounded-md border-gray-300 text-blue-600 focus:ring-blue-500"
+                  className="h-4 w-4 rounded-md border-gray-300 text-brand-blue focus:ring-brand-blue"
                   required
                 />
                 <span className="ml-3 block text-sm text-gray-800">
                   {t("auth:iAcceptThe")}{" "}
                   <Link
                     to="/Terms-and-Conditions"
-                    className="font-semibold text-[#FF6347] hover:underline"
+                    className="font-semibold text-brand-red hover:underline"
                   >
                     {t("common:termsAndConditions")}
                   </Link>
@@ -152,7 +152,7 @@ export const Signup = () => {
             <div className="mt-8">
               <button
                 type="submit"
-                className="w-full rounded-md bg-[#FF6347] px-4 py-2.5 text-sm font-semibold tracking-wider text-white hover:bg-[#FF7F50]"
+                className="w-full rounded-md bg-brand-red px-4 py-2.5 text-sm font-semibold tracking-wider text-white hover:bg-brand-red-dark"
               >
                 {t("auth:createAccount")}
               </button>
@@ -174,7 +174,7 @@ export const Signup = () => {
               {t("auth:alreadyHaveAnAccount")}{" "}
               <Link
                 to="/Login"
-                className="font-semibold text-[#FF6347] hover:underline"
+                className="font-semibold text-brand-red hover:underline"
               >
                 {t("auth:loginHere")}
               </Link>

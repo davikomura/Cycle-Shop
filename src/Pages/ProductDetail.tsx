@@ -16,7 +16,7 @@ export const ProductDetail = () => {
   if (!bike) {
     return (
       <section className="mx-auto flex min-h-[60vh] max-w-5xl flex-col justify-center px-4 py-16">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d46847]">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">
           {t("catalog:product")}
         </p>
         <h1 className="mt-2 text-3xl font-bold text-gray-900">
@@ -27,7 +27,7 @@ export const ProductDetail = () => {
         </p>
         <Link
           to="/"
-          className="mt-6 inline-flex rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-[#FF6347]"
+          className="mt-6 inline-flex rounded-full bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-brand-red"
         >
           {t("common:backToHomepage")}
         </Link>
@@ -47,7 +47,7 @@ export const ProductDetail = () => {
         </div>
 
         <div className="flex flex-col justify-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d46847]">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">
             {t(categoryNameKey(bike.tipo))}
           </p>
           <h1 className="mt-3 text-4xl font-bold text-gray-900">{bike.nome}</h1>
@@ -56,12 +56,12 @@ export const ProductDetail = () => {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <span className="rounded-full bg-[#edf4ff] px-3 py-1 text-sm font-semibold text-[#3560a3]">
+            <span className="rounded-full bg-[#edf4ff] px-3 py-1 text-sm font-semibold text-brand-blue">
               {bike.avaliacao
                 ? t("catalog:rating5AverageRating", { rating: bike.avaliacao })
                 : t("common:newArrival")}
             </span>
-            <span className="rounded-full bg-[#f8ede2] px-3 py-1 text-sm font-semibold text-[#d46847]">
+            <span className="rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold text-brand-red">
               {t("catalog:sales.count", { count: bike.totalVendas })}
             </span>
           </div>
@@ -79,14 +79,14 @@ export const ProductDetail = () => {
             <button
               type="button"
               onClick={() => addItem(bike)}
-              className="rounded-full bg-linear-to-r from-[#e95f3c] to-[#ff8b61] px-6 py-3 font-medium text-white shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-0.5 hover:shadow-orange-500/30"
+              className="rounded-full bg-linear-to-r from-brand-red to-brand-red-dark px-6 py-3 font-medium text-white shadow-lg shadow-brand-red/20 transition-all hover:-translate-y-0.5 hover:shadow-brand-red/30"
             >
               {t("common:actions.addToCart")}
             </button>
             <button
               type="button"
               onClick={() => toggleFavorite(bike.id)}
-              className="rounded-full border border-gray-300 px-6 py-3 text-gray-700 transition-colors hover:border-[#d46847] hover:text-[#d46847]"
+              className="rounded-full border border-gray-300 px-6 py-3 text-gray-700 transition-colors hover:border-brand-red hover:text-brand-red"
             >
               {t(
                 isFavorite(bike.id)
@@ -104,7 +104,7 @@ export const ProductDetail = () => {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             <div className="soft-panel rounded-2xl px-4 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#d46847]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
                 {t("catalog:delivery")}
               </p>
               <p className="mt-2 text-sm text-gray-600">
@@ -112,7 +112,7 @@ export const ProductDetail = () => {
               </p>
             </div>
             <div className="soft-panel rounded-2xl px-4 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#d46847]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
                 {t("catalog:warranty")}
               </p>
               <p className="mt-2 text-sm text-gray-600">
@@ -120,7 +120,7 @@ export const ProductDetail = () => {
               </p>
             </div>
             <div className="soft-panel rounded-2xl px-4 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#d46847]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
                 {t("common:support")}
               </p>
               <p className="mt-2 text-sm text-gray-600">

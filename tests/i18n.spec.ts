@@ -76,7 +76,7 @@ test("language and currency changes persist across product, cart and reload", as
     await page
       .getByRole("combobox", { name: "Currency", exact: true })
       .selectOption(currency);
-    await expect(page.locator(".product-card").first()).toContainText(price);
+    await expect(page.locator(".catalog-card").first()).toContainText(price);
   }
 });
 
@@ -151,7 +151,7 @@ test("downloads translation areas and languages only when needed", async ({
   );
   expect(chunks("home")).toHaveLength(2);
   await page
-    .locator(".product-card")
+    .locator(".catalog-card")
     .first()
     .getByRole("link", { name: "Details" })
     .click();

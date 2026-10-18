@@ -1,7 +1,7 @@
 import { useI18n } from "../../i18n/I18n";
 import type { LinkProps } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import logo from "../../assets/logo_dk_cycle_shop.png";
+import logo from "../../assets/dk-cycle-horizontal.png";
 
 type FooterLink = { label: string; to: LinkProps["to"] };
 
@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="flex items-center lg:justify-center">
           <Link to="/" onClick={scrollToTop}>
-            <img src={logo} alt="DK Cycle Shop" className="w-60" />
+            <img src={logo} alt="DK Cycle Shop" className="footer-logo" />
           </Link>
         </div>
       </div>

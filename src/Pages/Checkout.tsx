@@ -54,7 +54,7 @@ export const Checkout = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d46847]">
+        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">
           {t("checkout:checkout")}
         </p>
         <h1 className="mt-2 text-3xl font-bold text-gray-900">
@@ -72,7 +72,7 @@ export const Checkout = () => {
               <input
                 name="fullName"
                 defaultValue={user?.name}
-                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-[#d46847]"
+                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-brand-red"
               />
             </div>
             <div className="md:col-span-2">
@@ -91,7 +91,7 @@ export const Checkout = () => {
               </label>
               <input
                 name="address"
-                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-[#d46847]"
+                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-brand-red"
                 placeholder={t("checkout:streetAndNumber")}
               />
             </div>
@@ -101,7 +101,7 @@ export const Checkout = () => {
               </label>
               <input
                 name="city"
-                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-[#d46847]"
+                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-brand-red"
                 placeholder={t("checkout:yourCity")}
               />
             </div>
@@ -111,7 +111,7 @@ export const Checkout = () => {
               </label>
               <input
                 name="cardNumber"
-                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-[#d46847]"
+                className="w-full rounded-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 outline-hidden focus:border-brand-red"
                 placeholder="4242 4242 4242 4242"
               />
             </div>
@@ -126,7 +126,7 @@ export const Checkout = () => {
           <button
             type="submit"
             disabled={isPlacingOrder}
-            className="mt-8 rounded-full bg-linear-to-r from-[#e95f3c] to-[#ff8b61] px-6 py-3 font-medium text-white shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-0.5 hover:shadow-orange-500/30"
+            className="mt-8 rounded-full bg-linear-to-r from-brand-red to-brand-red-dark px-6 py-3 font-medium text-white shadow-lg shadow-brand-red/20 transition-all hover:-translate-y-0.5 hover:shadow-brand-red/30"
           >
             {t("checkout:placeOrder")}
           </button>

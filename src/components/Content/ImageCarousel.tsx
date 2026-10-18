@@ -81,7 +81,7 @@ const ImageCarousel = () => {
             <div className="relative inline-block px-3" key={categoria.name}>
               <div
                 className={`h-64 w-64 max-w-xs overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl ${
-                  index === currentImageIndex ? "border-4 border-blue-500" : ""
+                  index === currentImageIndex ? "border-4 border-brand-blue" : ""
                 }`}
               >
                 <img
@@ -98,7 +98,7 @@ const ImageCarousel = () => {
                 <div className="absolute bottom-5 left-0 right-0 flex justify-center">
                   <Link
                     to={getCategoryRoute(categoria.name)}
-                    className="rounded-lg bg-white px-8 py-2 font-bold text-black shadow-lg transition-colors hover:bg-[#FF6347]"
+                    className="rounded-lg bg-white px-8 py-2 font-bold text-black shadow-lg transition-colors hover:bg-brand-red"
                   >
                     {t("catalog:shopNow")}
                   </Link>
@@ -139,7 +139,7 @@ const ImageCarousel = () => {
         className="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={nextSlide}
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-[#FF6347] group-focus:ring-4 group-focus:ring-white">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-brand-red group-focus:ring-4 group-focus:ring-white">
           <svg
             className="h-4 w-4 text-gray-dark"
             aria-hidden="true"

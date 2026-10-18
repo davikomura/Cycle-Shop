@@ -1,8 +1,6 @@
-import { categoryNameKey } from "../i18n/catalogKeys";
+import { ProductCard } from "../components/Common/ProductCard";
 import { Link } from "@tanstack/react-router";
 import { useCatalog } from "../lib/useCatalog";
-import { useCart } from "../context/useCart";
-import { useFavorites } from "../context/useFavorites";
 import { useI18n } from "../i18n/I18n";
 const categories = [
   {
@@ -39,8 +37,6 @@ const categories = [
 export const MainPage = () => {
   const { t, formatPrice } = useI18n(["common", "catalog", "home"]);
   const { data: catalog } = useCatalog();
-  const { addItem } = useCart();
-  const { isFavorite, toggleFavorite } = useFavorites();
   const [heroBike] = catalog.filter((b) => b.tipo === "Mountain Bike");
   return (
     <main className="storefront">
@@ -60,7 +56,7 @@ export const MainPage = () => {
               {t("home:hero.description")}
             </p>
             <div className="hero-buttons">
-              <Link className="button-lime" to="/search" search={{ q: "" }}>
+              <Link className="button-brand" to="/search" search={{ q: "" }}>
                 {t("home:hero.primaryAction")} <span>↗</span>
               </Link>
               <Link className="hero-secondary" to="/Mountain-Bike">
@@ -172,61 +168,9 @@ export const MainPage = () => {
               {t("home:featured.action")} ↗
             </Link>
           </div>
-          <div className="product-grid">
+          <div className="catalog-grid">
             {catalog.slice(0, 4).map((bike) => (
-              <article className="product-card" key={bike.id}>
-                <div className="product-image">
-                  <span className="product-category">
-                    {t(categoryNameKey(bike.tipo))}
-                  </span>
-                  <button
-                    className={
-                      "favorite-button " +
-                      (isFavorite(bike.id) ? "is-saved" : "")
-                    }
-                    aria-label={t(
-                      isFavorite(bike.id)
-                        ? "common:savedToFavorites"
-                        : "common:saveToFavorites",
-                    )}
-                    aria-pressed={isFavorite(bike.id)}
-                    onClick={() => toggleFavorite(bike.id)}
-                  >
-                    {isFavorite(bike.id) ? "♥" : "♡"}
-                  </button>
-                  <Link
-                    to="/product/$productId"
-                    params={{ productId: String(bike.id) }}
-                  >
-                    <img src={bike.imagem} alt={bike.nome} loading="lazy" />
-                  </Link>
-                </div>
-                <div className="product-info">
-                  <p className="product-rating">
-                    {bike.avaliacao
-                      ? `★ ${bike.avaliacao.toFixed(1)} / 5`
-                      : t("common:newArrival")}
-                  </p>
-                  <Link
-                    to="/product/$productId"
-                    params={{ productId: String(bike.id) }}
-                  >
-                    <h3>{bike.nome}</h3>
-                  </Link>
-                  <div className="product-price">
-                    <strong>{formatPrice(bike.preco)}</strong>
-                    <Link
-                      to="/product/$productId"
-                      params={{ productId: String(bike.id) }}
-                    >
-                      {t("common:details")} ↗
-                    </Link>
-                  </div>
-                  <button className="add-button" onClick={() => addItem(bike)}>
-                    {t("common:actions.addToCart")} <span>+</span>
-                  </button>
-                </div>
-              </article>
+              <ProductCard key={bike.id} bike={bike} showDescription={false} />
             ))}
           </div>
         </div>
@@ -240,7 +184,7 @@ export const MainPage = () => {
               <br />
               {t("home:banner.highlight")}
             </h2>
-            <Link className="button-lime" to="/Trekking">
+            <Link className="button-brand" to="/Trekking">
               {t("home:banner.action")} ↗
             </Link>
           </div>

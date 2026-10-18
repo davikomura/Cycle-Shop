@@ -3,7 +3,7 @@ import { useI18n } from "../../i18n/I18n";
 import type { FormEvent } from "react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import logo from "../../assets/logo_dk_cycle_shop.png";
+import logo from "../../assets/dk-cycle-stacked.png";
 import { useAuth } from "../../context/useAuth";
 
 export const Login = () => {
@@ -42,7 +42,7 @@ export const Login = () => {
       </div>
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-4 py-8">
         <Link to="/" className="mb-6 flex items-center">
-          <img className="h-auto w-28 sm:w-36" src={logo} alt="DK Cycle Shop" />
+          <img className="h-auto w-40 rounded-xl bg-white sm:w-48" src={logo} alt="DK Cycle Shop" />
         </Link>
         <div className="w-full rounded-lg bg-white shadow-sm sm:max-w-md lg:max-w-lg xl:max-w-md">
           <div className="space-y-4 p-6 sm:p-8">
@@ -93,14 +93,14 @@ export const Login = () => {
                 </label>
                 <button
                   type="button"
-                  className="text-sm font-medium text-[#FF6347] hover:underline"
+                  className="text-sm font-medium text-brand-red hover:underline"
                 >
                   {t("auth:forgotPassword")}
                 </button>
               </div>
               <button
                 type="submit"
-                className="w-full rounded-lg bg-[#FF6347] px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-[#FF7F50]"
+                className="w-full rounded-lg bg-brand-red px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-brand-red-dark"
               >
                 {t("common:signIn")}
               </button>
@@ -118,7 +118,7 @@ export const Login = () => {
                 {t("auth:donTHaveAnAccountYet")}{" "}
                 <Link
                   to="/Signup"
-                  className="font-medium text-[#FF6347] hover:underline"
+                  className="font-medium text-brand-red hover:underline"
                 >
                   {t("auth:signUp")}
                 </Link>

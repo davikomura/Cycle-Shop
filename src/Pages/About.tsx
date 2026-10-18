@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/I18n";
-import logo from "../assets/logo_dk_cycle_shop.png";
+import logo from "../assets/dk-cycle-stacked.png";
 
 export const About = () => {
   const { t } = useI18n(["common", "about"]);
@@ -19,7 +19,7 @@ export const About = () => {
         </div>
         <div className="flex w-full items-center justify-center lg:w-2/5">
           <img
-            className="h-auto w-full rounded-2xl bg-black object-cover"
+            className="h-auto w-full rounded-2xl bg-white object-contain"
             src={logo}
             alt="DK Cycle Shop logo"
           />

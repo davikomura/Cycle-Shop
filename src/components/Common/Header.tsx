@@ -1,4 +1,5 @@
-﻿import { useState, type FormEvent } from "react";
+import logo from "../../assets/dk-cycle-horizontal.png";
+import { useState, type FormEvent } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useAuth } from "../../context/useAuth";
 import { useCart } from "../../context/useCart";
@@ -33,10 +34,7 @@ export default function Header() {
       </div>
       <div className="header-main shop-container">
         <Link to="/" className="wordmark" aria-label={t("common:goToHomepage")}>
-          <span className="brand-icon">↗</span>
-          <span>
-            DK CYCLE<span className="brand-sub">SHOP · RIDE YOUR WAY</span>
-          </span>
+          <img src={logo} alt="DK Cycle" className="brand-logo" width={2146} height={733} />
         </Link>
         <form className="shop-search" onSubmit={submit}>
           <input

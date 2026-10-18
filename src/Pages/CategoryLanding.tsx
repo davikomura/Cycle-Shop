@@ -10,7 +10,7 @@ export const CategoryLanding = () => {
 
   return (
     <section className="mx-auto flex min-h-[60vh] max-w-5xl flex-col justify-center px-4 py-16">
-      <span className="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF6347]">
+      <span className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-red">
         {t("catalog:category")}
       </span>
       <h1 className="mt-4 text-4xl font-bold text-gray-900">
@@ -24,7 +24,7 @@ export const CategoryLanding = () => {
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
           to="/"
-          className="rounded-lg bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-[#FF6347]"
+          className="rounded-lg bg-gray-800 px-5 py-3 text-white transition-colors hover:bg-brand-red"
         >
           {t("common:backToHomepage")}
         </Link>
