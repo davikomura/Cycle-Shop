@@ -1,0 +1,118 @@
+{
+  "items": {
+    "1": {
+      "description": "Bicicleta urbana ecológica, ideal para desplazamientos diarios. Diseño moderno, cómodo y sostenible, con materiales reciclables y baja huella de carbono."
+    },
+    "2": {
+      "description": "La bicicleta perfecta para quienes buscan practicidad y estilo en la ciudad. Ligera y ágil, ideal para ir al trabajo o pasear por el parque."
+    },
+    "3": {
+      "description": "Bicicleta de montaña de alto rendimiento para amantes del ciclismo. Componentes de calidad y cuadro robusto para senderos exigentes."
+    },
+    "4": {
+      "description": "Bicicleta de cicloturismo rápida y versátil para viajes largos. Cuadro ligero y aerodinámico para disfrutar de comodidad y rendimiento."
+    },
+    "5": {
+      "description": "Cruiser elegante y cómoda para paseos tranquilos por la ciudad. Diseño clásico y sillín suave para pedalear de forma relajada y agradable."
+    },
+    "6": {
+      "description": "La CityCommuter 500 es ideal para quienes buscan una bicicleta urbana de calidad. Diseño elegante y cómodo para desplazamientos diarios."
+    },
+    "7": {
+      "description": "La TrailBlazer 2000 es una bicicleta de senderos robusta y fiable. Suspensión delantera y neumáticos anchos para terrenos difíciles."
+    },
+    "8": {
+      "description": "La EcoRide 100 es una bicicleta económica y sostenible para quienes cuidan el medio ambiente. Diseño ligero y eficiente para paseos urbanos."
+    },
+    "9": {
+      "description": "La UrbanExplorer 700 es versátil y cómoda para explorar la ciudad. Geometría relajada y accesorios prácticos para rutas urbanas."
+    },
+    "10": {
+      "description": "La MountainHawk XT es una bicicleta de montaña de alto rendimiento para amantes del off-road. Doble suspensión y componentes de alta calidad para senderos exigentes."
+    },
+    "11": {
+      "description": "La Speedster 1000 es rápida y ágil para amantes de la velocidad. Geometría deportiva y componentes de alto rendimiento para aventuras emocionantes."
+    },
+    "12": {
+      "description": "La CommuterCruise 300 es cómoda y práctica para desplazamientos diarios. Diseño elegante y accesorios útiles para quienes buscan practicidad y estilo."
+    },
+    "13": {
+      "description": "La AllTerrain Pro es una bicicleta todoterreno de alto rendimiento para ciclistas exigentes. Doble suspensión y componentes de última generación para superar grandes retos."
+    },
+    "14": {
+      "description": "La RapidRider 800 es rápida y ágil para desplazamientos urbanos. Diseño ligero y aerodinámico para quienes buscan eficiencia y velocidad."
+    },
+    "15": {
+      "description": "La CityCruise 400 es una bicicleta urbana cómoda y práctica para el día a día. Diseño elegante y accesorios útiles que combinan estilo y funcionalidad."
+    },
+    "16": {
+      "description": "La TrailRover 1500 es una bicicleta de senderos versátil y robusta para amantes de la naturaleza. Suspensión delantera y neumáticos anchos para terrenos difíciles."
+    },
+    "17": {
+      "description": "La EcoCycle 50 es económica y sostenible, perfecta para paseos urbanos. Diseño sencillo y eficiente para quienes cuidan el medio ambiente."
+    },
+    "18": {
+      "description": "La UrbanRider 600 es una bicicleta urbana cómoda y versátil para el día a día. Geometría relajada y accesorios prácticos para rutas urbanas."
+    },
+    "19": {
+      "description": "La MountainChamp X es una bicicleta de montaña de alto rendimiento para ciclistas exigentes. Doble suspensión y componentes de calidad para senderos difíciles."
+    },
+    "20": {
+      "description": "La SpeedyRacer 1200 es rápida y ágil para quienes buscan velocidad. Diseño deportivo y componentes de alto rendimiento para aventuras emocionantes."
+    },
+    "21": {
+      "description": "La ComfyCruise 250 es cómoda y práctica para desplazamientos urbanos. Diseño elegante y accesorios útiles para quienes buscan comodidad y estilo."
+    },
+    "22": {
+      "description": "La CityGlider 450 es ligera y ágil para desplazamientos diarios. Diseño aerodinámico y accesorios funcionales para eficiencia y practicidad."
+    },
+    "23": {
+      "description": "La TrailMaster 1800 es una bicicleta de senderos robusta y versátil para amantes de la naturaleza. Suspensión delantera y neumáticos anchos para terrenos difíciles."
+    },
+    "24": {
+      "description": "La EcoRide 75 es económica y sostenible para quienes cuidan el medio ambiente. Diseño sencillo y eficiente, ideal para paseos urbanos."
+    },
+    "25": {
+      "description": "La UrbanVoyager 800 es una bicicleta urbana cómoda y versátil para desplazamientos diarios. Geometría relajada y accesorios prácticos para rutas urbanas."
+    },
+    "26": {
+      "description": "La MountainHero XT es una bicicleta de montaña de alto rendimiento para ciclistas exigentes. Doble suspensión y componentes de calidad para senderos difíciles."
+    },
+    "27": {
+      "description": "La SpeedKing 1500 es rápida y ágil para quienes buscan velocidad. Diseño deportivo y componentes de alto rendimiento para aventuras emocionantes."
+    },
+    "28": {
+      "description": "La CommuterEase 350 es cómoda y práctica para desplazamientos diarios. Diseño elegante y accesorios útiles para quienes buscan comodidad y estilo."
+    },
+    "29": {
+      "description": "Bicicleta ideal para pequeños principiantes, con ruedines y cuadro resistente para garantizar seguridad y diversión."
+    },
+    "30": {
+      "description": "Bicicleta infantil elegante y cómoda, con colores vivos y sillín suave para disfrutar de los paseos."
+    },
+    "31": {
+      "description": "Bicicleta deportiva para jóvenes aventureros, con cuadro ligero y marchas fáciles de usar para divertirse pedaleando."
+    },
+    "32": {
+      "description": "Bicicleta de montaña en miniatura para niños, con neumáticos duraderos y cuadro robusto para divertirse fuera del asfalto."
+    },
+    "33": {
+      "description": "Bicicleta de paseo cómoda para niños, ideal para rutas largas en familia. Sillín acolchado y pedaleo fácil."
+    },
+    "34": {
+      "description": "Bicicleta infantil ecológica hecha con materiales sostenibles y diseñada para un uso diario seguro."
+    },
+    "35": {
+      "description": "Bicicleta versátil para niños mayores, con varias marchas y posición cómoda para distintos terrenos."
+    },
+    "36": {
+      "description": "Bicicleta para pequeños exploradores, con construcción duradera y colores vivos para inspirar paseos divertidos."
+    },
+    "37": {
+      "description": "Bicicleta rápida para niños que disfrutan de las carreras, con cuadro ligero y diseño centrado en el rendimiento."
+    },
+    "38": {
+      "description": "Bicicleta divertida y colorida para niños pequeños, con funciones de seguridad y conducción cómoda."
+    }
+  }
+}

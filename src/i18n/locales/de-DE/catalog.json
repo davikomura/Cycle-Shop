@@ -1,0 +1,101 @@
+{
+  "categories": {
+    "mountain": {
+      "name": "Mountainbikes"
+    },
+    "road": {
+      "name": "Rennräder"
+    },
+    "electric": {
+      "name": "E-Bikes"
+    },
+    "trekking": {
+      "name": "Trekkingräder"
+    },
+    "kids": {
+      "name": "Kinderfahrräder"
+    },
+    "tires": {
+      "name": "Reifen",
+      "description": "Ersatzreifen und Upgrades sind bald verfügbar."
+    },
+    "clothing": {
+      "name": "Bekleidung",
+      "description": "Radbekleidung und saisonale Sets sind bald verfügbar."
+    },
+    "accessories": {
+      "name": "Zubehör",
+      "description": "Helme, Lichter, Taschen und weiteres Zubehör folgen bald."
+    },
+    "fallback": {
+      "description": "Weitere Produkte dieser Kategorie sind bald verfügbar."
+    }
+  },
+  "category": "Kategorie",
+  "askAQuestion": "Frage stellen",
+  "noFavoritesYet": "Noch keine Favoriten",
+  "saveBikesHereToCompareThemLater": "Speichere Fahrräder, um sie später zu vergleichen und schnell wiederzufinden.",
+  "discoverBikes": "Fahrräder entdecken",
+  "savedList": "Deine Auswahl",
+  "favorites": {
+    "title": "Favoriten",
+    "count": "Gespeicherte Fahrräder: {{count}}",
+    "count_one": "{{count}} gespeichertes Fahrrad",
+    "count_other": "{{count}} gespeicherte Fahrräder"
+  },
+  "clearFavorites": "Favoriten löschen",
+  "product": "Produkt",
+  "productNotFound": "Produkt nicht gefunden",
+  "thisBikeIsNoLongerAvailableOr": "Dieses Fahrrad ist nicht mehr verfügbar oder der Link ist falsch.",
+  "sold": "verkauft",
+  "vatIncluded": "Inkl. MwSt.",
+  "moreLikeThis": "Ähnliche Modelle",
+  "delivery": "Lieferung",
+  "shipsIn24Hours": "Versand innerhalb von 24 Stunden",
+  "warranty": "Garantie",
+  "2YearsOnFrame": "2 Jahre auf den Rahmen",
+  "setupGuidanceIncluded": "Anleitung zur Montage inklusive",
+  "search": "Suche",
+  "noMatchesYet": "Keine Treffer gefunden",
+  "tryABroaderTermLikeMountainCity": "Versuche einen allgemeineren Begriff wie Mountainbike, Stadt, elektrisch oder Rennrad.",
+  "curatedCatalog": "Ausgewähltes Sortiment",
+  "modelsReadyToBrowse": "Modelle zum Entdecken.",
+  "sort": "Sortieren:",
+  "allPrices": "Alle Preise",
+  "allRatings": "Alle Bewertungen",
+  "4StarsAndUp": "Ab 4 Sternen",
+  "newArrivals": "Neuheiten",
+  "new": "Neu",
+  "thisCategoryIsBeingPrepared": "Keine Fahrräder in dieser Auswahl",
+  "weAreCuratingProductsForThisSection": "Passe die Filter an oder entdecke eine andere Kategorie.",
+  "add": "Hinzufügen",
+  "save": "Speichern",
+  "saved": "Gespeichert",
+  "shopNow": "Jetzt einkaufen",
+  "previous": "Zurück",
+  "next": "Weiter",
+  "bestSellers": "Bestseller",
+  "topRated": "Beste Bewertungen",
+  "priceLowToHigh": "Preis aufsteigend",
+  "priceHighToLow": "Preis absteigend",
+  "searchWithinCategory": "In {{category}} suchen...",
+  "underPrice": "Unter {{price}}",
+  "overPrice": "Über {{price}}",
+  "minToMax": "{{min}} bis {{max}}",
+  "resultsForQuery": "Ergebnisse für „{{query}}“",
+  "browseAllBikes": "Alle Fahrräder entdecken",
+  "results": {
+    "count": "Gefundene Produkte: {{count}}",
+    "count_one": "{{count}} Produkt gefunden",
+    "count_other": "{{count}} Produkte gefunden"
+  },
+  "rating5AverageRating": "Durchschnitt: {{rating}}/5",
+  "models": {
+    "count_one": "{{count}} Modell zum Entdecken.",
+    "count_other": "{{count}} Modelle zum Entdecken."
+  },
+  "sales": {
+    "count_one": "{{count}} verkauft",
+    "count_other": "{{count}} verkauft"
+  }
+}

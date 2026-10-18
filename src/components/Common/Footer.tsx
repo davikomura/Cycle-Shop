@@ -1,35 +1,37 @@
-import type { LinkProps } from '@tanstack/react-router';
-import { Link } from '@tanstack/react-router';
-import logo from '../../assets/logo_dk_cycle_shop.png';
+import { useI18n } from "../../i18n/I18n";
+import type { LinkProps } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+import logo from "../../assets/logo_dk_cycle_shop.png";
 
-type FooterLink = { label: string; to: LinkProps['to'] };
+type FooterLink = { label: string; to: LinkProps["to"] };
 
 const serviceLinks: FooterLink[] = [
-  { label: 'Shipping information', to: '/FAQ' },
-  { label: 'Withdrawal form', to: '/Terms-and-Conditions' },
-  { label: 'Warranty claim', to: '/FAQ' },
+  { label: "common:shippingInformation", to: "/FAQ" },
+  { label: "common:withdrawalForm", to: "/Terms-and-Conditions" },
+  { label: "common:warrantyClaim", to: "/FAQ" },
 ];
 
 const helpLinks: FooterLink[] = [
-  { label: 'Support', to: '/FAQ' },
-  { label: 'FAQ', to: '/FAQ' },
-  { label: 'Bike assembly videos', to: '/About' },
+  { label: "common:support", to: "/FAQ" },
+  { label: "common:faq", to: "/FAQ" },
+  { label: "common:bikeAssemblyVideos", to: "/About" },
 ];
 
 const companyLinks: FooterLink[] = [
-  { label: 'About', to: '/About' },
-  { label: 'Privacy Policy', to: '/PrivacyPolicy' },
-  { label: 'Terms & Conditions', to: '/Terms-and-Conditions' },
+  { label: "common:about", to: "/About" },
+  { label: "common:privacyPolicy", to: "/PrivacyPolicy" },
+  { label: "common:termsConditions", to: "/Terms-and-Conditions" },
 ];
 
 const Footer = () => {
+  const { t } = useI18n(["common"]);
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const renderLinkGroup = (title: string, links: FooterLink[]) => (
     <div>
-      <h2 className="mb-4 text-lg font-bold text-white">{title}</h2>
+      <h2 className="mb-4 text-lg font-bold text-white">{t(title)}</h2>
       <ul className="space-y-3">
         {links.map((link) => (
           <li key={link.label}>
@@ -38,7 +40,7 @@ const Footer = () => {
               onClick={scrollToTop}
               className="text-base text-gray-400 transition-all hover:text-white"
             >
-              {link.label}
+              {t(link.label)}
             </Link>
           </li>
         ))}
@@ -49,9 +51,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-dark px-8 py-12 font-[sans-serif] lg:px-16">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {renderLinkGroup('Service', serviceLinks)}
-        {renderLinkGroup('Help & Tips', helpLinks)}
-        {renderLinkGroup('Company', companyLinks)}
+        {renderLinkGroup("common:service", serviceLinks)}
+        {renderLinkGroup("common:helpTips", helpLinks)}
+        {renderLinkGroup("common:company", companyLinks)}
 
         <div className="flex items-center lg:justify-center">
           <Link to="/" onClick={scrollToTop}>
@@ -64,7 +66,7 @@ const Footer = () => {
 
       <div className="sm:flex sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-gray-400 sm:order-1">
-          © 2026{' '}
+          © 2026{" "}
           <a
             href="https://github.com/davikomura"
             target="_blank"
@@ -73,7 +75,7 @@ const Footer = () => {
           >
             DK Cycle Shop
           </a>
-          All rights reserved.
+          {t("common:allRightsReserved")}
         </p>
 
         <div className="flex space-x-5 max-sm:mt-4">
@@ -82,9 +84,13 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="text-gray-400 transition-all hover:text-white"
-            aria-label="Facebook"
+            aria-label={t("common:facebook")}
           >
-            <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <svg
+              className="h-5 w-5 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <path
                 fillRule="evenodd"
                 d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.558V12h2.77l-.443 2.89h-2.327V22C18.343 21.128 22 16.991 22 12"
@@ -96,9 +102,13 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="text-gray-400 transition-all hover:text-white"
-            aria-label="YouTube"
+            aria-label={t("common:youtube")}
           >
-            <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <svg
+              className="h-5 w-5 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <path d="M12 2C6.486 2 2 6.486 2 12c0 5.513 4.486 10 10 10s10-4.487 10-10c0-5.514-4.486-10-10-10zm0 1.542c4.951 0 8.458 3.392 8.458 8.458 0 4.949-3.391 8.458-8.458 8.458-4.948 0-8.458-3.391-8.458-8.458 0-4.949 3.392-8.458 8.458-8.458zM9.743 16.747V7.128l6.027 4.31-6.027 4.309z" />
             </svg>
           </a>
@@ -107,7 +117,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="text-gray-400 transition-all hover:text-white"
-            aria-label="LinkedIn"
+            aria-label={t("common:linkedin")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

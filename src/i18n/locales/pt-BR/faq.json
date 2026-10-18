@@ -1,0 +1,38 @@
+{
+  "faqs": "Dúvidas",
+  "frequentlyAskedQuestions": "Perguntas frequentes",
+  "items": {
+    "billing": {
+      "question": "Como atualizo meus dados de cobrança?",
+      "answer": "Para atualizar seus dados de cobrança, acesse as configurações da conta e procure a seção de cobrança. Nela, você pode atualizar os dados de pagamento."
+    },
+    "support": {
+      "question": "Como entro em contato com o suporte?",
+      "answer": "Você pode falar com nosso suporte pela página de contato. Estamos disponíveis por telefone, e-mail ou chat."
+    },
+    "profile": {
+      "question": "Como atualizo os dados do meu perfil?",
+      "answer": "Para atualizar seu perfil, entre na conta e acesse a seção de perfil para alterar seus dados."
+    },
+    "history": {
+      "question": "Onde encontro meu histórico de compras?",
+      "answer": "Você encontra seu histórico de compras no painel da conta, na seção de histórico de pedidos."
+    },
+    "warranty": {
+      "question": "Qual é a garantia das bicicletas?",
+      "answer": "Oferecemos garantia de 2 anos para quadros e 1 ano para outras peças. Consulte nossa política de garantia para mais detalhes."
+    },
+    "assembly": {
+      "question": "Vocês oferecem montagem de bicicletas?",
+      "answer": "Sim, oferecemos montagem gratuita para todas as bicicletas compradas em nossa loja. Nossos especialistas garantem a montagem correta."
+    },
+    "returns": {
+      "question": "Posso devolver uma bicicleta se não gostar dela?",
+      "answer": "Sim, você pode devolver a bicicleta em até 30 dias após a compra com reembolso integral, desde que não tenha sido usada. Consulte nossa política de devolução."
+    },
+    "financing": {
+      "question": "Vocês oferecem opções de financiamento?",
+      "answer": "Sim, oferecemos opções de financiamento por meio de parceiros. Você pode parcelar o pagamento em vários meses. Consulte nossa página de financiamento."
+    }
+  }
+}

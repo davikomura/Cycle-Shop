@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Less routine.",
+    "highlight": "More adventure.",
+    "eyebrow": "FOR THE LOVE OF CYCLING",
+    "description": "From your first pedal stroke to your next big challenge. Find the bike that moves you.",
+    "primaryAction": "Find my bike",
+    "secondaryAction": "Explore the trails",
+    "footnote": "CITY. TRAIL. ROAD. YOUR WAY.",
+    "productBadge": "TRAIL READY"
+  },
+  "benefits": {
+    "selection": {
+      "title": "Bikes for every ride",
+      "description": "From city streets to mountain trails"
+    },
+    "favorites": {
+      "title": "Choose with confidence",
+      "description": "Compare models and save your favorites"
+    },
+    "languages": {
+      "title": "A shop that speaks your language",
+      "description": "4 languages. 3 currencies."
+    }
+  },
+  "categories": {
+    "eyebrow": "WHAT IS YOUR NEXT DESTINATION?",
+    "title": "Your ride. Your style.",
+    "viewAll": "View all bikes",
+    "mountain": "Own the trails.",
+    "road": "Find your speed.",
+    "electric": "Go a little further.",
+    "trekking": "Explore every day.",
+    "kids": "Big little adventures."
+  },
+  "featured": {
+    "eyebrow": "MEET YOUR NEXT BIKE",
+    "title": "Ready for your next ride.",
+    "action": "Explore the collection"
+  },
+  "banner": {
+    "eyebrow": "TAKE THE LONG WAY HOME",
+    "title": "The best route is",
+    "highlight": "the one you discover.",
+    "action": "Discover trekking bikes"
+  }
+}

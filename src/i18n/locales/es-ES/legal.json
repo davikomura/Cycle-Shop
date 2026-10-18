@@ -1,0 +1,61 @@
+{
+  "privacy": {
+    "collection": {
+      "title": "Información que recopilamos",
+      "intro": "Podemos recopilar la siguiente información:",
+      "contact": "Tu nombre y datos de contacto",
+      "demographics": "Información demográfica",
+      "surveys": "Otra información relevante para encuestas y ofertas"
+    },
+    "usage": {
+      "title": "Cómo utilizamos la información",
+      "records": "Mantenimiento de registros internos",
+      "improvements": "Mejora de nuestros productos y servicios",
+      "intro": "Necesitamos esta información para entender tus necesidades y ofrecer un mejor servicio, en particular por los siguientes motivos:",
+      "marketing": "Envío de correos promocionales sobre nuevos productos, ofertas especiales y otra información que pueda interesarte",
+      "research": "Ocasionalmente podemos usar tus datos para contactarte con fines de investigación de mercado por correo electrónico, teléfono o correo postal. También podemos personalizar el sitio según tus intereses."
+    },
+    "security": {
+      "title": "Seguridad",
+      "body": "Nos comprometemos a mantener tu información segura. Para evitar accesos o divulgaciones no autorizados, hemos establecido procedimientos físicos, electrónicos y administrativos adecuados para proteger la información recopilada en línea."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "Una cookie es un pequeño archivo que solicita permiso para guardarse en tu ordenador. Tras aceptarlo, ayuda a analizar el tráfico o identificar visitas a un sitio. Las cookies permiten que las aplicaciones web respondan de forma individual, adaptándose a tus necesidades, gustos y preferencias al recopilar y recordar esa información.",
+      "scope": "Las cookies ayudan a mejorar el sitio al identificar qué páginas te resultan útiles. Una cookie no nos da acceso a tu ordenador ni a información personal distinta de la que decides compartir."
+    },
+    "links": {
+      "title": "Enlaces a otros sitios web",
+      "body": "Nuestro sitio puede contener enlaces a otros sitios. Al seguirlos, recuerda que no tenemos control sobre ellos ni somos responsables de la protección y privacidad de los datos que proporciones allí. Esos sitios no se rigen por esta declaración. Consulta su política de privacidad."
+    },
+    "control": {
+      "title": "Control de tus datos personales",
+      "intro": "Puedes restringir la recopilación o el uso de tus datos personales de las siguientes formas:",
+      "withdrawal": "Si has autorizado el uso de tus datos para marketing directo, puedes cambiar de opinión en cualquier momento escribiéndonos o enviando un correo a [email protected].",
+      "sharing": "No venderemos, distribuiremos ni alquilaremos tus datos personales a terceros sin tu permiso, salvo obligación legal. Podemos enviarte información promocional de terceros que consideremos relevante si nos autorizas.",
+      "access": "Puedes solicitar los datos personales que conservamos sobre ti. Para obtener una copia, escribe a [Nombre de la empresa, dirección, ciudad, provincia, código postal] o a [email protected].",
+      "correction": "Si crees que la información que conservamos sobre ti es incorrecta o incompleta, escríbenos al contacto indicado. Corregiremos rápidamente los datos incorrectos."
+    },
+    "updates": "Esta política de privacidad puede cambiar sin previo aviso.",
+    "intro": "Esta política de privacidad explica cómo nuestro sitio web utiliza y protege la información que proporcionas al usarlo."
+  },
+  "terms": {
+    "intro": "Bienvenido a nuestra página de términos y condiciones. Lee estos términos atentamente antes de utilizar nuestros servicios.",
+    "acceptance": {
+      "title": "1. Aceptación de los términos",
+      "body": "Al acceder y utilizar este sitio web, aceptas estos términos y todas las leyes y normativas aplicables."
+    },
+    "changes": {
+      "title": "2. Cambios en los términos",
+      "body": "Nos reservamos el derecho a modificar estos términos en cualquier momento. Es tu responsabilidad revisarlos periódicamente."
+    },
+    "usage": {
+      "title": "3. Uso del sitio",
+      "body": "Aceptas no utilizar este sitio con fines ilegales ni para infringir las leyes de tu jurisdicción."
+    },
+    "contact": {
+      "title": "4. Información de contacto",
+      "body": "Si tienes preguntas sobre estos términos y condiciones, ponte en contacto con nosotros."
+    }
+  }
+}

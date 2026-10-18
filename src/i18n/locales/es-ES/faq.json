@@ -1,0 +1,38 @@
+{
+  "faqs": "Preguntas frecuentes",
+  "frequentlyAskedQuestions": "Preguntas frecuentes",
+  "items": {
+    "billing": {
+      "question": "¿Cómo actualizo mis datos de facturación?",
+      "answer": "Para actualizar tus datos de facturación, ve a los ajustes de tu cuenta y busca la sección de facturación. Allí puedes actualizar los datos de pago."
+    },
+    "support": {
+      "question": "¿Cómo contacto con atención al cliente?",
+      "answer": "Puedes contactar con atención al cliente desde la página de contacto. Estamos disponibles por teléfono, correo electrónico o chat."
+    },
+    "profile": {
+      "question": "¿Cómo actualizo los datos de mi perfil?",
+      "answer": "Para actualizar tu perfil, inicia sesión y ve a la sección de perfil para modificar tus datos."
+    },
+    "history": {
+      "question": "¿Dónde encuentro mi historial de compras?",
+      "answer": "Puedes encontrar tu historial de compras en el panel de tu cuenta, en la sección de historial de pedidos."
+    },
+    "warranty": {
+      "question": "¿Qué garantía tienen las bicicletas?",
+      "answer": "Ofrecemos 2 años de garantía para cuadros y 1 año para otras piezas. Consulta nuestra política de garantía para más detalles."
+    },
+    "assembly": {
+      "question": "¿Ofrecéis servicios de montaje de bicicletas?",
+      "answer": "Sí, ofrecemos montaje gratuito para todas las bicicletas compradas en nuestra tienda. Nuestros expertos se aseguran de que todo quede bien montado."
+    },
+    "returns": {
+      "question": "¿Puedo devolver una bicicleta si no me gusta?",
+      "answer": "Sí, puedes devolver la bicicleta en los 30 días posteriores a la compra con reembolso completo, siempre que no se haya usado. Consulta nuestra política de devoluciones."
+    },
+    "financing": {
+      "question": "¿Ofrecéis opciones de financiación?",
+      "answer": "Sí, ofrecemos financiación a través de nuestros socios. Puedes pagar a plazos durante varios meses. Consulta nuestra página de financiación."
+    }
+  }
+}

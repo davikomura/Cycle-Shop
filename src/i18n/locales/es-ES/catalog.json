@@ -1,0 +1,105 @@
+{
+  "categories": {
+    "mountain": {
+      "name": "Bicicletas de montaña"
+    },
+    "road": {
+      "name": "Bicicletas de carretera"
+    },
+    "electric": {
+      "name": "Bicicletas eléctricas"
+    },
+    "trekking": {
+      "name": "Trekking"
+    },
+    "kids": {
+      "name": "Infantiles"
+    },
+    "tires": {
+      "name": "Neumáticos",
+      "description": "Próximamente habrá neumáticos y mejoras disponibles."
+    },
+    "clothing": {
+      "name": "Ropa",
+      "description": "La ropa de ciclismo y los conjuntos de temporada llegarán pronto."
+    },
+    "accessories": {
+      "name": "Accesorios",
+      "description": "Próximamente habrá cascos, luces, bolsas y otros accesorios."
+    },
+    "fallback": {
+      "description": "Pronto habrá más productos de esta categoría."
+    }
+  },
+  "category": "Categoría",
+  "askAQuestion": "Haz una pregunta",
+  "noFavoritesYet": "Aún no tienes favoritos",
+  "saveBikesHereToCompareThemLater": "Guarda bicicletas para compararlas después y volver fácilmente.",
+  "discoverBikes": "Descubrir bicicletas",
+  "savedList": "Tu selección",
+  "favorites": {
+    "title": "Favoritos",
+    "count": "Bicicletas guardadas: {{count}}",
+    "count_one": "{{count}} bicicleta guardada",
+    "count_other": "{{count}} bicicletas guardadas",
+    "count_many": "{{count}} bicicletas guardadas"
+  },
+  "clearFavorites": "Borrar favoritos",
+  "product": "Producto",
+  "productNotFound": "Producto no encontrado",
+  "thisBikeIsNoLongerAvailableOr": "Esta bicicleta ya no está disponible o el enlace es incorrecto.",
+  "sold": "vendidas",
+  "vatIncluded": "IVA incluido",
+  "moreLikeThis": "Modelos similares",
+  "delivery": "Entrega",
+  "shipsIn24Hours": "Envío en 24 horas",
+  "warranty": "Garantía",
+  "2YearsOnFrame": "2 años para el cuadro",
+  "setupGuidanceIncluded": "Orientación de montaje incluida",
+  "search": "Búsqueda",
+  "noMatchesYet": "No se han encontrado resultados",
+  "tryABroaderTermLikeMountainCity": "Prueba un término más amplio, como montaña, ciudad, eléctrica o carretera.",
+  "curatedCatalog": "Catálogo seleccionado",
+  "modelsReadyToBrowse": "modelos para explorar.",
+  "sort": "Ordenar:",
+  "allPrices": "Todos los precios",
+  "allRatings": "Todas las valoraciones",
+  "4StarsAndUp": "4 estrellas o más",
+  "newArrivals": "Novedades",
+  "new": "Nuevo",
+  "thisCategoryIsBeingPrepared": "No hay bicicletas en esta selección",
+  "weAreCuratingProductsForThisSection": "Prueba a ajustar los filtros o explora otra categoría.",
+  "add": "Añadir",
+  "save": "Guardar",
+  "saved": "Guardado",
+  "shopNow": "Comprar ahora",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "bestSellers": "Más vendidos",
+  "topRated": "Mejor valorados",
+  "priceLowToHigh": "Precio: de menor a mayor",
+  "priceHighToLow": "Precio: de mayor a menor",
+  "searchWithinCategory": "Buscar en {{category}}...",
+  "underPrice": "Menos de {{price}}",
+  "overPrice": "Más de {{price}}",
+  "minToMax": "De {{min}} a {{max}}",
+  "resultsForQuery": "Resultados para «{{query}}»",
+  "browseAllBikes": "Explora todas las bicicletas",
+  "results": {
+    "count": "Productos encontrados: {{count}}",
+    "count_one": "{{count}} producto encontrado",
+    "count_other": "{{count}} productos encontrados",
+    "count_many": "{{count}} productos encontrados"
+  },
+  "rating5AverageRating": "Valoración media: {{rating}}/5",
+  "models": {
+    "count_one": "{{count}} modelo para explorar.",
+    "count_other": "{{count}} modelos para explorar.",
+    "count_many": "{{count}} modelos para explorar."
+  },
+  "sales": {
+    "count_one": "{{count}} vendida",
+    "count_other": "{{count}} vendidas",
+    "count_many": "{{count}} vendidas"
+  }
+}

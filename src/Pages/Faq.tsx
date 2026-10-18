@@ -1,7 +1,9 @@
-import { useState } from 'react';
-import faqsData from '../../data.json';
+import { useI18n } from "../i18n/I18n";
+import { useState } from "react";
+import faqsData from "../../data.json";
 
 export const Faq = () => {
+  const { t } = useI18n(["common", "faq"]);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -13,19 +15,19 @@ export const Faq = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <h1 className="mb-2 text-center text-lg font-medium text-indigo-600">
-            FAQs
+            {t("faq:faqs")}
           </h1>
           <h2 className="text-center text-4xl font-bold leading-[3.25rem] text-gray-900">
-            Frequently asked questions
+            {t("faq:frequentlyAskedQuestions")}
           </h2>
         </div>
 
         <div>
           {faqsData.faqs.map((faq, index) => (
             <div
-              key={faq.question}
+              key={faq.id}
               className={`rounded-2xl border-b border-solid border-gray-200 px-6 py-8 transition-all duration-500 ${
-                activeIndex === index ? 'bg-indigo-50' : 'hover:bg-indigo-50'
+                activeIndex === index ? "bg-indigo-50" : "hover:bg-indigo-50"
               }`}
             >
               <button
@@ -35,10 +37,12 @@ export const Faq = () => {
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-panel-${index}`}
               >
-                <span className="text-lg font-medium">{faq.question}</span>
+                <span className="text-lg font-medium">
+                  {t(`faq:items.${faq.id}.question`)}
+                </span>
                 <svg
                   className={`text-gray-500 transition duration-500 group-hover:text-indigo-600 ${
-                    activeIndex === index ? 'rotate-180' : ''
+                    activeIndex === index ? "rotate-180" : ""
                   }`}
                   width="22"
                   height="22"
@@ -59,12 +63,12 @@ export const Faq = () => {
                 id={`faq-panel-${index}`}
                 className="overflow-hidden px-0"
                 style={{
-                  maxHeight: activeIndex === index ? '250px' : '0',
-                  transition: 'max-height 0.5s ease',
+                  maxHeight: activeIndex === index ? "250px" : "0",
+                  transition: "max-height 0.5s ease",
                 }}
               >
                 <p className="pt-4 text-base leading-6 text-gray-900">
-                  {faq.answer}
+                  {t(`faq:items.${faq.id}.answer`)}
                 </p>
               </div>
             </div>

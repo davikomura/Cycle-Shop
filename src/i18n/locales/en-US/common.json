@@ -1,0 +1,53 @@
+{
+  "preferences": {
+    "language": "Language",
+    "currency": "Currency"
+  },
+  "yourNextAdventureStartsHere": "Your next adventure starts here.",
+  "goToHomepage": "Go to homepage",
+  "goToFavorites": "Go to favorites",
+  "goToCart": "Go to cart",
+  "cart": "Cart",
+  "signOut": "Sign out",
+  "signIn": "Sign in",
+  "menu": "Menu",
+  "close": "Close",
+  "shopNavigation": "Shop navigation",
+  "allBikes": "All bikes",
+  "ourStory": "Our Story",
+  "madeForTheRide": "Made for the ride.",
+  "backToHomepage": "Back to homepage",
+  "email": "Email",
+  "remove": "Remove",
+  "actions": {
+    "addToCart": "Add to cart"
+  },
+  "support": "Support",
+  "newArrival": "New arrival",
+  "details": "Details",
+  "saveToFavorites": "Save to favorites",
+  "savedToFavorites": "Saved to favorites",
+  "allRightsReserved": "All rights reserved.",
+  "service": "Service",
+  "helpTips": "Help & Tips",
+  "company": "Company",
+  "shippingInformation": "Shipping information",
+  "withdrawalForm": "Withdrawal form",
+  "warrantyClaim": "Warranty claim",
+  "faq": "FAQ",
+  "bikeAssemblyVideos": "Bike assembly videos",
+  "about": "About",
+  "termsConditions": "Terms & Conditions",
+  "privacyPolicy": "Privacy Policy",
+  "termsAndConditions": "Terms and Conditions",
+  "facebook": "Facebook",
+  "youtube": "YouTube",
+  "linkedin": "LinkedIn",
+  "search": {
+    "placeholder": "Search bikes...",
+    "submit": "Search bikes"
+  },
+  "currency": {
+    "estimateNotice": "Converted prices are estimates using fixed demo rates. Base currency: EUR."
+  }
+}

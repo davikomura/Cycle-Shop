@@ -1,0 +1,53 @@
+{
+  "preferences": {
+    "language": "Idioma",
+    "currency": "Moneda"
+  },
+  "yourNextAdventureStartsHere": "Tu próxima aventura empieza aquí.",
+  "goToHomepage": "Ir al inicio",
+  "goToFavorites": "Ir a favoritos",
+  "goToCart": "Ir a la cesta",
+  "cart": "Cesta",
+  "signOut": "Cerrar sesión",
+  "signIn": "Iniciar sesión",
+  "menu": "Menú",
+  "close": "Cerrar",
+  "shopNavigation": "Navegación de la tienda",
+  "allBikes": "Todas las bicicletas",
+  "ourStory": "Nuestra historia",
+  "madeForTheRide": "Hecho para pedalear.",
+  "backToHomepage": "Volver al inicio",
+  "email": "Correo electrónico",
+  "remove": "Eliminar",
+  "actions": {
+    "addToCart": "Añadir a la cesta"
+  },
+  "support": "Asistencia",
+  "newArrival": "Novedad",
+  "details": "Detalles",
+  "saveToFavorites": "Guardar en favoritos",
+  "savedToFavorites": "Guardado en favoritos",
+  "allRightsReserved": "Todos los derechos reservados.",
+  "service": "Servicios",
+  "helpTips": "Ayuda y consejos",
+  "company": "Empresa",
+  "shippingInformation": "Información de envío",
+  "withdrawalForm": "Formulario de desistimiento",
+  "warrantyClaim": "Solicitar garantía",
+  "faq": "Preguntas frecuentes",
+  "bikeAssemblyVideos": "Montaje de bicicletas",
+  "about": "Sobre nosotros",
+  "termsConditions": "Términos y condiciones",
+  "privacyPolicy": "Política de privacidad",
+  "termsAndConditions": "Términos y condiciones",
+  "facebook": "Facebook",
+  "youtube": "YouTube",
+  "linkedin": "LinkedIn",
+  "search": {
+    "placeholder": "Buscar bicicletas...",
+    "submit": "Buscar bicicletas"
+  },
+  "currency": {
+    "estimateNotice": "Los precios convertidos son estimaciones con tipos fijos de demostración. Moneda base: EUR."
+  }
+}

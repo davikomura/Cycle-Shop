@@ -1,160 +1,256 @@
-import { useCatalog } from '../lib/useCatalog';
-import dona from '../assets/bike.png';
-import { Link } from '@tanstack/react-router';
-import { useCart } from '../context/useCart';
-import { useFavorites } from '../context/useFavorites';
-import { formatPrice } from '../lib/catalog';
-import ImageCarousel from '../components/Content/ImageCarousel';
-
+import { categoryNameKey } from "../i18n/catalogKeys";
+import { Link } from "@tanstack/react-router";
+import { useCatalog } from "../lib/useCatalog";
+import { useCart } from "../context/useCart";
+import { useFavorites } from "../context/useFavorites";
+import { useI18n } from "../i18n/I18n";
+const categories = [
+  {
+    name: "catalog:categories.mountain.name",
+    detail: "home:categories.mountain",
+    image: "mountain_bike.png",
+    to: "/Mountain-Bike",
+  },
+  {
+    name: "catalog:categories.road.name",
+    detail: "home:categories.road",
+    image: "road_bike.png",
+    to: "/Road-Bike",
+  },
+  {
+    name: "catalog:categories.electric.name",
+    detail: "home:categories.electric",
+    image: "e-bike.png",
+    to: "/E-Bike",
+  },
+  {
+    name: "catalog:categories.trekking.name",
+    detail: "home:categories.trekking",
+    image: "Trekking.png",
+    to: "/Trekking",
+  },
+  {
+    name: "catalog:categories.kids.name",
+    detail: "home:categories.kids",
+    image: "kids_bike.png",
+    to: "/Kids",
+  },
+] as const;
 export const MainPage = () => {
+  const { t, formatPrice } = useI18n(["common", "catalog", "home"]);
   const { data: catalog } = useCatalog();
-  const featuredBikes = catalog.slice(0, 4);
   const { addItem } = useCart();
   const { isFavorite, toggleFavorite } = useFavorites();
-
+  const [heroBike] = catalog.filter((b) => b.tipo === "Mountain Bike");
   return (
-    <>
-      <section className="ambient-grid overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(255,132,92,0.35),_transparent_28%),linear-gradient(135deg,#191c23_0%,#111318_60%,#19140f_100%)] pt-10 sm:pt-16 md:pt-0 2xl:pt-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-8 md:grid-cols-2">
-            <div className="hero-fade flex flex-col items-center py-12 text-center md:items-start md:text-left">
-              <div className="w-full max-w-2xl rounded-[32px] border border-white/70 bg-[rgba(255,250,244,0.82)] px-8 py-10 text-[#1c1d22] shadow-[0_24px_70px_rgba(18,19,23,0.12)] backdrop-blur-xl">
-                <span className="inline-flex rounded-full border border-[#f0c7b4] bg-white/70 px-4 py-2 text-sm uppercase tracking-[0.3em] text-[#d46847]">
-                  Fresh drop
-                </span>
-                <h1 className="mt-6 text-3xl font-bold leading-tight text-[#181a20] sm:text-4xl lg:text-5xl">
-                  Ride farther with our new Tarmac collection
-                </h1>
-                <p className="mt-4 max-w-lg text-xl leading-relaxed text-[#5c6472] md:mt-8">
-                  Limited units, faster frames and hand-picked accessories for your
-                  next long ride.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link
-                    to="/Road-Bike"
-                    className="rounded-full bg-[#1b1e24] px-6 py-3 text-base text-white shadow-lg shadow-black/20 transition-transform hover:-translate-y-0.5 hover:bg-[#e95f3c]"
-                  >
-                    Explore now
-                  </Link>
-                  <Link
-                    to="/Mountain-Bike"
-                    className="rounded-full border border-[#d7dce2] bg-white/70 px-6 py-3 text-base text-[#1c1d22] transition-colors hover:border-[#d46847] hover:text-[#d46847]"
-                  >
-                    Compare models
-                  </Link>
-                </div>
-                <div className="mt-8 grid w-full max-w-xl grid-cols-3 gap-3 text-left">
-                  <div className="rounded-2xl border border-[#ead8ce] bg-white/72 px-4 py-4 text-[#1b1e24]">
-                    <p className="text-2xl font-bold">24h</p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#737b88]">
-                      dispatch
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-[#ead8ce] bg-white/72 px-4 py-4 text-[#1b1e24]">
-                    <p className="text-2xl font-bold">5.0</p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#737b88]">
-                      ride feel
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-[#ead8ce] bg-white/72 px-4 py-4 text-[#1b1e24]">
-                    <p className="text-2xl font-bold">12</p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#737b88]">
-                      featured builds
-                    </p>
-                  </div>
-                </div>
-              </div>
+    <main className="storefront">
+      <section className="ride-hero">
+        <div className="shop-container hero-layout">
+          <div className="hero-copy">
+            <p className="eyebrow">
+              <span />
+              {t("home:hero.eyebrow")}
+            </p>
+            <h1>
+              {t("home:hero.title")}
+              <br />
+              <em>{t("home:hero.highlight")}</em>
+            </h1>
+            <p className="hero-description">
+              {t("home:hero.description")}
+            </p>
+            <div className="hero-buttons">
+              <Link className="button-lime" to="/search" search={{ q: "" }}>
+                {t("home:hero.primaryAction")} <span>↗</span>
+              </Link>
+              <Link className="hero-secondary" to="/Mountain-Bike">
+                {t("home:hero.secondaryAction")} →
+              </Link>
             </div>
-            <div className="hero-fade relative flex justify-center py-10">
-              <div className="absolute inset-0 m-auto h-72 w-72 rounded-full bg-[#ff875d]/25 blur-3xl" />
-              <img
-                className="relative w-full max-w-sm drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)] md:max-w-full xl:mx-auto xl:max-w-lg 2xl:origin-bottom 2xl:scale-110"
-                src={dona}
-                alt="Road bike hero"
-              />
-            </div>
+            <p className="hero-footnote">{t("home:hero.footnote")}</p>
+          </div>
+          <div className="hero-product">
+            <span className="hero-outline" aria-hidden="true">
+              RIDE
+            </span>
+            <div className="hero-orbit" />
+            {heroBike && (
+              <>
+                <Link
+                  to="/product/$productId"
+                  params={{ productId: String(heroBike.id) }}
+                  className="hero-bike-link"
+                >
+                  <img
+                    src={heroBike.imagem}
+                    alt={heroBike.nome}
+                    fetchPriority="high"
+                  />
+                </Link>
+                <Link
+                  className="hero-product-tag"
+                  to="/product/$productId"
+                  params={{ productId: String(heroBike.id) }}
+                >
+                  <span>
+                    <small>{t("home:hero.productBadge")}</small>
+                    <strong>{heroBike.nome}</strong>
+                  </span>
+                  <span>{formatPrice(heroBike.preco)} ↗</span>
+                </Link>
+              </>
+            )}
+            <span className="hero-coordinate">DK / EVERYDAY EXPLORERS</span>
           </div>
         </div>
       </section>
-
-      <section className="font-[sans-serif]">
-        <div className="mx-auto p-4 sm:max-w-full lg:max-w-7xl">
-          <div className="mb-12 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#d46847]">
-                Editor&apos;s picks
-              </p>
-              <h2 className="mt-2 text-4xl font-extrabold text-gray-800">Highlights</h2>
-              <p className="mt-2 max-w-2xl text-gray-600">
-                Popular bikes with the strongest demand and best review signals.
-              </p>
-            </div>
+      <div className="benefit-strip shop-container">
+        {[
+          [
+            "↗",
+            "home:benefits.selection.title",
+            "home:benefits.selection.description",
+          ],
+          [
+            "◇",
+            "home:benefits.favorites.title",
+            "home:benefits.favorites.description",
+          ],
+          [
+            "◎",
+            "home:benefits.languages.title",
+            "home:benefits.languages.description",
+          ],
+        ].map(([icon, title, body]) => (
+          <div key={title}>
+            <span aria-hidden="true">{icon}</span>
+            <p>
+              <strong>{t(title)}</strong>
+              <small>{t(body)}</small>
+            </p>
           </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {featuredBikes.map((bike, index) => (
-              <article
-                key={bike.id}
-                className="rise-in relative overflow-hidden rounded-[28px] border border-white/60 bg-white/80 p-5 shadow-[0_16px_40px_rgba(18,19,23,0.08)] backdrop-blur-xs transition-all hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(18,19,23,0.12)]"
-                style={{ animationDelay: `${index * 90}ms` }}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFavorite(bike.id)}
-                  className={`absolute left-4 top-4 z-10 rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition-colors ${
-                    isFavorite(bike.id)
-                      ? 'bg-[#ffe2da] text-[#d64b24]'
-                      : 'bg-white/80 text-gray-600 hover:text-[#d64b24]'
-                  }`}
-                >
-                  {isFavorite(bike.id) ? 'Saved' : 'Save'}
-                </button>
-                <div className="absolute right-4 top-4 rounded-full bg-[#f8ede2] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#d46847]">
-                  Top pick
+        ))}
+      </div>
+      <section className="shop-container category-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">{t("home:categories.eyebrow")}</p>
+            <h2>{t("home:categories.title")}</h2>
+          </div>
+          <Link to="/search" search={{ q: "" }}>
+            {t("home:categories.viewAll")} ↗
+          </Link>
+        </div>
+        <div className="category-grid">
+          {categories.map((cat, index) => (
+            <Link key={cat.to} to={cat.to} className="category-tile">
+              <img
+                src={"/img/Categorias/" + cat.image}
+                alt={t(cat.name)}
+                loading="lazy"
+              />
+              <div>
+                <small>
+                  0{index + 1} / {t(cat.detail)}
+                </small>
+                <h3>
+                  {t(cat.name)} <span>↗</span>
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="featured-section">
+        <div className="shop-container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">{t("home:featured.eyebrow")}</p>
+              <h2>{t("home:featured.title")}</h2>
+            </div>
+            <Link to="/search" search={{ q: "" }}>
+              {t("home:featured.action")} ↗
+            </Link>
+          </div>
+          <div className="product-grid">
+            {catalog.slice(0, 4).map((bike) => (
+              <article className="product-card" key={bike.id}>
+                <div className="product-image">
+                  <span className="product-category">
+                    {t(categoryNameKey(bike.tipo))}
+                  </span>
+                  <button
+                    className={
+                      "favorite-button " +
+                      (isFavorite(bike.id) ? "is-saved" : "")
+                    }
+                    aria-label={t(
+                      isFavorite(bike.id)
+                        ? "common:savedToFavorites"
+                        : "common:saveToFavorites",
+                    )}
+                    aria-pressed={isFavorite(bike.id)}
+                    onClick={() => toggleFavorite(bike.id)}
+                  >
+                    {isFavorite(bike.id) ? "♥" : "♡"}
+                  </button>
+                  <Link
+                    to="/product/$productId"
+                    params={{ productId: String(bike.id) }}
+                  >
+                    <img src={bike.imagem} alt={bike.nome} loading="lazy" />
+                  </Link>
                 </div>
-                <div className="mx-auto mb-4 h-[210px] w-11/12 overflow-hidden">
-                  <img
-                    src={bike.imagem}
-                    alt={bike.nome}
-                    className="h-full w-full object-contain transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <div>
-                  <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-[#d46847]">
-                    {bike.tipo}
+                <div className="product-info">
+                  <p className="product-rating">
+                    {bike.avaliacao
+                      ? `★ ${bike.avaliacao.toFixed(1)} / 5`
+                      : t("common:newArrival")}
                   </p>
-                  <h3 className="text-center text-lg font-extrabold text-gray-800">
-                    {bike.nome}
-                  </h3>
-                  <p className="mt-2 text-center text-sm text-gray-500">
-                    {bike.totalVendas} sold
-                  </p>
-                  <h4 className="mt-4 text-center text-lg font-bold text-gray-800">
-                    {formatPrice(bike.preco)}
-                  </h4>
-                  <div className="mt-4 flex gap-2">
+                  <Link
+                    to="/product/$productId"
+                    params={{ productId: String(bike.id) }}
+                  >
+                    <h3>{bike.nome}</h3>
+                  </Link>
+                  <div className="product-price">
+                    <strong>{formatPrice(bike.preco)}</strong>
                     <Link
-                      to="/product/$productId" params={{ productId: String(bike.id) }}
-                      className="flex-1 rounded-full border border-gray-300 px-4 py-2.5 text-center text-sm font-medium text-gray-700 transition-colors hover:border-[#d46847] hover:text-[#d46847]"
+                      to="/product/$productId"
+                      params={{ productId: String(bike.id) }}
                     >
-                      Details
+                      {t("common:details")} ↗
                     </Link>
-                    <button
-                      type="button"
-                      onClick={() => addItem(bike)}
-                      className="flex-1 rounded-full bg-gray-800 px-4 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#FF6347]"
-                    >
-                      Add to cart
-                    </button>
                   </div>
+                  <button className="add-button" onClick={() => addItem(bike)}>
+                    {t("common:actions.addToCart")} <span>+</span>
+                  </button>
                 </div>
               </article>
             ))}
           </div>
         </div>
       </section>
-
-      <ImageCarousel />
-    </>
+      <section className="shop-container">
+        <div className="adventure-banner">
+          <div>
+            <p className="eyebrow">{t("home:banner.eyebrow")}</p>
+            <h2>
+              {t("home:banner.title")}
+              <br />
+              {t("home:banner.highlight")}
+            </h2>
+            <Link className="button-lime" to="/Trekking">
+              {t("home:banner.action")} ↗
+            </Link>
+          </div>
+          <img
+            src="/img/Categorias/Trekking.png"
+            alt={t("catalog:categories.trekking.name")}
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
   );
 };

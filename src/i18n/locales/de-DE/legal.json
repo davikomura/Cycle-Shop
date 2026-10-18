@@ -1,0 +1,61 @@
+{
+  "privacy": {
+    "collection": {
+      "title": "Erhobene Informationen",
+      "intro": "Wir können folgende Informationen erheben:",
+      "contact": "Deinen Namen und deine Kontaktdaten",
+      "demographics": "Demografische Informationen",
+      "surveys": "Weitere für Kundenumfragen und Angebote relevante Informationen"
+    },
+    "usage": {
+      "title": "Verwendung der Informationen",
+      "records": "Interne Dokumentation",
+      "improvements": "Verbesserung unserer Produkte und Dienstleistungen",
+      "intro": "Wir benötigen diese Informationen, um deine Bedürfnisse zu verstehen und einen besseren Service zu bieten, insbesondere aus folgenden Gründen:",
+      "marketing": "Versand von Werbe-E-Mails zu neuen Produkten, Sonderangeboten und weiteren Informationen, die dich interessieren könnten",
+      "research": "Gelegentlich nutzen wir deine Informationen, um dich für Marktforschung per E-Mail, Telefon oder Post zu kontaktieren. Wir können die Website auch an deine Interessen anpassen."
+    },
+    "security": {
+      "title": "Sicherheit",
+      "body": "Wir setzen uns für die Sicherheit deiner Informationen ein. Um unbefugten Zugriff oder Offenlegung zu verhindern, haben wir geeignete physische, elektronische und organisatorische Verfahren zum Schutz der online erhobenen Daten eingerichtet."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "Ein Cookie ist eine kleine Datei, die um Erlaubnis bittet, auf deinem Computer gespeichert zu werden. Nach deiner Zustimmung hilft sie, den Datenverkehr zu analysieren oder Websitebesuche zu erkennen. Cookies ermöglichen es Webanwendungen, individuell zu reagieren und sich durch das Speichern von Präferenzen an deine Bedürfnisse, Vorlieben und Abneigungen anzupassen.",
+      "scope": "Cookies helfen uns, die Website zu verbessern, indem sie zeigen, welche Seiten du nützlich findest. Ein Cookie gibt uns keinen Zugriff auf deinen Computer oder andere Informationen als die, die du freiwillig teilst."
+    },
+    "links": {
+      "title": "Links zu anderen Websites",
+      "body": "Unsere Website kann Links zu anderen Websites enthalten. Nach dem Verlassen unserer Website haben wir keine Kontrolle über diese Seiten und übernehmen keine Verantwortung für den Schutz dort angegebener Informationen. Diese Seiten unterliegen nicht dieser Erklärung. Bitte prüfe die jeweilige Datenschutzerklärung."
+    },
+    "control": {
+      "title": "Kontrolle deiner personenbezogenen Daten",
+      "intro": "Du kannst die Erhebung oder Nutzung deiner personenbezogenen Daten wie folgt einschränken:",
+      "withdrawal": "Wenn du der Nutzung deiner Daten für Direktmarketing zugestimmt hast, kannst du diese Zustimmung jederzeit schriftlich oder per E-Mail an [email protected] widerrufen.",
+      "sharing": "Wir verkaufen, verbreiten oder vermieten deine personenbezogenen Daten nicht ohne deine Zustimmung an Dritte, es sei denn, wir sind gesetzlich dazu verpflichtet. Mit deiner Erlaubnis können wir dir interessante Werbeinformationen von Dritten senden.",
+      "access": "Du kannst Auskunft über die von uns gespeicherten personenbezogenen Daten anfordern. Für eine Kopie schreibe an [Firmenname, Adresse, Stadt, Bundesland, Postleitzahl] oder per E-Mail an [email protected].",
+      "correction": "Wenn du glaubst, dass gespeicherte Informationen falsch oder unvollständig sind, schreibe uns bitte umgehend an die oben genannte Adresse. Wir werden falsche Angaben unverzüglich berichtigen."
+    },
+    "updates": "Diese Datenschutzerklärung kann ohne vorherige Ankündigung geändert werden.",
+    "intro": "Diese Datenschutzerklärung erläutert, wie unsere Website die Informationen verwendet und schützt, die du bei ihrer Nutzung angibst."
+  },
+  "terms": {
+    "intro": "Willkommen auf unserer Seite mit den Geschäftsbedingungen. Bitte lies diese vor der Nutzung unserer Dienste sorgfältig durch.",
+    "acceptance": {
+      "title": "1. Annahme der Bedingungen",
+      "body": "Durch den Zugriff auf diese Website und ihre Nutzung stimmst du diesen Bedingungen sowie allen geltenden Gesetzen und Vorschriften zu."
+    },
+    "changes": {
+      "title": "2. Änderungen der Bedingungen",
+      "body": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Du bist dafür verantwortlich, sie regelmäßig zu prüfen."
+    },
+    "usage": {
+      "title": "3. Nutzung der Website",
+      "body": "Du stimmst zu, diese Website nicht für illegale Zwecke oder zur Verletzung von Gesetzen in deinem Rechtsgebiet zu nutzen."
+    },
+    "contact": {
+      "title": "4. Kontaktinformationen",
+      "body": "Bei Fragen zu diesen Geschäftsbedingungen kontaktiere uns bitte."
+    }
+  }
+}

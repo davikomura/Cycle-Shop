@@ -1,0 +1,53 @@
+{
+  "preferences": {
+    "language": "Sprache",
+    "currency": "Währung"
+  },
+  "yourNextAdventureStartsHere": "Dein nächstes Abenteuer beginnt hier.",
+  "goToHomepage": "Zur Startseite",
+  "goToFavorites": "Zu den Favoriten",
+  "goToCart": "Zum Warenkorb",
+  "cart": "Warenkorb",
+  "signOut": "Abmelden",
+  "signIn": "Anmelden",
+  "menu": "Menü",
+  "close": "Schließen",
+  "shopNavigation": "Shop-Navigation",
+  "allBikes": "Alle Fahrräder",
+  "ourStory": "Unsere Geschichte",
+  "madeForTheRide": "Für deine Fahrt gemacht.",
+  "backToHomepage": "Zurück zur Startseite",
+  "email": "E-Mail",
+  "remove": "Entfernen",
+  "actions": {
+    "addToCart": "In den Warenkorb"
+  },
+  "support": "Support",
+  "newArrival": "Neuheit",
+  "details": "Details",
+  "saveToFavorites": "Zu Favoriten hinzufügen",
+  "savedToFavorites": "In Favoriten gespeichert",
+  "allRightsReserved": "Alle Rechte vorbehalten.",
+  "service": "Service",
+  "helpTips": "Hilfe und Tipps",
+  "company": "Unternehmen",
+  "shippingInformation": "Versandinformationen",
+  "withdrawalForm": "Widerrufsformular",
+  "warrantyClaim": "Garantieanfrage",
+  "faq": "Häufige Fragen",
+  "bikeAssemblyVideos": "Fahrradmontage",
+  "about": "Über uns",
+  "termsConditions": "Allgemeine Geschäftsbedingungen",
+  "privacyPolicy": "Datenschutzerklärung",
+  "termsAndConditions": "Allgemeine Geschäftsbedingungen",
+  "facebook": "Facebook",
+  "youtube": "YouTube",
+  "linkedin": "LinkedIn",
+  "search": {
+    "placeholder": "Fahrräder suchen...",
+    "submit": "Fahrräder suchen"
+  },
+  "currency": {
+    "estimateNotice": "Umgerechnete Preise sind Schätzungen mit festen Demo-Kursen. Basiswährung: EUR."
+  }
+}

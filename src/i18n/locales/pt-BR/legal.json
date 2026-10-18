@@ -1,0 +1,61 @@
+{
+  "privacy": {
+    "collection": {
+      "title": "Informações que coletamos",
+      "intro": "Podemos coletar as seguintes informações:",
+      "contact": "Seu nome e dados de contato",
+      "demographics": "Informações demográficas",
+      "surveys": "Outras informações relevantes para pesquisas e ofertas"
+    },
+    "usage": {
+      "title": "Como usamos as informações",
+      "records": "Manutenção de registros internos",
+      "improvements": "Melhoria dos nossos produtos e serviços",
+      "intro": "Precisamos dessas informações para entender suas necessidades e oferecer um serviço melhor, especialmente pelos seguintes motivos:",
+      "marketing": "Envio de e-mails promocionais sobre novos produtos, ofertas especiais e outras informações que consideramos interessantes para você",
+      "research": "Ocasionalmente, podemos usar suas informações para entrar em contato para pesquisas de mercado, por e-mail, telefone ou correio. Também podemos usá-las para personalizar o site conforme seus interesses."
+    },
+    "security": {
+      "title": "Segurança",
+      "body": "Estamos comprometidos com a segurança das suas informações. Para evitar acesso ou divulgação não autorizados, adotamos procedimentos físicos, eletrônicos e administrativos adequados para proteger os dados coletados online."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "Um cookie é um pequeno arquivo que solicita permissão para ser armazenado no seu computador. Após sua autorização, ele ajuda a analisar o tráfego ou identificar visitas a um site. Cookies permitem que aplicações web respondam individualmente, adaptando suas operações às suas necessidades, preferências e interesses ao coletar e lembrar essas informações.",
+      "scope": "Cookies ajudam a melhorar o site ao identificar quais páginas são úteis para você. Um cookie não nos dá acesso ao seu computador ou a informações pessoais além daquelas que você decide compartilhar."
+    },
+    "links": {
+      "title": "Links para outros sites",
+      "body": "Nosso site pode conter links para outros sites. Ao seguir esses links, lembre-se de que não temos controle sobre esses sites e não somos responsáveis pela proteção e privacidade das informações fornecidas neles. Esses sites não são regidos por esta declaração. Consulte a política de privacidade do site em questão."
+    },
+    "control": {
+      "title": "Controle dos seus dados pessoais",
+      "intro": "Você pode restringir a coleta ou o uso de seus dados pessoais das seguintes formas:",
+      "withdrawal": "Se você autorizou o uso de suas informações para marketing direto, pode mudar de ideia a qualquer momento escrevendo para nós ou enviando um e-mail para [email protected].",
+      "sharing": "Não venderemos, distribuiremos ou alugaremos seus dados pessoais a terceiros sem sua permissão, exceto quando exigido por lei. Podemos enviar informações promocionais de terceiros que consideramos relevantes se você autorizar.",
+      "access": "Você pode solicitar detalhes dos dados pessoais que mantemos sobre você. Para obter uma cópia, escreva para [Nome da empresa, endereço, cidade, estado, CEP] ou envie um e-mail para [email protected].",
+      "correction": "Se acreditar que alguma informação que mantemos sobre você está incorreta ou incompleta, escreva ou envie um e-mail para o endereço acima. Corrigiremos prontamente as informações incorretas."
+    },
+    "updates": "Esta política de privacidade pode ser alterada sem aviso prévio.",
+    "intro": "Esta política de privacidade descreve como nosso site usa e protege as informações que você fornece ao utilizá-lo."
+  },
+  "terms": {
+    "intro": "Bem-vindo à página de termos e condições. Leia estes termos com atenção antes de usar nossos serviços.",
+    "acceptance": {
+      "title": "1. Aceitação dos termos",
+      "body": "Ao acessar e usar este site, você concorda com estes termos e com todas as leis e regulamentos aplicáveis."
+    },
+    "changes": {
+      "title": "2. Alterações dos termos",
+      "body": "Reservamo-nos o direito de alterar estes termos a qualquer momento. É sua responsabilidade revisá-los regularmente."
+    },
+    "usage": {
+      "title": "3. Uso do site",
+      "body": "Você concorda em não usar este site para fins ilegais ou para violar leis de sua jurisdição."
+    },
+    "contact": {
+      "title": "4. Informações de contato",
+      "body": "Se tiver dúvidas sobre estes termos e condições, entre em contato conosco."
+    }
+  }
+}

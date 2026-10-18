@@ -1,0 +1,101 @@
+{
+  "categories": {
+    "mountain": {
+      "name": "Mountain Bike"
+    },
+    "road": {
+      "name": "Road Bike"
+    },
+    "electric": {
+      "name": "E-Bike"
+    },
+    "trekking": {
+      "name": "Trekking"
+    },
+    "kids": {
+      "name": "Kids"
+    },
+    "tires": {
+      "name": "Tires",
+      "description": "Replacement tires and upgrades will be available here soon."
+    },
+    "clothing": {
+      "name": "Clothing",
+      "description": "Cycling apparel and seasonal kits are coming soon."
+    },
+    "accessories": {
+      "name": "Accessories",
+      "description": "Helmets, lights, bags and other add-ons are coming soon."
+    },
+    "fallback": {
+      "description": "More products in this category will be available soon."
+    }
+  },
+  "category": "Category",
+  "askAQuestion": "Ask a question",
+  "noFavoritesYet": "No favorites yet",
+  "saveBikesHereToCompareThemLater": "Save bikes here to compare them later and return quickly.",
+  "discoverBikes": "Discover bikes",
+  "savedList": "Saved list",
+  "favorites": {
+    "title": "Favorites",
+    "count": "Saved bikes: {{count}}",
+    "count_one": "{{count}} saved bike",
+    "count_other": "{{count}} saved bikes"
+  },
+  "clearFavorites": "Clear favorites",
+  "product": "Product",
+  "productNotFound": "Product not found",
+  "thisBikeIsNoLongerAvailableOr": "This bike is no longer available or the link is incorrect.",
+  "sold": "sold",
+  "vatIncluded": "VAT included",
+  "moreLikeThis": "More like this",
+  "delivery": "Delivery",
+  "shipsIn24Hours": "Ships in 24 hours",
+  "warranty": "Warranty",
+  "2YearsOnFrame": "2 years on frame",
+  "setupGuidanceIncluded": "Setup guidance included",
+  "search": "Search",
+  "noMatchesYet": "No matches yet",
+  "tryABroaderTermLikeMountainCity": "Try a broader term like mountain, city, electric or road.",
+  "curatedCatalog": "Curated catalog",
+  "modelsReadyToBrowse": "models ready to browse.",
+  "sort": "Sort:",
+  "allPrices": "All prices",
+  "allRatings": "All ratings",
+  "4StarsAndUp": "4 stars and up",
+  "newArrivals": "New arrivals",
+  "new": "New",
+  "thisCategoryIsBeingPrepared": "This category is being prepared",
+  "weAreCuratingProductsForThisSection": "We are curating products for this section and will publish them soon.",
+  "add": "Add",
+  "save": "Save",
+  "saved": "Saved",
+  "shopNow": "Shop Now",
+  "previous": "Previous",
+  "next": "Next",
+  "bestSellers": "Best Sellers",
+  "topRated": "Top Rated",
+  "priceLowToHigh": "Price: Low to High",
+  "priceHighToLow": "Price: High to Low",
+  "searchWithinCategory": "Search within {{category}}...",
+  "underPrice": "Under {{price}}",
+  "overPrice": "Over {{price}}",
+  "minToMax": "{{min}} to {{max}}",
+  "resultsForQuery": "Results for \"{{query}}\"",
+  "browseAllBikes": "Browse all bikes",
+  "results": {
+    "count": "Products found: {{count}}",
+    "count_one": "{{count}} product found",
+    "count_other": "{{count}} products found"
+  },
+  "rating5AverageRating": "{{rating}}/5 average rating",
+  "models": {
+    "count_one": "{{count}} model ready to browse.",
+    "count_other": "{{count}} models ready to browse."
+  },
+  "sales": {
+    "count_one": "{{count}} sold",
+    "count_other": "{{count}} sold"
+  }
+}

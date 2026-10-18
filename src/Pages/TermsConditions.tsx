@@ -1,26 +1,38 @@
+import { useI18n } from "../i18n/I18n";
 export const TermsConditions = () => {
+  const { t } = useI18n(["common", "legal"]);
   return (
     <div className="bg-gray-100 flex justify-center items-center">
       <div className="bg-white w-full h-full p-6 sm:p-8">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Terms and Conditions</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+          {t("common:termsAndConditions")}
+        </h1>
         <p className="text-gray-700 mb-4">
-          Welcome to our Terms and Conditions page. Please read these terms carefully before using our services.
+          {t("legal:terms.intro")}
         </p>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">1. Acceptance of Terms</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+          {t("legal:terms.acceptance.title")}
+        </h2>
         <p className="text-gray-600 mb-3 sm:mb-4">
-          By accessing and using this website, you agree to be bound by these terms and all applicable laws and regulations.
+          {t("legal:terms.acceptance.body")}
         </p>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">2. Changes to Terms</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+          {t("legal:terms.changes.title")}
+        </h2>
         <p className="text-gray-600 mb-3 sm:mb-4">
-          We reserve the right to modify these terms at any time. You are responsible for regularly reviewing these terms.
+          {t("legal:terms.changes.body")}
         </p>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">3. Use of Site</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+          {t("legal:terms.usage.title")}
+        </h2>
         <p className="text-gray-600 mb-3 sm:mb-4">
-          You agree not to use this site for any illegal purposes or to violate any laws in your jurisdiction.
+          {t("legal:terms.usage.body")}
         </p>
-        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">4. Contact Information</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+          {t("legal:terms.contact.title")}
+        </h2>
         <p className="text-gray-600">
-          If you have any questions about these Terms and Conditions, please contact us.
+          {t("legal:terms.contact.body")}
         </p>
       </div>
     </div>

@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Weniger Alltag.",
+    "highlight": "Mehr Abenteuer.",
+    "eyebrow": "AUS LIEBE ZUM RADFAHREN",
+    "description": "Vom ersten Pedaltritt bis zur nächsten großen Herausforderung. Finde das Fahrrad, das dich bewegt.",
+    "primaryAction": "Mein Fahrrad finden",
+    "secondaryAction": "Trails entdecken",
+    "footnote": "STADT. TRAIL. STRASSE. DEIN WEG.",
+    "productBadge": "BEREIT FÜR DEN TRAIL"
+  },
+  "benefits": {
+    "selection": {
+      "title": "Fahrräder für jede Tour",
+      "description": "Von der Stadt bis zum Bergtrail"
+    },
+    "favorites": {
+      "title": "Mit Vertrauen wählen",
+      "description": "Modelle vergleichen und Favoriten speichern"
+    },
+    "languages": {
+      "title": "Ein Shop, der deine Sprache spricht",
+      "description": "4 Sprachen. 3 Währungen."
+    }
+  },
+  "categories": {
+    "eyebrow": "WOHIN GEHT DEINE NÄCHSTE TOUR?",
+    "title": "Deine Tour. Dein Stil.",
+    "viewAll": "Alle Fahrräder ansehen",
+    "mountain": "Erobere die Trails.",
+    "road": "Finde dein Tempo.",
+    "electric": "Komm weiter.",
+    "trekking": "Jeden Tag entdecken.",
+    "kids": "Kleine große Abenteuer."
+  },
+  "featured": {
+    "eyebrow": "ENTDECKE DEIN NÄCHSTES FAHRRAD",
+    "title": "Bereit für deine nächste Tour.",
+    "action": "Kollektion entdecken"
+  },
+  "banner": {
+    "eyebrow": "NIMM DEN LANGEN WEG NACH HAUSE",
+    "title": "Die beste Route ist",
+    "highlight": "die, die du entdeckst.",
+    "action": "Trekkingräder entdecken"
+  }
+}

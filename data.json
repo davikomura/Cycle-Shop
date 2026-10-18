@@ -519,41 +519,49 @@
 
     "faqs" : [
         {
+          "id": "billing",
           "question": "How do I update my billing information?",
           "answer":
             "To update your billing information, go to your account settings and look for the 'Billing' section. From there, you can update your payment details."
         },
         {
+          "id": "support",
           "question": "How can I contact customer support?",
           "answer":
             "You can contact our customer support through the 'Contact Us' page. We're available via phone, email, or live chat."
         },
         {
+          "id": "profile",
           "question": "How do I update my profile information?",
           "answer":
             "To update your profile information, log into your account and go to the 'Profile' section to make changes to your details."
         },
         {
+          "id": "history",
           "question": "How do I find my purchase history?",
           "answer":
             "You can find your purchase history in your account dashboard under the 'Order History' section."
         },
         {
+          "id": "warranty",
           "question": "What is the warranty on bikes?",
           "answer":
             "We offer a 2-year warranty on frames and a 1-year warranty on other parts. For more details, please check our warranty policy."
         },
         {
+          "id": "assembly",
           "question": "Do you offer bike assembly services?",
           "answer":
             "Yes, we offer free bike assembly for all bikes purchased through our store. Our experts will ensure everything is set up perfectly."
         },
         {
+          "id": "returns",
           "question": "Can I return a bike if I don't like it?",
           "answer":
             "Yes, you can return a bike within 30 days of purchase for a full refund, provided it's in unused condition. Please refer to our return policy for more details."
         },
         {
+          "id": "financing",
           "question": "Do you offer financing options?",
           "answer":
             "Yes, we offer financing options through our partners. You can choose to pay in installments over several months. Please check our financing page for more information."

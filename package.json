@@ -15,8 +15,10 @@
   "dependencies": {
     "@tanstack/react-query": "^5.104.2",
     "@tanstack/react-router": "^1.170.42",
+    "i18next": "^26.5.2",
     "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react-dom": "^19.3.0",
+    "react-i18next": "^17.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

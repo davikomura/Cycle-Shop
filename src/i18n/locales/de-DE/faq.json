@@ -1,0 +1,38 @@
+{
+  "faqs": "FAQ",
+  "frequentlyAskedQuestions": "Häufig gestellte Fragen",
+  "items": {
+    "billing": {
+      "question": "Wie aktualisiere ich meine Rechnungsdaten?",
+      "answer": "Gehe zu deinen Kontoeinstellungen und suche den Bereich „Rechnung“. Dort kannst du deine Zahlungsdaten aktualisieren."
+    },
+    "support": {
+      "question": "Wie erreiche ich den Kundenservice?",
+      "answer": "Du kannst unseren Kundenservice über die Kontaktseite erreichen. Wir sind per Telefon, E-Mail oder Live-Chat verfügbar."
+    },
+    "profile": {
+      "question": "Wie aktualisiere ich meine Profildaten?",
+      "answer": "Melde dich an und gehe zum Bereich „Profil“, um deine Angaben zu ändern."
+    },
+    "history": {
+      "question": "Wo finde ich meinen Kaufverlauf?",
+      "answer": "Du findest deinen Kaufverlauf in deinem Konto unter „Bestellverlauf“."
+    },
+    "warranty": {
+      "question": "Welche Garantie haben die Fahrräder?",
+      "answer": "Wir bieten 2 Jahre Garantie auf Rahmen und 1 Jahr auf andere Teile. Weitere Einzelheiten findest du in unseren Garantiebedingungen."
+    },
+    "assembly": {
+      "question": "Bietet ihr Fahrradmontage an?",
+      "answer": "Ja, wir bieten kostenlose Montage für alle bei uns gekauften Fahrräder. Unsere Fachleute sorgen dafür, dass alles richtig eingestellt ist."
+    },
+    "returns": {
+      "question": "Kann ich ein Fahrrad zurückgeben, wenn es mir nicht gefällt?",
+      "answer": "Ja, du kannst ein unbenutztes Fahrrad innerhalb von 30 Tagen nach dem Kauf gegen volle Erstattung zurückgeben. Weitere Informationen findest du in unseren Rückgabebedingungen."
+    },
+    "financing": {
+      "question": "Bietet ihr Finanzierungsmöglichkeiten an?",
+      "answer": "Ja, wir bieten Finanzierung über unsere Partner. Du kannst über mehrere Monate in Raten zahlen. Weitere Informationen findest du auf unserer Finanzierungsseite."
+    }
+  }
+}

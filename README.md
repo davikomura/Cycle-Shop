@@ -64,3 +64,50 @@ novo deploy (`staleTime: Infinity`). Ao conectar uma API, adapte `queryFn`, remo
 os dados iniciais locais e configure carregamento, erros e invalidação do cache.
 
 Autor: Davi Komura de Castro. Licença [MIT](./LICENSE).
+
+## Idiomas e moedas
+
+A loja oferece `pt-BR`, `es-ES`, `en-US` e `de-DE`. O idioma inicial segue o
+navegador (português para idiomas não suportados). As preferências de idioma
+e moeda são independentes e ficam no localStorage.
+
+A tradução usa **i18next + react-i18next**. Os arquivos ficam em
+`src/i18n/locales/<idioma>/<area>.json`, separados em `common`, `home`,
+`catalog`, `products`, `checkout`, `auth`, `about`, `faq` e `legal`.
+
+- `src/i18n/config.ts`: inicialização e backend de imports dinâmicos. O Vite gera
+  um chunk por idioma/área. Apenas `common` é solicitado na inicialização;
+  os componentes solicitam suas áreas via `useI18n([...])`. O inglês é o fallback
+  para traduções ausentes.
+- `src/i18n/I18n.tsx`: integração com react-i18next e preferências de moeda.
+  O Suspense em `main.tsx` aguarda os recursos antes de mostrar os textos.
+- `src/i18n/settings.ts`: idiomas, moedas e taxas de conversão configuráveis.
+- `src/i18n/catalogKeys.ts`: correspondência entre categorias e chaves de tradução.
+
+Use chaves semânticas estáveis, independentes do texto traduzido:
+
+```tsx
+const { t, formatPrice } = useI18n(['common', 'catalog']);
+t('common:actions.addToCart');
+t('catalog:results.count', { count: results.length });
+```
+
+Parâmetros nos JSONs usam `{{nome}}`. Para contagens, forneça `count` e as
+variantes `_one` / `_other`; português e espanhol também usam `_many`.
+As descrições de produtos usam IDs (`products:items.1.description`), não o texto
+em inglês. O FAQ também usa IDs estáveis de `data.json`, permitindo reordenar
+as perguntas sem trocar suas traduções.
+
+Ao adicionar uma tradução, atualize os quatro idiomas sem renomear chaves por
+alterações de redação. Ao adicionar uma área, registre-a em `namespaces` e
+declare-a nos componentes que a utilizam.
+
+Os preços do catálogo e pedidos continuam armazenados em **EUR**. A exibição
+converte para BRL, EUR ou USD usando `Intl.NumberFormat`, inclusive nos filtros,
+carrinho e checkout. As taxas são **fixas e demonstrativas**, não cotações atuais:
+1 EUR = 6 BRL = 1,10 USD. A loja informa essa condição no rodapé. A seleção de
+moeda não implementa cobrança real ou integração cambial.
+
+Os testes verificam cobertura dos dicionários, interpolação, plurais, fallback,
+conversão de moeda, persistência das preferências, fluxo de compra e downloads
+sob demanda por idioma e área no navegador.

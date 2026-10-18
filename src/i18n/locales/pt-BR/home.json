@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Menos rotina.",
+    "highlight": "Mais aventura.",
+    "eyebrow": "POR AMOR AO CICLISMO",
+    "description": "Da primeira pedalada ao próximo grande desafio. Encontre a bicicleta que te move.",
+    "primaryAction": "Encontrar minha bike",
+    "secondaryAction": "Explorar as trilhas",
+    "footnote": "CIDADE. TRILHA. ESTRADA. DO SEU JEITO.",
+    "productBadge": "PRONTA PARA A TRILHA"
+  },
+  "benefits": {
+    "selection": {
+      "title": "Bicicletas para cada caminho",
+      "description": "Das ruas da cidade às trilhas"
+    },
+    "favorites": {
+      "title": "Escolha com confiança",
+      "description": "Compare modelos e salve seus favoritos"
+    },
+    "languages": {
+      "title": "Uma loja que fala seu idioma",
+      "description": "4 idiomas. 3 moedas."
+    }
+  },
+  "categories": {
+    "eyebrow": "QUAL É O SEU PRÓXIMO DESTINO?",
+    "title": "Seu pedal. Seu estilo.",
+    "viewAll": "Ver todas as bicicletas",
+    "mountain": "Domine as trilhas.",
+    "road": "Encontre seu ritmo.",
+    "electric": "Vá mais longe.",
+    "trekking": "Explore todos os dias.",
+    "kids": "Pequenas grandes aventuras."
+  },
+  "featured": {
+    "eyebrow": "CONHEÇA SUA PRÓXIMA BIKE",
+    "title": "Prontas para o próximo pedal.",
+    "action": "Explorar a coleção"
+  },
+  "banner": {
+    "eyebrow": "ESCOLHA O CAMINHO MAIS LONGO",
+    "title": "O melhor caminho é",
+    "highlight": "aquela que você descobre.",
+    "action": "Conhecer bikes de trekking"
+  }
+}

@@ -1,10 +1,13 @@
-import type { MouseEvent } from 'react';
-import { useRef, useState } from 'react';
-import { Link } from '@tanstack/react-router';
-import data from '../../../data.json';
-import { getCategoryRoute } from '../../lib/catalog';
+import { categoryNameKey } from "../../i18n/catalogKeys";
+import { useI18n } from "../../i18n/I18n";
+import type { MouseEvent } from "react";
+import { useRef, useState } from "react";
+import { Link } from "@tanstack/react-router";
+import data from "../../../data.json";
+import { getCategoryRoute } from "../../lib/catalog";
 
 const ImageCarousel = () => {
+  const { t } = useI18n(["common", "catalog"]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -71,25 +74,25 @@ const ImageCarousel = () => {
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
-        style={{ cursor: 'default', overflowX: 'hidden' }}
+        style={{ cursor: "default", overflowX: "hidden" }}
       >
         <div className="ml-10 flex flex-nowrap md:ml-20 lg:ml-40">
           {categorias.map((categoria, index) => (
             <div className="relative inline-block px-3" key={categoria.name}>
               <div
                 className={`h-64 w-64 max-w-xs overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl ${
-                  index === currentImageIndex ? 'border-4 border-blue-500' : ''
+                  index === currentImageIndex ? "border-4 border-blue-500" : ""
                 }`}
               >
                 <img
                   src={categoria.image}
-                  alt={categoria.name}
+                  alt={t(categoryNameKey(categoria.name))}
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-3xl font-bold">
                   <div className="text-white drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]">
-                    {categoria.name}
+                    {t(categoryNameKey(categoria.name))}
                   </div>
                 </div>
                 <div className="absolute bottom-5 left-0 right-0 flex justify-center">
@@ -97,7 +100,7 @@ const ImageCarousel = () => {
                     to={getCategoryRoute(categoria.name)}
                     className="rounded-lg bg-white px-8 py-2 font-bold text-black shadow-lg transition-colors hover:bg-[#FF6347]"
                   >
-                    Shop Now
+                    {t("catalog:shopNow")}
                   </Link>
                 </div>
               </div>
@@ -127,7 +130,7 @@ const ImageCarousel = () => {
               d="M5 1 1 5l4 4"
             />
           </svg>
-          <span className="sr-only">Previous</span>
+          <span className="sr-only">{t("catalog:previous")}</span>
         </span>
       </button>
 
@@ -152,7 +155,7 @@ const ImageCarousel = () => {
               d="m1 9 4-4-4-4"
             />
           </svg>
-          <span className="sr-only">Next</span>
+          <span className="sr-only">{t("catalog:next")}</span>
         </span>
       </button>
     </div>
