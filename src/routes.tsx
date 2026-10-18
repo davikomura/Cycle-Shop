@@ -1,4 +1,5 @@
-import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router';
+import { getProductById, getProductSlug } from "./lib/catalog";
+import { createRootRoute, createRoute, createRouter, redirect } from '@tanstack/react-router';
 import App from './App';
 import { About } from './Pages/About';
 import { CategoryLanding } from './Pages/CategoryLanding';
@@ -35,7 +36,12 @@ const routeTree = rootRoute.addChildren([
   createRoute({ getParentRoute: () => rootRoute, path: '/Kids', component: Kids }),
   createRoute({ getParentRoute: () => rootRoute, path: '/About', component: About }),
   createRoute({ getParentRoute: () => rootRoute, path: '/PrivacyPolicy', component: PrivacyPolicy }),
-  createRoute({ getParentRoute: () => rootRoute, path: '/product/$productId', component: ProductDetail }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/product/$productSlug', beforeLoad: ({ params }) => {
+    if (/^\d+$/.test(params.productSlug)) {
+      const product = getProductById(params.productSlug);
+      if (product) throw redirect({ to: '/product/$productSlug', params: { productSlug: getProductSlug(product.nome) }, replace: true });
+    }
+  }, component: ProductDetail }),
   createRoute({ getParentRoute: () => rootRoute, path: '/search', validateSearch: (search: Record<string, unknown>): { q?: string } => ({ q: typeof search.q === 'string' ? search.q : '' }), component: SearchResults }),
   createRoute({ getParentRoute: () => rootRoute, path: '/Terms-and-Conditions', component: TermsConditions }),
   createRoute({ getParentRoute: () => rootRoute, path: '/FAQ', component: Faq }),

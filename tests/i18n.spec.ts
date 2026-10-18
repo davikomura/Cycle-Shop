@@ -48,7 +48,7 @@ test("language and currency changes persist across product, cart and reload", as
       .getByRole("combobox", { name: currency, exact: true })
       .selectOption("USD");
     await page.goto("/product/1");
-    await expect(page.locator("section")).toContainText(
+    await expect(page.locator(".product-pricing")).toContainText(
       new Intl.NumberFormat(locale, {
         style: "currency",
         currency: "USD",

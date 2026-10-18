@@ -97,5 +97,18 @@
   "sales": {
     "count_one": "{{count}} verkauft",
     "count_other": "{{count}} verkauft"
+  },
+  "reviews": {
+    "count_one": "{{count}} Bewertung",
+    "count_other": "{{count}} Bewertungen"
+  },
+  "shipping": {
+    "title": "Versand und Lieferzeit",
+    "postalCode": "Postleitzahl des Zielorts (Brasilien)",
+    "calculate": "Berechnen",
+    "invalid": "Geben Sie eine gültige brasilianische Postleitzahl mit 8 Ziffern ein.",
+    "demo": "Liefersimulation für Brasilien. Beispielpreise und Lieferzeiten, nicht im Bestellbetrag enthalten.",
+    "standard": "Standardlieferung",
+    "days": "Voraussichtlich {{min}} bis {{max}} Werktage"
   }
 }

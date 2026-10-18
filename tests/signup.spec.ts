@@ -1,0 +1,30 @@
+import { expect, test } from '@playwright/test';
+
+test('signup enforces password rules and matching confirmation', async ({ page }) => {
+  await page.goto('/Signup');
+  await page.locator('#name').fill('Test Rider');
+  await page.locator('#email').fill('rider@example.com');
+  await page.locator('#accept-terms').check();
+  await page.locator('#password').fill('abcdefgh');
+  await page.locator('#confirm-password').fill('abcdefgh');
+  await page.locator('button[type=submit]').click();
+  await expect(page.getByRole('alert')).toContainText('1 special character');
+  await expect(page).toHaveURL(/Signup$/);
+  await page.locator('#password').fill('LongPassword1!');
+  await expect(page.locator('#password-strength')).toContainText('Strong');
+  await page.locator('button[type=submit]').click();
+  await expect(page.getByRole('alert')).toHaveText('Passwords must match.');
+  await page.locator('#confirm-password').fill('LongPassword1! ');
+  await expect(page.locator('#password-match')).toHaveText('Passwords must match.');
+  await page.locator('#confirm-password').fill('LongPassword1!');
+  await expect(page.locator('#password-match')).toHaveText('Passwords match.');
+  await page.locator('#confirm-password').locator('..').getByRole('button').click();
+  await expect(page.locator('#confirm-password')).toHaveAttribute('type', 'text');
+  await page.locator('#confirm-password').locator('..').getByRole('button').click();
+  await page.screenshot({ path: 'test-results/signup-password-desktop.png', fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/signup-password-mobile.png', fullPage: true });
+  await page.locator('button[type=submit]').click();
+  await expect(page).toHaveURL('/');
+});

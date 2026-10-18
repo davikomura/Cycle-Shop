@@ -8,7 +8,7 @@ test('search, favorites, cart persistence and checkout login return', async ({ p
   await page.getByRole('button', { name: 'Search bikes', exact: true }).click();
   await expect(page).toHaveURL(/search\?q=EcoRider/);
   await page.getByRole('link', { name: 'EcoRider 3000', exact: true }).first().click();
-  await expect(page).toHaveURL(/product\/1$/);
+  await expect(page).toHaveURL(/product\/eco-rider-3000$/);
   await page.getByRole('button', { name: /save/i }).click();
   await page.getByRole('link', { name: 'Go to favorites' }).click();
   await expect(page.getByRole('heading', { name: 'EcoRider 3000' })).toBeVisible();
@@ -45,4 +45,46 @@ test('category filters and mobile navigation', async ({ page }) => {
   await page.getByRole('navigation').getByRole('link', { name: 'E-Bike', exact: true }).click();
   await expect(page).toHaveURL(/E-Bike$/);
   await expect(page.getByRole('heading', { name: 'E-Bike', exact: true })).toBeVisible();
+});
+
+
+test('product URLs redirect, reload and handle missing products', async ({ page }) => {
+  await page.goto('/product/5');
+  await expect(page).toHaveURL(/product\/comfy-cruiser$/);
+  await expect(page.getByRole('heading', { name: 'ComfyCruiser', exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('heading', { name: 'ComfyCruiser', exact: true })).toBeVisible();
+  await page.screenshot({ path: 'test-results/product-desktop.png', fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator('.product-buy')).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/product-mobile.png', fullPage: true });
+  await page.getByRole('link', { name: 'More like this', exact: true }).click();
+  await expect(page).toHaveURL(/Trekking$/);
+  await page.goto('/product/does-not-exist');
+  await expect(page.getByRole('heading', { name: 'Product not found' })).toBeVisible();
+});
+
+test('shipping validates CEP and clears stale estimates when the destination changes', async ({ page }) => {
+  await page.goto('/product/trail-blazer-2000');
+  await expect(page.locator('.product-review-summary')).toHaveAttribute('aria-label', '5/5 average rating');
+  await expect(page.locator('.product-review-count')).toContainText('review');
+  const postalCode = page.getByLabel('Destination postal code (Brazil)');
+  await postalCode.fill('123');
+  await page.getByRole('button', { name: 'Calculate', exact: true }).click();
+  await expect(postalCode).toHaveAttribute('aria-invalid', 'true');
+  await expect(page.getByRole('alert')).toBeVisible();
+  await postalCode.fill('01310100');
+  await expect(postalCode).toHaveValue('01310-100');
+  await page.getByRole('button', { name: 'Calculate', exact: true }).click();
+  await expect(page.locator('.shipping-result')).toContainText('3 to 6 business days');
+  await expect(page.locator('.shipping-result')).toContainText('59.40');
+  await page.screenshot({ path: 'test-results/shipping-desktop.png', fullPage: true });
+  await postalCode.fill('80010000');
+  await expect(page.locator('.shipping-result')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Calculate', exact: true }).click();
+  await expect(page.locator('.shipping-result')).toContainText('5 to 8 business days');
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/shipping-mobile.png', fullPage: true });
 });

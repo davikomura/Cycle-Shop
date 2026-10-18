@@ -3,12 +3,12 @@ import { useI18n } from "../../i18n/I18n";
 import type { FormEvent } from "react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import logo from "../../assets/dk-cycle-stacked.png";
+import logo from "../../assets/dk-cycle-horizontal.png";
 import { useAuth } from "../../context/useAuth";
 
 export const Login = () => {
   const { t } = useI18n(["common", "auth"]);
-  const [submitted, setSubmitted] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export const Login = () => {
     }
 
     login({ email });
-    setSubmitted(true);
+
     const redirectTo =
       new URLSearchParams(location.searchStr).get("redirect") === "/checkout"
         ? "/checkout"
@@ -36,97 +36,46 @@ export const Login = () => {
   };
 
   return (
-    <section className="bg-gray-dark">
-      <div className="text-white absolute right-4 top-4">
+    <main className="login-page">
+      <header className="login-header">
+        <Link to="/" className="login-back"><span aria-hidden="true">&larr;</span>{t("common:backToHomepage")}</Link>
         <Preferences />
-      </div>
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-4 py-8">
-        <Link to="/" className="mb-6 flex items-center">
-          <img className="h-auto w-40 rounded-xl bg-white sm:w-48" src={logo} alt="DK Cycle Shop" />
-        </Link>
-        <div className="w-full rounded-lg bg-white shadow-sm sm:max-w-md lg:max-w-lg xl:max-w-md">
-          <div className="space-y-4 p-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              {t("auth:signInToYourAccount")}
-            </h1>
-            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-gray-900"
-                >
-                  {t("auth:yourEmail")}
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900"
-                  placeholder="name@company.com"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="password"
-                  className="mb-2 block text-sm font-medium text-gray-900"
-                >
-                  {t("auth:password")}
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900"
-                  required
-                />
-              </div>
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-3 text-sm text-gray-500">
-                  <input
-                    id="remember"
-                    type="checkbox"
-                    className="h-4 w-4 rounded border border-gray-300 bg-gray-50"
-                  />
-                  {t("auth:rememberMe")}
-                </label>
-                <button
-                  type="button"
-                  className="text-sm font-medium text-brand-red hover:underline"
-                >
-                  {t("auth:forgotPassword")}
+      </header>
+      <div className="login-content">
+        <div className="login-form-wrap">
+          <Link to="/" className="login-logo" aria-label={t("common:goToHomepage")}>
+            <img src={logo} alt="DK Cycle" />
+          </Link>
+          <h1>{t("auth:signInToYourAccount")}</h1>
+          <p className="login-intro">{t("auth:loginIntro")}</p>
+          <form className="login-form" onSubmit={handleSubmit}>
+            <div className="login-field">
+              <label htmlFor="email">{t("auth:yourEmail")}</label>
+              <input type="email" name="email" id="email" autoComplete="email" placeholder={t("auth:enterEmail")} required />
+            </div>
+            <div className="login-field">
+              <label htmlFor="password">{t("auth:password")}</label>
+              <div className="login-password">
+                <input type={showPassword ? "text" : "password"} name="password" id="password" autoComplete="current-password" placeholder={t("auth:enterPassword")} required />
+                <button type="button" onClick={() => setShowPassword(!showPassword)} aria-label={t(showPassword ? "auth:hidePassword" : "auth:showPassword")} aria-pressed={showPassword}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" /><circle cx="12" cy="12" r="3" />{showPassword && <path d="m3 3 18 18" />}</svg>
                 </button>
               </div>
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-brand-red px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-brand-red-dark"
-              >
-                {t("common:signIn")}
-              </button>
-              {error && (
-                <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
-                  {t(error)}
-                </p>
-              )}
-              {submitted && (
-                <p className="rounded-lg bg-green-50 px-4 py-3 text-sm text-green-700">
-                  {t("auth:signedInSuccessfully")}
-                </p>
-              )}
-              <p className="text-sm font-light text-gray-500">
-                {t("auth:donTHaveAnAccountYet")}{" "}
-                <Link
-                  to="/Signup"
-                  className="font-medium text-brand-red hover:underline"
-                >
-                  {t("auth:signUp")}
-                </Link>
-              </p>
-            </form>
+            </div>
+            {error && <p className="login-error" role="alert">{t(error)}</p>}
+            <button type="submit" className="login-submit">{t("common:signIn")}<span aria-hidden="true">&rarr;</span></button>
+          </form>
+          <div className="login-register">
+            <p>{t("auth:donTHaveAnAccountYet")}</p>
+            <Link to="/Signup">{t("auth:createAccount")}</Link>
           </div>
         </div>
       </div>
-    </section>
+      <footer className="login-footer">
+        <span>DK Cycle</span>
+        <Link to="/PrivacyPolicy">{t("common:privacyPolicy")}</Link>
+        <Link to="/FAQ">{t("common:helpTips")}</Link>
+      </footer>
+    </main>
   );
 };

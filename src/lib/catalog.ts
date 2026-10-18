@@ -1,5 +1,10 @@
 import data from '../../data.json';
 
+export const getProductSlug = (name: string) => name
+  .replace(/([a-z])([A-Z])/g, '$1-$2')
+  .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
 const availableImages = new Set([
   '/img/Bikes/AllTerrainPro.png',
   '/img/Bikes/CityCommuter500.png',
@@ -111,6 +116,7 @@ export const getCompleteBikeCatalog = () =>
       ...bike,
       imagem: normalizeImagePath(bike.imagem),
       avaliacao: getProductRating(bike.id),
+      totalAvaliacoes: data.avaliacoes.filter((review) => review.id_bicicleta === bike.id).length,
       totalVendas: getSalesCount(bike.nome),
     }))
     .filter((bike): bike is typeof bike & { imagem: string } => bike.imagem !== null);

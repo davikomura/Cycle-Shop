@@ -1,3 +1,4 @@
+import { getProductSlug } from "../lib/catalog";
 import { ProductCard } from "../components/Common/ProductCard";
 import { Link } from "@tanstack/react-router";
 import { useCatalog } from "../lib/useCatalog";
@@ -73,8 +74,8 @@ export const MainPage = () => {
             {heroBike && (
               <>
                 <Link
-                  to="/product/$productId"
-                  params={{ productId: String(heroBike.id) }}
+                  to="/product/$productSlug"
+                  params={{ productSlug: getProductSlug(heroBike.nome) }}
                   className="hero-bike-link"
                 >
                   <img
@@ -85,8 +86,8 @@ export const MainPage = () => {
                 </Link>
                 <Link
                   className="hero-product-tag"
-                  to="/product/$productId"
-                  params={{ productId: String(heroBike.id) }}
+                  to="/product/$productSlug"
+                  params={{ productSlug: getProductSlug(heroBike.nome) }}
                 >
                   <span>
                     <small>{t("home:hero.productBadge")}</small>

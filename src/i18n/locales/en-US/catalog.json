@@ -97,5 +97,18 @@
   "sales": {
     "count_one": "{{count}} sold",
     "count_other": "{{count}} sold"
+  },
+  "reviews": {
+    "count_one": "{{count}} review",
+    "count_other": "{{count}} reviews"
+  },
+  "shipping": {
+    "title": "Shipping and delivery",
+    "postalCode": "Destination postal code (Brazil)",
+    "calculate": "Calculate",
+    "invalid": "Enter a valid 8-digit Brazilian postal code.",
+    "demo": "Delivery simulation for Brazil. Illustrative prices and times, not included at checkout.",
+    "standard": "Standard delivery",
+    "days": "Estimated {{min}} to {{max}} business days"
   }
 }

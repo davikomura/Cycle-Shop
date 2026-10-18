@@ -101,5 +101,19 @@
     "count_one": "{{count}} vendida",
     "count_other": "{{count}} vendidas",
     "count_many": "{{count}} vendidas"
+  },
+  "reviews": {
+    "count_one": "{{count}} avaliação",
+    "count_other": "{{count}} avaliações",
+    "count_many": "{{count}} avaliações"
+  },
+  "shipping": {
+    "title": "Frete e prazo de entrega",
+    "postalCode": "CEP de destino",
+    "calculate": "Calcular",
+    "invalid": "Informe um CEP com 8 dígitos válidos.",
+    "demo": "Simulação para entrega no Brasil. Valores e prazos ilustrativos, não incluídos no checkout.",
+    "standard": "Entrega padrão",
+    "days": "Estimativa de {{min}} a {{max}} dias úteis"
   }
 }

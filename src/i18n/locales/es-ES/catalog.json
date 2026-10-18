@@ -101,5 +101,19 @@
     "count_one": "{{count}} vendida",
     "count_other": "{{count}} vendidas",
     "count_many": "{{count}} vendidas"
+  },
+  "reviews": {
+    "count_one": "{{count}} valoración",
+    "count_other": "{{count}} valoraciones",
+    "count_many": "{{count}} valoraciones"
+  },
+  "shipping": {
+    "title": "Envío y plazo de entrega",
+    "postalCode": "Código postal de destino (Brasil)",
+    "calculate": "Calcular",
+    "invalid": "Introduce un código postal brasileño válido de 8 dígitos.",
+    "demo": "Simulación de entrega en Brasil. Precios y plazos ilustrativos, no incluidos al finalizar la compra.",
+    "standard": "Entrega estándar",
+    "days": "Estimación de {{min}} a {{max}} días laborables"
   }
 }

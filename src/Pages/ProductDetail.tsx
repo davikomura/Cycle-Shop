@@ -1,15 +1,17 @@
+import { getCategoryRoute, getProductSlug } from "../lib/catalog";
 import { categoryNameKey } from "../i18n/catalogKeys";
 import { useI18n } from "../i18n/I18n";
 import { useCatalog } from "../lib/useCatalog";
 import { Link, useParams } from "@tanstack/react-router";
 import { useCart } from "../context/useCart";
 import { useFavorites } from "../context/useFavorites";
+import { ShippingCalculator } from "../components/Common/ShippingCalculator";
 
 export const ProductDetail = () => {
-  const { t, formatPrice } = useI18n(["common", "catalog", "products"]);
-  const { productId = "" } = useParams({ from: "/product/$productId" });
+  const { t, formatPrice, locale } = useI18n(["common", "catalog", "products"]);
+  const { productSlug = "" } = useParams({ from: "/product/$productSlug" });
   const { data: catalog } = useCatalog();
-  const bike = catalog.find((product) => product.id === Number(productId));
+  const bike = catalog.find((product) => getProductSlug(product.nome) === productSlug);
   const { addItem } = useCart();
   const { isFavorite, toggleFavorite } = useFavorites();
 
@@ -35,98 +37,54 @@ export const ProductDetail = () => {
     );
   }
 
+  const saved = isFavorite(bike.id);
+  const categoryRoute = getCategoryRoute(bike.tipo);
+
   return (
-    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="soft-panel rounded-[32px] p-8">
-          <img
-            src={bike.imagem}
-            alt={bike.nome}
-            className="mx-auto h-[420px] w-full object-contain"
-          />
-        </div>
-
-        <div className="flex flex-col justify-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-red">
-            {t(categoryNameKey(bike.tipo))}
-          </p>
-          <h1 className="mt-3 text-4xl font-bold text-gray-900">{bike.nome}</h1>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            {t(`products:items.${bike.id}.description`)}
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <span className="rounded-full bg-[#edf4ff] px-3 py-1 text-sm font-semibold text-brand-blue">
-              {bike.avaliacao
-                ? t("catalog:rating5AverageRating", { rating: bike.avaliacao })
-                : t("common:newArrival")}
-            </span>
-            <span className="rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold text-brand-red">
-              {t("catalog:sales.count", { count: bike.totalVendas })}
-            </span>
+    <section className="product-page">
+      <div className="shop-container">
+        <nav className="product-breadcrumb" aria-label={t("catalog:product")}>
+          <Link to="/">DK Cycle</Link><span aria-hidden="true">/</span>
+          <Link to={categoryRoute}>{t(categoryNameKey(bike.tipo))}</Link>
+          <span aria-hidden="true">/</span><span aria-current="page">{bike.nome}</span>
+        </nav>
+        <div className="product-layout">
+          <div className="product-media">
+            <img src={bike.imagem} alt={bike.nome} fetchPriority="high" />
           </div>
-
-          <div className="mt-8 flex items-end gap-4">
-            <span className="text-4xl font-bold text-gray-900">
-              {formatPrice(bike.preco)}
-            </span>
-            <span className="pb-1 text-sm text-gray-500">
-              {t("catalog:vatIncluded")}
-            </span>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={() => addItem(bike)}
-              className="rounded-full bg-linear-to-r from-brand-red to-brand-red-dark px-6 py-3 font-medium text-white shadow-lg shadow-brand-red/20 transition-all hover:-translate-y-0.5 hover:shadow-brand-red/30"
-            >
+          <div className="product-summary">
+            <Link className="product-category" to={categoryRoute}>{t(categoryNameKey(bike.tipo))}</Link>
+            <h1>{bike.nome}</h1>
+            <div className="product-rating">
+              {bike.avaliacao ? <div className="product-review-summary" aria-label={t("catalog:rating5AverageRating", { rating: bike.avaliacao })}>
+                <strong>{new Intl.NumberFormat(locale, { minimumFractionDigits: 1 }).format(bike.avaliacao)}</strong>
+                <span className="product-stars" aria-hidden="true">
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  <span className="product-stars-fill" style={{ width: `${bike.avaliacao / 5 * 100}%` }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </span>
+                <span className="product-review-count">{t("catalog:reviews.count", { count: bike.totalAvaliacoes })}</span>
+              </div> : <span>{t("common:newArrival")}</span>}
+              <span className="product-sales">{t("catalog:sales.count", { count: bike.totalVendas })}</span>
+            </div>
+            <p className="product-description">{t(`products:items.${bike.id}.description`)}</p>
+            <div className="product-pricing">
+              <strong>{formatPrice(bike.preco)}</strong>
+              <span>{t("catalog:vatIncluded")}</span>
+            </div>
+            <button type="button" onClick={() => addItem(bike)} className="product-buy">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M3 3h2l3 13h11l3-10H6" /><circle cx="9" cy="21" r="1" /><circle cx="19" cy="21" r="1" /></svg>
               {t("common:actions.addToCart")}
             </button>
-            <button
-              type="button"
-              onClick={() => toggleFavorite(bike.id)}
-              className="rounded-full border border-gray-300 px-6 py-3 text-gray-700 transition-colors hover:border-brand-red hover:text-brand-red"
-            >
-              {t(
-                isFavorite(bike.id)
-                  ? "common:savedToFavorites"
-                  : "common:saveToFavorites",
-              )}
+            <button type="button" onClick={() => toggleFavorite(bike.id)} aria-pressed={saved} className="product-favorite">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill={saved ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" /></svg>
+              {t(saved ? "common:savedToFavorites" : "common:saveToFavorites")}
             </button>
-            <Link
-              to={`/search?q=${encodeURIComponent(categoryNameKey(bike.tipo))}`}
-              className="rounded-full border border-gray-300 px-6 py-3 text-gray-700 transition-colors hover:border-gray-500"
-            >
-              {t("catalog:moreLikeThis")}
-            </Link>
-          </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            <div className="soft-panel rounded-2xl px-4 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
-                {t("catalog:delivery")}
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                {t("catalog:shipsIn24Hours")}
-              </p>
-            </div>
-            <div className="soft-panel rounded-2xl px-4 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
-                {t("catalog:warranty")}
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                {t("catalog:2YearsOnFrame")}
-              </p>
-            </div>
-            <div className="soft-panel rounded-2xl px-4 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-red">
-                {t("common:support")}
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                {t("catalog:setupGuidanceIncluded")}
-              </p>
-            </div>
+            <ShippingCalculator key={bike.id} />
+            <dl className="product-services">
+              <div><dt>{t("catalog:warranty")}</dt><dd>{t("catalog:2YearsOnFrame")}</dd></div>
+              <div><dt>{t("common:support")}</dt><dd>{t("catalog:setupGuidanceIncluded")}</dd></div>
+            </dl>
+            <Link to={categoryRoute} className="product-related">{t("catalog:moreLikeThis")} <span aria-hidden="true">&rarr;</span></Link>
           </div>
         </div>
       </div>
